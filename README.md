@@ -19,9 +19,9 @@ The goal is twofold:
 2. Proactively enforce secure engineering practices comparable to those followed by experienced human developers
 
 ### Research Questions
-1. What are the insecure behaviors coding agents encounter during the software development lifecycle?
-2. What are the principles that can guide agents to prevent insecure behaviors?
-3. 
+RQ1: What insecure/risky behaviors do coding agents exhibit across the software development lifecycle?
+RQ2: Can secure software engineering standards be systematically translated into (enforceable/programmable) agent behavior constraints?
+RQ3: To what extent does principle-guided governance reduce insecure behaviors in coding agents?
 
 ### Core Idea
 ```
