@@ -1,20 +1,98 @@
-# agent-secure-behavior
+# Agent Behavior Security Project
 
-## High-Level Objective
-Build a principle-guided framework to improve the security of LLM-based coding agents by modeling their behaviors across the code generation lifecycle and enforcing programmable security policies derived from standards like NIST, OWASP, and CWE.
+## Research Objective
+This project aims to improve the security of LLM-based coding agents by identifying insecure behaviors that arise during autonomous software development and enforcing (programmable) security policies derived from authoritative standards.
 
-## Repository Map
+Rather than focusing only on code-level vulnerabilities, we model and constrain agent behaviors across the entire lifecycle. (Temporary, needs to be revised)
+- Requirement interpretation
+- Design decisions
+- Code synthesis
+- Dependency management
+- Configuration generation
+- Testing and execution
+- Environment setup
+- CI/CD modification
+- Deployment-related outputs
+
+The goal is twofold:
+1. Prevent insecure behaviors
+2. Proactively enforce secure engineering practices comparable to those followed by experienced human developers
+
+### Research Questions
+1. What are the insecure behaviors coding agents encounter during the software development lifecycle?
+2. What are the principles that can guide agents to prevent insecure behaviors?
+3. 
+
+### Core Idea
 ```
-agent-secure-behavior/
-├── README.md                       # This file
-├── docs/                           # Documentation
-│   ├── roadmap.md                  # Project milestones and timeline
-│   ├── threat-model.md             # Security threat model
-│   └── principles-sources.md       # Security principles and standards
-└── LICENSE                         # Project license
+Insecure Coding Behaviors
+                ↓
+Security Standards (NIST / OWASP / CWE / CERT)
+                ↓
+Extracted Secure Principles
+                ↓
+Policy Specification (DSL / YAML)
+                ↓
+Behavioral Enforcement Engine
+                ↓
+Auditable Agent Decisions
 ```
 
-## How to Run Tests
-_Test infrastructure will be added as the project develops._
+## Insecure Behaviors
+- Unpinned or unverified dependencies
+- Hallucinated packages
+- Unsafe default configurations
+- Insecure cryptographic choices
+- Insecure tool output
+- Insufficient input validation and sanitization
+- Privilege escalation in configs
 
-Currently, there are no automated tests in this repository. As components are implemented (taxonomy, DSL, runtime, evaluation), corresponding test suites will be added.
+## Authoritative Sources
+The selection covers: Secure SDLC, Secure coding, System hardening, Dependency management, Deployment security, Access control, Risk management
+
+- [NIST Secure Software Development Framework (SP 800-218)](https://csrc.nist.gov/pubs/sp/800/218/final) &rarr; Lifecycle governance principles
+- [CWE Top 25 Most Dangerous Software Weaknesses](https://cwe.mitre.org/top25/index.html) &rarr; Vulnerability identification
+- [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/) &rarr; Requirement for authentication, crypto, input validation, logging, etc.
+- [CERT Secure Coding Standards](https://wiki.sei.cmu.edu/confluence/spaces/seccode/pages/88042752/SEI+CERT+Coding+Standards) &rarr; Language-aware enforcement
+ 
+- [NIST SP 800-53 — Security and Privacy Controls](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) &rarr; Access control, configuration management, system integrity
+- [OWASP Proactive Controls](https://owasp.org/projects/spotlight/historical/2021.02.10/) &rarr; Developer security guidance like SCP
+
+- [Supply-chain Levels for Software Artifacts](https://slsa.dev/spec/v1.2/) &raar; CI/CD configs generation
+- [CIS Benchmarks](https://downloads.cisecurity.org/#/?pi_content=91ab0d92a7268333c808284d1f6b464f3c9b71bb57ad44b7b18318fa8568bc49) &rarr; community-driven best practice guidelines (from companies) ([What are CIS Benchmarks?](https://www.ibm.com/think/topics/cis-benchmarks))
+
+### Example Policy (Sketch)
+```yaml
+policy_id: DEP_PIN_001
+category: dependency-management
+description: Dependencies must use exact version pinning
+applies_to: install_dependency
+rule:
+  require_exact_version: true
+severity: high
+standard_mapping:
+  - CWE-1104
+  - OWASP-A06
+```
+
+## Experimental Evaluation
+### Agents
+**Open-source Agents**
+- SWE-agent
+- OpenHands
+- Aider
+
+**Proprietary Agents**
+- Cursor
+- CodeX
+
+### Benchmarks
+- SusVibes| [Is Vibe Coding Safe? Benchmarking Vulnerability of Agent-Generated Code in Real-World Tasks](https://arxiv.org/abs/2512.03262) | [GitHub](https://github.com/LeiLiLab/susvibes)
+- SWEBench | [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770) | [GitHub](https://github.com/SWE-bench/SWE-bench)
+- SecCodePLT | [SECODEPLT: A Unified Benchmark for Evaluating the Security Risks and Capabilities of Code Agents](https://arxiv.org/abs/2410.11096) [Dataset](https://huggingface.co/datasets/Virtue-AI-HUB/SecCodePLT)
+- Sec-bench | [SEC-bench: Automated Benchmarking of LLM Agents on Real-World Software Security Tasks](https://arxiv.org/abs/2506.11791)| [GitHub](https://github.com/SEC-bench/SEC-bench)
+- SecureAgentBench | [SecureAgentBench: Benchmarking Secure Code Generation under Realistic Vulnerability Scenarios](https://arxiv.org/abs/2509.22097) | [GitHub(TBD)](https://github.com/iCSawyer/SecureAgentBench)
+- SecRepoBench | [SecRepoBench: Benchmarking Code Agents for Secure Code Completion in Real-World Repositories](https://arxiv.org/pdf/2504.21205) | [GitHub](https://github.com/ai-sec-lab/SecRepoBench)
+- CWEval | [CWEval: Outcome-driven Evaluation on Functionality and Security of LLM Code Generation](https://ieeexplore.ieee.org/document/11028476?denied=) | [GitHub](https://github.com/Co1lin/CWEval)
+- BaxBench | [BaxBench: Can LLMs Generate Correct and Secure Backends?](https://arxiv.org/abs/2502.11844) | [GitHub](https://github.com/logic-star-ai/baxbench)
+
