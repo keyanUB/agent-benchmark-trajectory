@@ -47,7 +47,7 @@ Auditable Agent Decisions
 - Insufficient input validation and sanitization
 - Privilege escalation in configs
 
-## Authoritative Sources
+## Principal Sources (Under Verifying)
 The selection covers: Secure SDLC, Secure coding, System hardening, Dependency management, Deployment security, Access control, Risk management
 
 - [NIST Secure Software Development Framework (SP 800-218)](https://csrc.nist.gov/pubs/sp/800/218/final) &rarr; Lifecycle governance principles
