@@ -31,7 +31,7 @@ Security Standards (NIST / OWASP / CWE / CERT)
                 ↓
 Extracted Secure Principles
                 ↓
-Policy Specification (DSL / YAML)
+Policy Specification (a new DSL?)
                 ↓
 Behavioral Enforcement Engine
                 ↓
