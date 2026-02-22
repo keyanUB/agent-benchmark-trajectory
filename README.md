@@ -58,7 +58,7 @@ The selection covers: Secure SDLC, Secure coding, System hardening, Dependency m
 - [NIST SP 800-53 — Security and Privacy Controls](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) &rarr; Access control, configuration management, system integrity
 - [OWASP Proactive Controls](https://owasp.org/projects/spotlight/historical/2021.02.10/) &rarr; Developer security guidance like SCP
 
-- [Supply-chain Levels for Software Artifacts](https://slsa.dev/spec/v1.2/) &raar; CI/CD configs generation
+- [Supply-chain Levels for Software Artifacts](https://slsa.dev/spec/v1.2/) &rarr; CI/CD configs generation
 - [CIS Benchmarks](https://downloads.cisecurity.org/#/?pi_content=91ab0d92a7268333c808284d1f6b464f3c9b71bb57ad44b7b18318fa8568bc49) &rarr; community-driven best practice guidelines (from companies) ([What are CIS Benchmarks?](https://www.ibm.com/think/topics/cis-benchmarks))
 
 ### Example Policy (Sketch)
