@@ -19,9 +19,9 @@ The goal is twofold:
 2. Proactively enforce secure engineering practices comparable to those followed by experienced human developers
 
 ### Research Questions
-RQ1: What insecure/risky behaviors do coding agents exhibit across the software development lifecycle?
-RQ2: Can secure software engineering standards be systematically translated into (enforceable/programmable) agent behavior constraints?
-RQ3: To what extent does principle-guided governance reduce insecure behaviors in coding agents?
+**RQ1**: What insecure/risky behaviors do coding agents exhibit across the software development lifecycle?
+**RQ2**: Can secure software engineering standards be systematically translated into (enforceable/programmable) agent behavior constraints?
+**RQ3**: To what extent does principle-guided governance reduce insecure behaviors in coding agents?
 
 ### Core Idea
 ```
@@ -86,14 +86,18 @@ We formalize a "good" policy ensures two fundamental dimensions:
 1. Consistency
    - Between what an agent says and what it actually does
        - Say-Do Consistency (SDC)
-```math
-\text{SDC} = \frac{\text{# actions consistent with stated plan}}{\text{total actions}}
-```
-       - Behavioral Consistency via KL Divergence
-```math
-$D_{\mathrm{KL}}\!\left(\pi_{\text{declared}} \,\middle\|\, \pi_{\text{actual}}\right)$
-```
-       - TODO: Check the proposal for the consistency metric
+
+        ```math
+        \text{SDC} = \frac{\text{\# actions consistent with stated plan}}{\text{total actions}}
+        ```
+
+      - Behavioral Consistency via KL Divergence
+
+        ```math
+        D_{\mathrm{KL}}\!\left(\pi_{\text{declared}} \,\middle\|\, \pi_{\text{actual}}\right)
+        ```
+      
+      - <span style="color:red">[TODO]</span>: Check the proposal for the consistency metric
 
 ## Experimental Evaluation
 ### Agents

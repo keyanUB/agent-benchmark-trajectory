@@ -1,0 +1,1539 @@
+[
+  {
+    "definition": [
+      "Application: The software product being developed, into which security controls must be integrated."
+    ],
+    "scope": "All applications developed within the organization.",
+    "policy_description": "ASVS defines an 'application' as the software product being developed, into which security controls must be integrated.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Requirement: The word requirement is used specifically in the ASVS as it describes what must be achieved to satisfy it."
+    ],
+    "scope": "All requirements within the ASVS.",
+    "policy_description": "The ASVS only contains requirements (must) and does not contain recommendations (should) as the main condition.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Documented Security Decisions: Requirements for documenting key security decisions to enhance traceability."
+    ],
+    "scope": "All applications developed within the organization.",
+    "policy_description": "Requirements for documenting key security decisions must be followed to enhance traceability and support context-sensitive implementations.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Verification: The requirement must be verifiable, and the verification must result in a 'fail' or 'pass' decision."
+    ],
+    "scope": "All security requirements within the ASVS.",
+    "policy_description": "Every requirement must have a demonstrable impact on security, and the absence of a requirement must result in a less secure application.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Level 1: The minimum requirements to consider when securing an application."
+    ],
+    "scope": "All applications aiming for basic security compliance.",
+    "policy_description": "Level 1 contains around 20% of the ASVS requirements and represents a critical starting point for securing applications.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Level 2: A comprehensive view of standard security practices."
+    ],
+    "scope": "Applications striving for a higher level of security than Level 1.",
+    "policy_description": "Most applications should strive to achieve Level 2 security, which includes around 50% of the requirements in the ASVS.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Level 3: The highest level of security requirements."
+    ],
+    "scope": "Applications looking to demonstrate the highest levels of security.",
+    "policy_description": "Level 3 provides the final ~30% of requirements to comply with the ASVS and includes advanced security controls.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Scope of Verification: The scope of the verification should be clear, including which Level the organization is attempting to achieve."
+    ],
+    "scope": "All verification processes conducted by the organization.",
+    "policy_description": "The verifier should make the scope of the verification clear, including which Level the organization is attempting to achieve and which requirements were included.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Automated Security Testing Tools: Tools such as DAST and SAST that identify security issues."
+    ],
+    "scope": "All applications undergoing security testing.",
+    "policy_description": "Automated security testing tools must be correctly implemented in the build pipeline to identify security issues effectively.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Penetration Testing: A method of testing security by simulating attacks."
+    ],
+    "scope": "All applications undergoing security verification.",
+    "policy_description": "Documentation or source code-led penetration testing is strongly encouraged to verify many of the ASVS requirements.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Untrusted data: Data that has not been verified or sanitized and may pose a security risk."
+    ],
+    "scope": "All applications that dynamically build URLs.",
+    "policy_description": "Verify that when dynamically building URLs, untrusted data is encoded according to its context (e.g., URL encoding or base64 URL encoding for query or path parameters). Ensure that only safe URL protocols are permitted (e.g., disallow javascript: or data:).",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Output encoding: The process of converting data into a format that can be safely included in a web page or application output."
+    ],
+    "scope": "All applications that dynamically build JavaScript content.",
+    "policy_description": "Verify that output encoding or escaping is used when dynamically building JavaScript content (including JSON), to avoid changing the message or document structure (to avoid JavaScript and JSON injection).",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Parameterized queries: A method of executing database queries where parameters are passed separately from the query itself to prevent injection attacks."
+    ],
+    "scope": "All applications that perform data selection or database queries.",
+    "policy_description": "Verify that data selection or database queries (e.g., SQL, HQL, NoSQL, Cypher) use parameterized queries, ORMs, entity frameworks, or are otherwise protected from SQL injection and other database injection attacks.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "OS command injection: A type of attack where an attacker executes arbitrary commands on the operating system via a vulnerable application."
+    ],
+    "scope": "All applications that make operating system calls.",
+    "policy_description": "Verify that the application protects against OS command injection and that operating system calls use parameterized OS queries or use contextual command line output encoding.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "LDAP injection: An attack that exploits vulnerabilities in applications that construct LDAP queries from user input."
+    ],
+    "scope": "All applications that interact with LDAP directories.",
+    "policy_description": "Verify that the application protects against LDAP injection vulnerabilities, or that specific security controls to prevent LDAP injection have been implemented.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "XPath injection: An attack that exploits vulnerabilities in applications that construct XPath queries from user input."
+    ],
+    "scope": "All applications that use XPath queries.",
+    "policy_description": "Verify that the application is protected against XPath injection attacks by using query parameterization or precompiled queries.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "LaTeX injection: An attack that exploits vulnerabilities in applications that process LaTeX documents."
+    ],
+    "scope": "All applications that use LaTeX processors.",
+    "policy_description": "Verify that LaTeX processors are configured securely (such as not using the “–shell-escape” flag) and an allowlist of commands is used to prevent LaTeX injection attacks.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Regular expressions: A sequence of characters that define a search pattern, often used for string matching."
+    ],
+    "scope": "All applications that utilize regular expressions.",
+    "policy_description": "Verify that the application escapes special characters in regular expressions (typically using a backslash) to prevent them from being misinterpreted as metacharacters.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "CSV injection: An attack that exploits vulnerabilities in applications that generate CSV files."
+    ],
+    "scope": "All applications that export CSV content.",
+    "policy_description": "Verify that the application is protected against CSV and Formula Injection. The application must follow the escaping rules defined in RFC4180 sections 2.6 and 2.7 when exporting CSV content. Additionally, when exporting to CSV or other spreadsheet formats (such as XLS, XLSX, or ODF), special characters (including ‘=’, ‘+’, ‘‑’, ‘@’, ‘\t’ (tab), and ‘\u0000’ (null character)) must be escaped with a single quote if they appear as the first character in a field value.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Sanitization: The process of cleaning input data to remove potentially dangerous characters or content."
+    ],
+    "scope": "All applications that handle untrusted HTML input.",
+    "policy_description": "Verify that all untrusted HTML input from WYSIWYG editors or similar is sanitized using a well-known and secure HTML sanitization library or framework feature.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Dynamic code execution: The execution of code that is generated at runtime, which can introduce security risks."
+    ],
+    "scope": "All applications that use eval() or other dynamic code execution features.",
+    "policy_description": "Verify that the application avoids the use of eval() or other dynamic code execution features such as Spring Expression Language (SpEL). Where there is no alternative, any user input being included must be sanitized before being executed.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Server-side Request Forgery (SSRF): An attack that allows an attacker to send crafted requests from the server to internal resources."
+    ],
+    "scope": "All applications that make requests to other services.",
+    "policy_description": "Verify that the application protects against Server-side Request Forgery (SSRF) attacks, by validating untrusted data against an allowlist of protocols, domains, paths, and ports and sanitizing potentially dangerous characters before using the data to call another service.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Template injection: An attack that exploits vulnerabilities in applications that use template engines."
+    ],
+    "scope": "All applications that use templates.",
+    "policy_description": "Verify that the application protects against template injection attacks by not allowing templates to be built based on untrusted input. Where there is no alternative, any untrusted input being included dynamically during template creation must be sanitized or strictly validated.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Java Naming and Directory Interface (JNDI): An API that provides naming and directory functionality to applications."
+    ],
+    "scope": "All applications that use JNDI.",
+    "policy_description": "Verify that the application appropriately sanitizes untrusted input before use in Java Naming and Directory Interface (JNDI) queries and that JNDI is configured securely to prevent JNDI injection attacks.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Memcache: A distributed memory caching system used to speed up dynamic web applications."
+    ],
+    "scope": "All applications that use memcache.",
+    "policy_description": "Verify that the application sanitizes content before it is sent to memcache to prevent injection attacks.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Format strings: A string that specifies how to format output."
+    ],
+    "scope": "All applications that use format strings.",
+    "policy_description": "Verify that format strings which might resolve in an unexpected or malicious way when used are sanitized before being processed.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "SMTP: Simple Mail Transfer Protocol, used for sending emails."
+    ],
+    "scope": "All applications that pass user input to mail systems.",
+    "policy_description": "Verify that the application sanitizes user input before passing to mail systems to protect against SMTP or IMAP injection.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Regular expressions: A sequence of characters that define a search pattern."
+    ],
+    "scope": "All applications that use regular expressions.",
+    "policy_description": "Verify that regular expressions are free from elements causing exponential backtracking, and ensure untrusted input is sanitized to mitigate ReDoS or Runaway Regex attacks.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Memory safety: The practice of ensuring that memory is accessed safely to prevent vulnerabilities."
+    ],
+    "scope": "All applications that use system languages or unmanaged code.",
+    "policy_description": "Verify that the application uses memory-safe strings, safer memory copy, and pointer arithmetic to detect or prevent stack, buffer, or heap overflows.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Integer overflow: A condition where an arithmetic operation exceeds the maximum limit of an integer type."
+    ],
+    "scope": "All applications that perform integer operations.",
+    "policy_description": "Verify that sign, range, and input validation techniques are used to prevent integer overflows.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Memory management: The process of managing computer memory."
+    ],
+    "scope": "All applications that allocate memory.",
+    "policy_description": "Verify that dynamically allocated memory and resources are released, and that references or pointers to freed memory are removed or set to null to prevent dangling pointers and use-after-free vulnerabilities.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Deserialization: The process of converting data from a stored or transmitted representation into actual application objects."
+    ],
+    "scope": "All applications that perform deserialization.",
+    "policy_description": "Verify that deserialization of untrusted data enforces safe input handling, such as using an allowlist of object types or restricting client-defined object types, to prevent deserialization attacks.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "XML parser: A component that reads XML documents and provides access to their content."
+    ],
+    "scope": "All applications that use XML parsers.",
+    "policy_description": "Verify that the application configures XML parsers to use a restrictive configuration and that unsafe features such as resolving external entities are disabled to prevent XML External Entity (XXE) attacks.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "HTTP response: A message sent by a server in response to a client's request."
+    ],
+    "scope": "All applications that send HTTP responses.",
+    "policy_description": "Verify that every HTTP response with a message body contains a Content-Type header field that matches the actual content of the response, including the charset parameter to specify safe character encoding (e.g., UTF-8, ISO-8859-1) according to IANA Media Types.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "HTTP redirect: A response that instructs the client to request a different URL."
+    ],
+    "scope": "All applications that implement HTTP redirects.",
+    "policy_description": "Verify that only user-facing endpoints (intended for manual web-browser access) automatically redirect from HTTP to HTTPS, while other services or endpoints do not implement transparent redirects.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "HTTP method: A request method supported by HTTP, such as GET, POST, PUT, DELETE."
+    ],
+    "scope": "All applications that support HTTP methods.",
+    "policy_description": "Verify that only HTTP methods that are explicitly supported by the application or its API (including OPTIONS during preflight requests) can be used and that unused methods are blocked.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Digital signatures: A mathematical scheme for verifying the authenticity and integrity of a message."
+    ],
+    "scope": "All applications that handle sensitive requests or transactions.",
+    "policy_description": "Verify that per-message digital signatures are used to provide additional assurance on top of transport protections for requests or transactions which are highly sensitive or which traverse a number of systems.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "HTTP message: A formatted message sent over HTTP."
+    ],
+    "scope": "All applications that process HTTP messages.",
+    "policy_description": "Verify that all application components (including load balancers, firewalls, and application servers) determine boundaries of incoming HTTP messages using the appropriate mechanism for the HTTP version to prevent HTTP request smuggling.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "HTTP header: A component of the HTTP protocol that carries additional information about the request or response."
+    ],
+    "scope": "All applications that send or receive HTTP headers.",
+    "policy_description": "Verify that the application does not send nor accept HTTP/2 or HTTP/3 messages with connection-specific header fields such as Transfer-Encoding to prevent response splitting and header injection attacks.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "GraphQL: A query language for APIs and a runtime for fulfilling those queries with existing data."
+    ],
+    "scope": "All applications that expose GraphQL APIs.",
+    "policy_description": "Verify that a query allowlist, depth limiting, amount limiting, or query cost analysis is used to prevent GraphQL or data layer expression Denial of Service (DoS) as a result of expensive, nested queries.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "WebSocket: A communication protocol that provides full-duplex communication channels over a single TCP connection."
+    ],
+    "scope": "All applications that use WebSocket connections.",
+    "policy_description": "Verify that WebSocket over TLS (WSS) is used for all WebSocket connections.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "File upload: The process of transferring a file from a user's device to a server."
+    ],
+    "scope": "All applications that allow file uploads.",
+    "policy_description": "Verify that the application will only accept files of a size which it can process without causing a loss of performance or a denial of service attack.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "File extension: A suffix at the end of a filename that indicates the file type."
+    ],
+    "scope": "All applications that accept file uploads.",
+    "policy_description": "Verify that when the application accepts a file, either on its own or within an archive such as a zip file, it checks if the file extension matches an expected file extension and validates that the contents correspond to the type represented by the extension.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "File size quota: A limit on the amount of storage space that can be used by a user."
+    ],
+    "scope": "All applications that manage user file storage.",
+    "policy_description": "Verify that a file size quota and maximum number of files per user are enforced to ensure that a single user cannot fill up the storage with too many files, or excessively large files.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Path traversal: A security vulnerability that allows an attacker to access files and directories that are stored outside the intended directory."
+    ],
+    "scope": "All applications that create file paths for file operations.",
+    "policy_description": "Verify that when the application creates file paths for file operations, instead of user-submitted filenames, it uses internally generated or trusted data, or if user-submitted filenames or file metadata must be used, strict validation and sanitization must be applied.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "File processing: The act of manipulating files, such as reading, writing, or executing them."
+    ],
+    "scope": "All applications that process files.",
+    "policy_description": "Verify that server-side file processing, such as file decompression, ignores user-provided path information to prevent vulnerabilities such as zip slip.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Session management: The process of managing user sessions in an application."
+    ],
+    "scope": "All applications that maintain user sessions.",
+    "policy_description": "Verify that the user’s session inactivity timeout and absolute maximum session lifetime are documented, are appropriate in combination with other controls, and that the documentation includes justification for any deviations from NIST SP 800-63B re-authentication requirements.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Session token: A unique identifier that is used to manage a user's session."
+    ],
+    "scope": "All applications that use session tokens.",
+    "policy_description": "Verify that the application performs all session token verification using a trusted, backend service.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Inactivity timeout: A period of time after which a session is automatically terminated due to inactivity."
+    ],
+    "scope": "All applications that manage user sessions.",
+    "policy_description": "Verify that there is an inactivity timeout such that re-authentication is enforced according to risk analysis and documented security decisions.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Session termination: The process of ending a user session."
+    ],
+    "scope": "All applications that manage user sessions.",
+    "policy_description": "Verify that when session termination is triggered (such as logout or expiration), the application disallows any further use of the session.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Credential stuffing: An attack where an attacker uses stolen account credentials to gain unauthorized access."
+    ],
+    "scope": "All applications that implement authentication mechanisms.",
+    "policy_description": "Verify that controls to prevent attacks such as credential stuffing and password brute force are implemented according to the application’s security documentation.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Multi-factor authentication (MFA): A security mechanism that requires more than one form of verification to access an application."
+    ],
+    "scope": "All applications that require authentication.",
+    "policy_description": "Verify that either a multi-factor authentication mechanism or a combination of single-factor authentication mechanisms must be used in order to access the application.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "Identity Provider (IdP): A service that creates, maintains, and manages identity information for users."
+    ],
+    "scope": "All applications that support multiple identity providers.",
+    "policy_description": "Verify that if the application supports multiple identity providers (IdPs), the user’s identity cannot be spoofed via another supported identity provider (e.g., by using the same user identifier).",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that the application requires further authentication with at least one factor or secondary verification before performing highly sensitive transactions or operations.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that session lifetime and termination between Relying Parties (RPs) and Identity Providers (IdPs) behave as documented, requiring re-authentication as necessary such as when the maximum time between IdP authentication events is reached.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that creation of a session requires either the user’s consent or an explicit action, preventing the creation of new application sessions without user interaction.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that authorization documentation defines rules for restricting function-level and data-specific access based on consumer permissions and resource attributes.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that authorization documentation defines rules for field-level access restrictions (both read and write) based on consumer permissions and resource attributes.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that the application’s documentation defines the environmental and contextual attributes (including but not limited to time of day, user location, IP address, or device) that are used in the application to make security decisions, including those pertaining to authentication and authorization.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that authentication and authorization documentation defines how environmental and contextual factors are used in decision-making, in addition to function-level, data-specific, and field-level authorization.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that the application ensures that function-level access is restricted to consumers with explicit permissions.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that the application ensures that data-specific access is restricted to consumers with explicit permissions to specific data items to mitigate insecure direct object reference (IDOR) and broken object level authorization (BOLA).",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that the application ensures that field-level access is restricted to consumers with explicit permissions to specific fields to mitigate broken object property level authorization (BOPLA).",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that adaptive security controls based on a consumer’s environmental and contextual attributes (such as time of day, location, IP address, or device) are implemented for authentication and authorization decisions, as defined in the application’s documentation.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that the application enforces authorization rules at a trusted service layer and doesn’t rely on controls that an untrusted consumer could manipulate, such as client-side JavaScript.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that changes to values on which authorization decisions are made are applied immediately. Where changes cannot be applied immediately, there must be mitigating controls to alert when a consumer performs an action when they are no longer authorized to do so and revert the change.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that access to an object is based on the originating subject’s (e.g., consumer’s) permissions, not on the permissions of any intermediary or service acting on their behalf.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that multi-tenant applications use cross-tenant controls to ensure consumer operations will never affect tenants with which they do not have permissions to interact.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that access to administrative interfaces incorporates multiple layers of security, including continuous consumer identity verification, device security posture assessment, and contextual risk analysis.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that self-contained tokens are validated using their digital signature or MAC to protect against tampering before accepting the token’s contents.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that only algorithms on an allowlist can be used to create and verify self-contained tokens, for a given context.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that key material that is used to validate self-contained tokens is from trusted pre-configured sources for the token issuer.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that if a validity timespan is present in the token data, the token and its content are accepted only if the verification time is within this validity timespan.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that the service receiving a token validates the token to be the correct type and is meant for the intended purpose before accepting the token’s contents.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that the service only accepts tokens which are intended for use with that service (audience).",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that if a token issuer uses the same private key for issuing tokens to different audiences, the issued tokens contain an audience restriction that uniquely identifies the intended audiences.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that tokens are only sent to components that strictly need them.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that the client only accepts values from the authorization server if these values result from an authorization flow that was initiated by the same user agent session and transaction.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that if the code flow is used, the OAuth client has protection against browser-based request forgery attacks.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that if the OAuth client can interact with more than one authorization server, it has a defense against mix-up attacks.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that the OAuth client only requests the required scopes (or other authorization parameters) in requests to the authorization server.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that the resource server only accepts access tokens that are intended for use with that service (audience).",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that the resource server enforces authorization decisions based on claims from the access token that define delegated authorization.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that if an access control decision requires identifying a unique user from an access token, the resource server identifies the user from claims that cannot be reassigned to other users.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that if the resource server requires specific authentication strength, methods, or recentness, it verifies that the presented access token satisfies these constraints.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that the authorization server validates redirect URIs based on a client-specific allowlist of pre-registered URIs using exact string comparison.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that if the authorization server returns the authorization code in the authorization response, it can be used only once for a token request.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that the authorization code is short-lived.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that for a given client, the authorization server only allows the usage of grants that this client needs to use.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that the authorization server mitigates refresh token replay attacks for public clients.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that if the code grant is used, the authorization server mitigates authorization code interception attacks by requiring proof key for code exchange (PKCE).",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that refresh tokens have an absolute expiration.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that refresh tokens and reference access tokens can be revoked by an authorized user using the authorization server user interface.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that the authorization server configuration only assigns the required scopes to the OAuth client.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that for a given client, the authorization server only allows the 'response_mode' value that this client needs to use.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that the client is confidential and the authorization server requires the use of strong client authentication methods.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that the application is designed with strong cryptographic architecture to protect data assets according to their classification.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that there is a documented policy for management of cryptographic keys and a cryptographic key lifecycle that follows a key management standard such as NIST SP800-57.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that a cryptographic inventory is performed, maintained, regularly updated, and includes all cryptographic keys, algorithms, and certificates used by the application.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that all random numbers and strings which are intended to be non-guessable must be generated using a cryptographically secure pseudo-random number generator (CSPRNG) and have at least 128 bits of entropy.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that sensitive data is only sent to the server in the HTTP message body or header fields, and that the URL and query string do not contain sensitive information.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that the application prevents sensitive data from being cached in server components, such as load balancers and application caches, or ensure that the data is securely purged after use.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that controls around sensitive data related to encryption, integrity verification, retention, how the data is to be logged, access controls around sensitive data in logs, privacy and privacy-enhancing technologies are implemented as defined in the documentation for the specific data’s protection level.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that sensitive information is removed from the metadata of user-submitted files unless storage is consented to by the user.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that the application does not expose detailed version information of backend components.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that the application is deployed either without any source control metadata or in a way that these folders are inaccessible both externally and to the application itself.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that debug modes are disabled for all components in production environments to prevent exposure of debugging features and information leakage.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that web servers do not expose directory listings to clients unless explicitly intended.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that using the HTTP TRACE method is not supported in production environments, to avoid potential information leakage.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that documentation (such as for internal APIs) and monitoring endpoints are not exposed unless explicitly intended.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "None"
+    ],
+    "scope": "None",
+    "policy_description": "Verify that the web tier is configured to only serve files with specific file extensions to prevent unintentional information, configuration, and source code leakage.",
+    "reference": [
+      "ApplicationSecurityVerificationStandard May2025"
+    ]
+  },
+  {
+    "definition": [
+      "data object",
+      "subset of fields"
+    ],
+    "scope": "All applications utilizing data objects.",
+    "policy_description": "Verify that the application only returns the required subset of fields from a data object. For example, it should not return an entire data object, as some individual fields should not be accessible to users.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "external URLs",
+      "redirects"
+    ],
+    "scope": "All applications making calls to external URLs.",
+    "policy_description": "Verify that where the application backend makes calls to external URLs, it is configured to not follow redirects unless it is intended functionality.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "mass assignment attacks",
+      "allowed fields",
+      "controller",
+      "action"
+    ],
+    "scope": "All applications with user input handling.",
+    "policy_description": "Verify that the application has countermeasures to protect against mass assignment attacks by limiting allowed fields per controller and action, e.g., it is not possible to insert or update a field value when it was not intended to be part of that action.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "proxying",
+      "middleware components",
+      "original IP address"
+    ],
+    "scope": "All applications utilizing proxying and middleware components.",
+    "policy_description": "Verify that all proxying and middleware components transfer the user’s original IP address correctly using trusted data fields that cannot be manipulated by the end user, and the application and web server use this correct value for logging and security decisions such as rate limiting, taking into account that even the original IP address may not be reliable due to dynamic IPs, VPNs, or corporate firewalls.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "variables",
+      "correct type",
+      "strict equality",
+      "comparator operations"
+    ],
+    "scope": "All applications handling variable types.",
+    "policy_description": "Verify that the application explicitly ensures that variables are of the correct type and performs strict equality and comparator operations. This is to avoid type juggling or type confusion vulnerabilities caused by the application code making an assumption about a variable type.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "JavaScript code",
+      "prototype pollution"
+    ],
+    "scope": "All applications utilizing JavaScript.",
+    "policy_description": "Verify that JavaScript code is written in a way that prevents prototype pollution, for example, by using Set() or Map() instead of object literals.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "HTTP parameter pollution attacks",
+      "application framework"
+    ],
+    "scope": "All applications using an application framework.",
+    "policy_description": "Verify that the application has defenses against HTTP parameter pollution attacks, particularly if the application framework makes no distinction about the source of request parameters (query string, body parameters, cookies, or header fields).",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "shared objects",
+      "multi-threaded code",
+      "race conditions",
+      "data corruption"
+    ],
+    "scope": "All applications with multi-threaded code.",
+    "policy_description": "Verify that shared objects in multi-threaded code (such as caches, files, or in-memory objects accessed by multiple threads) are accessed safely by using thread-safe types and synchronization mechanisms like locks or semaphores to avoid race conditions and data corruption.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "resource's state",
+      "atomic operation",
+      "time-of-check to time-of-use (TOCTOU)"
+    ],
+    "scope": "All applications performing resource checks.",
+    "policy_description": "Verify that checks on a resource’s state, such as its existence or permissions, and the actions that depend on them are performed as a single atomic operation to prevent time-of-check to time-of-use (TOCTOU) race conditions. For example, checking if a file exists before opening it, or verifying a user’s access before granting it.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "locks",
+      "locking logic"
+    ],
+    "scope": "All applications using locks in multi-threaded environments.",
+    "policy_description": "Verify that locks are used consistently to avoid threads getting stuck, whether by waiting on each other or trying endlessly, and that locking logic stays within the code responsible for managing the resource to ensure locks cannot be inadvertently or maliciously modified by external classes or code.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "resource allocation policies",
+      "thread starvation"
+    ],
+    "scope": "All applications managing resource allocation.",
+    "policy_description": "Verify that resource allocation policies prevent thread starvation by ensuring fair access to resources, such as by leveraging thread pools, allowing lower-priority threads to proceed within a reasonable timeframe.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "security logs",
+      "error logs",
+      "performance logs"
+    ],
+    "scope": "All applications generating logs.",
+    "policy_description": "Security logs are distinct from error or performance logs and are used to record security-relevant events such as authentication decisions, access control decisions, and attempts to bypass security controls, such as input validation or business logic validation. Their purpose is to support detection, response, and investigation by providing high-signal, structured data for analysis tools like SIEMs.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "sensitive personal data",
+      "logged data"
+    ],
+    "scope": "All applications handling sensitive data.",
+    "policy_description": "Logs should not include sensitive personal data unless legally required, and any logged data must be protected as a high-value asset. Logging must not compromise privacy or system security.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "logging inventory",
+      "application stack"
+    ],
+    "scope": "All applications with logging mechanisms.",
+    "policy_description": "Verify that an inventory exists documenting the logging performed at each layer of the application’s technology stack, what events are being logged, log formats, where that logging is stored, how it is used, how access to it is controlled, and for how long logs are kept.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "log entry",
+      "metadata"
+    ],
+    "scope": "All applications generating log entries.",
+    "policy_description": "Verify that each log entry includes necessary metadata (such as when, where, who, what) that would allow for a detailed investigation of the timeline when an event happens.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "time sources",
+      "synchronized timestamps"
+    ],
+    "scope": "All applications generating logs.",
+    "policy_description": "Verify that time sources for all logging components are synchronized, and that timestamps in security event metadata use UTC or include an explicit timezone offset. UTC is recommended to ensure consistency across distributed systems and to prevent confusion during daylight saving time transitions.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "logged data",
+      "protection level"
+    ],
+    "scope": "All applications logging sensitive data.",
+    "policy_description": "Verify that when logging sensitive data, the application enforces logging based on the data’s protection level. For example, it may not be allowed to log certain data, such as credentials or payment details. Other data, such as session tokens, may only be logged by being hashed or masked, either in full or partially.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "security events",
+      "application logging"
+    ],
+    "scope": "All applications logging security events.",
+    "policy_description": "Verify that all authentication operations are logged, including successful and unsuccessful attempts. Additional metadata, such as the type of authentication or factors used, should also be collected.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "failed authorization attempts",
+      "sensitive data"
+    ],
+    "scope": "All applications handling authorization.",
+    "policy_description": "Verify that failed authorization attempts are logged. For Level 3, this must include logging all authorization decisions, including logging when sensitive data is accessed (without logging the sensitive data itself).",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "security events",
+      "security controls"
+    ],
+    "scope": "All applications logging security events.",
+    "policy_description": "Verify that the application logs the security events that are defined in the documentation and also logs attempts to bypass the security controls, such as input validation, business logic, and anti-automation.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "unexpected errors",
+      "security control failures"
+    ],
+    "scope": "All applications handling errors.",
+    "policy_description": "Verify that the application logs unexpected errors and security control failures such as backend TLS failures.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "log injection",
+      "logging components"
+    ],
+    "scope": "All applications generating logs.",
+    "policy_description": "Verify that all logging components appropriately encode data to prevent log injection.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "unauthorized access",
+      "logs"
+    ],
+    "scope": "All applications generating logs.",
+    "policy_description": "Verify that logs are protected from unauthorized access and cannot be modified.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "logs",
+      "secure transmission"
+    ],
+    "scope": "All applications transmitting logs.",
+    "policy_description": "Verify that logs are securely transmitted to a logically separate system for analysis, detection, alerting, and escalation. The aim is to ensure that if the application is breached, the logs are not compromised.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "generic message",
+      "sensitive internal details"
+    ],
+    "scope": "All applications handling errors.",
+    "policy_description": "Verify that a generic message is returned to the consumer when an unexpected or security-sensitive error occurs, ensuring no exposure of sensitive internal system data such as stack traces, queries, secret keys, and tokens.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "external resource access",
+      "secure operation"
+    ],
+    "scope": "All applications accessing external resources.",
+    "policy_description": "Verify that the application continues to operate securely when external resource access fails, for example, by using patterns such as circuit breakers or graceful degradation.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "graceful failure",
+      "exception handling"
+    ],
+    "scope": "All applications handling exceptions.",
+    "policy_description": "Verify that the application fails gracefully and securely, including when an exception occurs, preventing fail-open conditions such as processing a transaction despite errors resulting from validation logic.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "last resort error handler",
+      "unhandled exceptions"
+    ],
+    "scope": "All applications handling exceptions.",
+    "policy_description": "Verify that a 'last resort' error handler is defined which will catch all unhandled exceptions. This is both to avoid losing error details that must go to log files and to ensure that an error does not take down the entire application process, leading to a loss of availability.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "WebRTC",
+      "real-time communication"
+    ],
+    "scope": "All applications utilizing WebRTC.",
+    "policy_description": "Web Real-Time Communication (WebRTC) enables real-time voice, video, and data exchange in modern applications. As adoption increases, securing WebRTC infrastructure becomes critical.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "TURN service",
+      "IP addresses"
+    ],
+    "scope": "All applications operating TURN servers.",
+    "policy_description": "Verify that the Traversal Using Relays around NAT (TURN) service only allows access to IP addresses that are not reserved for special purposes (e.g., internal networks, broadcast, loopback). Note that this applies to both IPv4 and IPv6 addresses.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "resource exhaustion",
+      "TURN server"
+    ],
+    "scope": "All applications operating TURN servers.",
+    "policy_description": "Verify that the Traversal Using Relays around NAT (TURN) service is not susceptible to resource exhaustion when legitimate users attempt to open a large number of ports on the TURN server.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "media servers",
+      "WebRTC"
+    ],
+    "scope": "All applications hosting their own WebRTC media servers.",
+    "policy_description": "Verify that the media server is configured to use and support approved Datagram Transport Layer Security (DTLS) cipher suites and a secure protection profile for the DTLS Extension for establishing keys for the Secure Real-time Transport Protocol (DTLS-SRTP).",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "SRTP authentication",
+      "media server"
+    ],
+    "scope": "All applications hosting their own WebRTC media servers.",
+    "policy_description": "Verify that Secure Real-time Transport Protocol (SRTP) authentication is checked at the media server to prevent Real-time Transport Protocol (RTP) injection attacks from leading to either a Denial of Service condition or audio or video media insertion into media streams.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "malformed SRTP packets",
+      "media server"
+    ],
+    "scope": "All applications hosting their own WebRTC media servers.",
+    "policy_description": "Verify that the media server is able to continue processing incoming media traffic when encountering malformed Secure Real-time Transport Protocol (SRTP) packets.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "flood of SRTP packets",
+      "media server"
+    ],
+    "scope": "All applications hosting their own WebRTC media servers.",
+    "policy_description": "Verify that the media server is able to continue processing incoming media traffic during a flood of Secure Real-time Transport Protocol (SRTP) packets from legitimate users.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "ClientHello race condition",
+      "DTLS"
+    ],
+    "scope": "All applications hosting their own WebRTC media servers.",
+    "policy_description": "Verify that the media server is not susceptible to the 'ClientHello' Race Condition vulnerability in Datagram Transport Layer Security (DTLS) by checking if the media server is publicly known to be vulnerable or by performing the race condition test.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "signaling server",
+      "peer-to-peer communication"
+    ],
+    "scope": "All applications operating their own WebRTC signaling servers.",
+    "policy_description": "Verify that the signaling server is able to continue processing legitimate incoming signaling messages during a flood attack. This should be achieved by implementing rate limiting at the signaling level.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  },
+  {
+    "definition": [
+      "malformed signaling messages",
+      "signaling server"
+    ],
+    "scope": "All applications operating their own WebRTC signaling servers.",
+    "policy_description": "Verify that the signaling server is able to continue processing legitimate signaling messages when encountering malformed signaling messages that could cause a denial of service condition. This could include implementing input validation, safely handling integer overflows, preventing buffer overflows, and employing other robust error-handling techniques.",
+    "reference": [
+      "Application Security Verification Standard May 2025"
+    ]
+  }
+]
