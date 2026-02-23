@@ -61,6 +61,8 @@ The selection covers: Secure SDLC, Secure coding, System hardening, Dependency m
 - [Supply-chain Levels for Software Artifacts](https://slsa.dev/spec/v1.2/) &rarr; CI/CD configs generation
 - [CIS Benchmarks](https://downloads.cisecurity.org/#/?pi_content=91ab0d92a7268333c808284d1f6b464f3c9b71bb57ad44b7b18318fa8568bc49) &rarr; community-driven best practice guidelines (from companies) ([What are CIS Benchmarks?](https://www.ibm.com/think/topics/cis-benchmarks))
 
+## Agent Behavior-related Policy 
+
 ### Example Policy (Sketch)
 ```yaml
 policy_id: DEP_PIN_001
@@ -74,6 +76,24 @@ standard_mapping:
   - CWE-1104
   - OWASP-A06
 ```
+
+### To Define A "Good" Policy
+We formalize a "good" policy ensures two fundamental dimensions:
+1. Ambiguity (interpretability clarity)
+2. Measurability (verifiability / enforceability)
+
+### Measurement Metrics
+1. Consistency
+   - Between what an agent says and what it actually does
+       - Say-Do Consistency (SDC)
+```math
+\text{SDC} = \frac{\text{# actions consistent with stated plan}}{\text{total actions}}
+```
+       - Behavioral Consistency via KL Divergence
+```math
+$D_{\mathrm{KL}}\!\left(\pi_{\text{declared}} \,\middle\|\, \pi_{\text{actual}}\right)$
+```
+       - TODO: Check the proposal for the consistency metric
 
 ## Experimental Evaluation
 ### Agents
