@@ -62,7 +62,7 @@ The selection covers: Secure SDLC, Secure coding, System hardening, Dependency m
 
 - [Supply-chain Levels for Software Artifacts](https://slsa.dev/spec/v1.2/) &rarr; CI/CD configs generation
 - [CIS Benchmarks](https://downloads.cisecurity.org/#/?pi_content=91ab0d92a7268333c808284d1f6b464f3c9b71bb57ad44b7b18318fa8568bc49) &rarr; community-driven best practice guidelines (from companies) ([What are CIS Benchmarks?](https://www.ibm.com/think/topics/cis-benchmarks))
-- [Palo Alto The C-Suite Guide to GenAI Risk Management]()
+- [Palo Alto The C-Suite Guide to GenAI Risk Management](policy/c-suite-guide-to-gen-ai-risk-management.pdf)
 
 ## Agent Behavior-related Policy 
 
