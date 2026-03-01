@@ -54,12 +54,15 @@ The selection covers: Secure SDLC, Secure coding, System hardening, Dependency m
 - [CWE Top 25 Most Dangerous Software Weaknesses](https://cwe.mitre.org/top25/index.html) &rarr; Vulnerability identification
 - [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/) &rarr; Requirement for authentication, crypto, input validation, logging, etc.
 - [CERT Secure Coding Standards](https://wiki.sei.cmu.edu/confluence/spaces/seccode/pages/88042752/SEI+CERT+Coding+Standards) &rarr; Language-aware enforcement
+- [OWASP AI Agent Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html)
+- [OWASP Top 10 Risk & Mitigations for LLMs and GenAI Apps](https://statics.teams.cdn.office.net/evergreen-assets/safelinks/2/atp-safelinks.html)
  
 - [NIST SP 800-53 — Security and Privacy Controls](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) &rarr; Access control, configuration management, system integrity
 - [OWASP Proactive Controls](https://owasp.org/projects/spotlight/historical/2021.02.10/) &rarr; Developer security guidance like SCP
 
 - [Supply-chain Levels for Software Artifacts](https://slsa.dev/spec/v1.2/) &rarr; CI/CD configs generation
 - [CIS Benchmarks](https://downloads.cisecurity.org/#/?pi_content=91ab0d92a7268333c808284d1f6b464f3c9b71bb57ad44b7b18318fa8568bc49) &rarr; community-driven best practice guidelines (from companies) ([What are CIS Benchmarks?](https://www.ibm.com/think/topics/cis-benchmarks))
+- [Palo Alto The C-Suite Guide to GenAI Risk Management]()
 
 ## Agent Behavior-related Policy 
 
