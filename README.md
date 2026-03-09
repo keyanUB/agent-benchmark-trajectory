@@ -112,6 +112,7 @@ We formalize a "good" policy ensures two fundamental dimensions:
 **Proprietary Agents**
 - Cursor
 - CodeX
+- Claude Code
 
 ### Benchmarks
 - SusVibes| [Is Vibe Coding Safe? Benchmarking Vulnerability of Agent-Generated Code in Real-World Tasks](https://arxiv.org/abs/2512.03262) | [GitHub](https://github.com/LeiLiLab/susvibes)
@@ -122,7 +123,28 @@ We formalize a "good" policy ensures two fundamental dimensions:
 - SecRepoBench | [SecRepoBench: Benchmarking Code Agents for Secure Code Completion in Real-World Repositories](https://arxiv.org/pdf/2504.21205) | [GitHub](https://github.com/ai-sec-lab/SecRepoBench)
 - CWEval | [CWEval: Outcome-driven Evaluation on Functionality and Security of LLM Code Generation](https://ieeexplore.ieee.org/document/11028476?denied=) | [GitHub](https://github.com/Co1lin/CWEval)
 - BaxBench | [BaxBench: Can LLMs Generate Correct and Secure Backends?](https://arxiv.org/abs/2502.11844) | [GitHub](https://github.com/logic-star-ai/baxbench)
-- 
+
+## Agent Lifecycle
+
+* No standard lifecycle for current agents. A synthesized lifecycle from Claude:
+1. Perception/Input
+2. Memory Retrieval
+3. Reasoning/Planning
+4. Action/Tool Use
+5. Obervation
+6. Memory Update
+7. Evaluation/Reflection
+8. Termination
+
+### The Software Development Life Cycle (SDLC)?
+1. Planning
+2. Requirements analysis
+3. Design
+4. Implementation
+5. Testing
+6. Deployment
+7. Maintenance
+ 
 
 ### Methods
 #### Policy Extraction
