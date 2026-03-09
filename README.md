@@ -55,7 +55,7 @@ The selection covers: Secure SDLC, Secure coding, System hardening, Dependency m
 - [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/) &rarr; Requirement for authentication, crypto, input validation, logging, etc.
 - [CERT Secure Coding Standards](https://wiki.sei.cmu.edu/confluence/spaces/seccode/pages/88042752/SEI+CERT+Coding+Standards) &rarr; Language-aware enforcement
 - [OWASP AI Agent Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html)
-- [OWASP Top 10 Risk & Mitigations for LLMs and GenAI Apps](https://statics.teams.cdn.office.net/evergreen-assets/safelinks/2/atp-safelinks.html)
+- [OWASP Top 10 Risk & Mitigations for LLMs and GenAI Apps](policy/LLMAll.pdf)
  
 - [NIST SP 800-53 — Security and Privacy Controls](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final) &rarr; Access control, configuration management, system integrity
 - [OWASP Proactive Controls](https://owasp.org/projects/spotlight/historical/2021.02.10/) &rarr; Developer security guidance like SCP
