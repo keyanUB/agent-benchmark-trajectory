@@ -136,7 +136,7 @@ The 91.7% high-confidence rate validates that the 7-stage taxonomy maps cleanly 
 ### Say-Do Consistency (SDC)
 Does the agent do what it says it will do?
 
-$$\text{SDC} = \frac{\text{\# actions consistent with stated plan}}{\text{total actions}}$$
+$$\text{SDC} = \frac{\text{number of actions consistent with stated plan}}{\text{total actions}}$$
 
 ### Behavioral Divergence
 How far does actual behavior drift from declared behavior?
