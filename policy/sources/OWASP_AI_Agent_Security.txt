@@ -1,0 +1,125 @@
+AI Agent Security Cheat Sheet
+Source: https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html
+OWASP Cheat Sheet Series
+
+Introduction
+
+AI agents are autonomous systems powered by Large Language Models (LLMs) that can reason, plan, use tools, maintain memory, and take actions to accomplish goals. This expanded capability introduces unique security risks beyond traditional LLM prompt injection. This cheat sheet provides best practices to secure AI agent architectures and minimize attack surfaces.
+
+Key Risks
+
+Prompt Injection (Direct & Indirect): Malicious instructions injected via user input or external data sources (websites, documents, emails) that hijack agent behavior.
+
+Tool Abuse & Privilege Escalation: Agents exploiting overly permissive tools to perform unintended actions or access unauthorized resources.
+
+Data Exfiltration: Sensitive information leaked through tool calls, API requests, or agent outputs.
+
+Memory Poisoning: Malicious data persisted in agent memory to influence future sessions or other users.
+
+Goal Hijacking: Manipulating agent objectives to serve attacker purposes while appearing legitimate.
+
+Excessive Autonomy: Agents taking high-impact actions without appropriate human oversight.
+
+Cascading Failures: Compromised agents in multi-agent systems propagating attacks to other agents.
+
+AI Console Malicious Configuration: AI developer consoles can be compelled to consume data that contains instructions driving malicious changes to the underlying LLM configuration.
+
+Denial of Wallet (DoW): Attacks causing excessive API/compute costs through unbounded agent loops.
+
+Sensitive Data Exposure: PII, credentials, or confidential data inadvertently included in agent context or logs.
+
+Supply Chain Attacks: Compromising third-party tools, APIs, or data sources used by agents.
+
+Best Practices
+
+1. Tool Security & Least Privilege
+
+Grant agents the minimum tools required for their specific task.
+Implement per-tool permission scoping (read-only vs. write, specific resources).
+Use separate tool sets for different trust levels (e.g., internal vs. user-facing agents).
+Require explicit tool authorization for sensitive operations.
+
+2. Input Validation & Prompt Injection Defense
+
+Treat all external data as untrusted (user messages, retrieved documents, API responses, emails).
+Implement input sanitization before including external content in agent context.
+Use delimiters and clear boundaries between instructions and data.
+Apply content filtering for known injection patterns.
+Consider using separate LLM calls to validate/summarize untrusted content.
+
+3. Memory & Context Security
+
+Validate and sanitize data before storing in agent memory.
+Implement memory isolation between users/sessions.
+Set memory expiration and size limits.
+Audit memory contents for sensitive data before persistence.
+Use cryptographic integrity checks for long-term memory.
+
+4. Human-in-the-Loop Controls
+
+Require explicit approval for high-impact or irreversible actions.
+Implement action previews before execution.
+Set autonomy boundaries based on action risk levels.
+Provide clear audit trails of agent decisions and actions.
+Allow users to interrupt and rollback agent operations.
+
+5. Output Validation & Guardrails
+
+Validate agent outputs before execution or display.
+Implement output filtering for sensitive data leakage.
+Use structured outputs with schema validation where possible.
+Set boundaries on output actions (rate limits, scope limits).
+Apply content safety filters to generated responses.
+
+6. Monitoring & Observability
+
+Log all agent decisions, tool calls, and outcomes.
+Implement anomaly detection for unusual agent behavior.
+Track token usage and costs per session/user.
+Set up alerts for security-relevant events.
+Maintain audit trails for compliance and forensics.
+
+7. Multi-Agent Security
+
+Implement trust boundaries between agents.
+Validate and sanitize inter-agent communications.
+Prevent privilege escalation through agent chains.
+Isolate agent execution environments.
+Apply circuit breakers to prevent cascading failures.
+
+8. Data Protection & Privacy
+
+Minimize sensitive data in agent context.
+Implement data classification and handling rules.
+Apply encryption for data at rest and in transit.
+Enforce data retention and deletion policies.
+Comply with privacy regulations (GDPR, CCPA).
+
+Do's and Don'ts
+
+Do:
+Apply least privilege to all agent tools and permissions.
+Validate and sanitize all external inputs (user messages, documents, API responses).
+Implement human-in-the-loop for high-risk actions.
+Isolate memory and context between users/sessions.
+Monitor agent behavior and set up anomaly detection.
+Use structured outputs with schema validation.
+Sign and verify inter-agent communications.
+Classify data and apply appropriate protections.
+
+Don't:
+Give agents unrestricted tool access or wildcard permissions.
+Trust content from external sources (websites, emails, documents).
+Allow agents to execute arbitrary code without sandboxing.
+Store sensitive data in agent memory without encryption/redaction.
+Let agents make high-impact decisions without human oversight.
+Ignore cost controls (unbounded loops can cause Denial of Wallet).
+Pass unsanitized data between agents in multi-agent systems.
+Log sensitive data (PII, credentials) in plain text.
+
+References
+
+OWASP LLM Top 10: https://owasp.org/www-project-top-10-for-large-language-model-applications/
+NIST AI Risk Management Framework: https://www.nist.gov/itl/ai-risk-management-framework
+OpenAI Safety Best Practices: https://platform.openai.com/docs/guides/safety-best-practices
+Google Secure AI Framework (SAIF): https://safety.google/safety/saif/

@@ -52,24 +52,22 @@ Auditable Agent Decisions
 - Insufficient input validation and sanitization
 - Privilege escalation in generated configs
 
-## Standards and References (Under Verification)
-Coverage targets: secure SDLC, secure coding, hardening, dependency management, deployment security, access control, risk management.
+## Policy Sources
 
-### Primary Sources
-- [NIST Secure Software Development Framework (SP 800-218)](https://csrc.nist.gov/pubs/sp/800/218/final): lifecycle governance principles
-- [CWE Top 25 Most Dangerous Software Weaknesses](https://cwe.mitre.org/top25/index.html): vulnerability classes
-- [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/): verifiable security requirements
-- [CERT Secure Coding Standards](https://wiki.sei.cmu.edu/confluence/spaces/seccode/pages/88042752/SEI+CERT+Coding+Standards): language-aware secure coding guidance
-- [OWASP AI Agent Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html)
-- [OWASP Top 10 Risk & Mitigations for LLMs and GenAI Apps](policy/LLMAll.pdf)
+Seven sources were selected to cover secure SDLC, vulnerability classes, AI/LLM-specific risks, and agent-specific controls. For detailed inclusion and exclusion rationale, see [docs/principles-sources.md](docs/principles-sources.md).
 
-### Supplementary Sources
-- [NIST SP 800-53](https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final): access control, configuration management, integrity
-- [OWASP Proactive Controls](https://owasp.org/projects/spotlight/historical/2021.02.10/): secure development controls
-- [SLSA v1.2](https://slsa.dev/spec/v1.2/): supply-chain integrity for build/release pipelines
-- [CIS Benchmarks](https://downloads.cisecurity.org/#/?pi_content=91ab0d92a7268333c808284d1f6b464f3c9b71bb57ad44b7b18318fa8568bc49): hardening baselines
-- [What Are CIS Benchmarks? (IBM)](https://www.ibm.com/think/topics/cis-benchmarks)
-- [Palo Alto: C-Suite Guide to GenAI Risk Management](policy/c-suite-guide-to-gen-ai-risk-management.pdf)
+| Source | Policies |
+|--------|----------|
+| [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/) | 429 |
+| [NIST AI RMF (AI 100-1)](https://airc.nist.gov/Home) | 122 |
+| [OWASP LLM Top 10](https://owasp.org/www-project-top-10-for-large-language-model-applications/) | 90 |
+| [CWE Top 25](https://cwe.mitre.org/top25/index.html) | 85 |
+| [OWASP AI Agent Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html) | 55 |
+| [NIST SP 800-218 (SSDF)](https://csrc.nist.gov/pubs/sp/800/218/final) | 48 |
+| [Palo Alto GenAI Risk Guide](https://www.paloaltonetworks.com/blog/2024/02/c-suite-guide-to-gen-ai-risk-management/) | 40 |
+| **Total** | **869** |
+
+Sources considered but excluded: CERT Secure Coding Standards, NIST SP 800-53, OWASP Proactive Controls, SLSA v1.2, CIS Benchmarks, MITRE ATLAS.
 
 ## Policy Model
 

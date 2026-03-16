@@ -1,0 +1,4155 @@
+[
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "For any reuse or distribution, you must clearly communicate the license terms of this work to others.",
+    "reference": [
+      "CopyrightandLicense",
+      "Creative Commons Attribution-ShareAlike 4.0 International License",
+      "Version5.0.0, May2025"
+    ],
+    "policy_id": "ASVS-001"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Componentsthatserve,modify,orvalidateHTTPtraffic,suchasWebApplicationFirewalls(WAFs), load balancers, or proxies, may be considered part of the application for those specific purposes, as some security controls depend directly on them or can be implemented through them.",
+    "reference": [
+      "ScopeoftheASVS",
+      "Application"
+    ],
+    "policy_id": "ASVS-002"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "These components should be considered for requirements related to cached responses, rate limiting, or restrictingincomingandoutgoingconnectionsbasedonsourceanddestination.",
+    "reference": [
+      "ScopeoftheASVS",
+      "Application"
+    ],
+    "policy_id": "ASVS-003"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "The requirement must be verifiable, and the verification must result in a “fail” or “pass” decision.",
+    "reference": [
+      "Verification"
+    ],
+    "policy_id": "ASVS-004"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "The ASVS only contains requirements (must) and does not contain recommendations (should) as the main condition.",
+    "reference": [
+      "Requirement"
+    ],
+    "policy_id": "ASVS-005"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Documentationrequirementsarealwaysinthefirstsectionofachapter(althoughnoteverychapterhasthem)andalwayshavearelatedimplementationrequirementwherethedecisionsthataredocumentedshouldactuallybeputintoplace.",
+    "reference": [
+      "Documentedsecuritydecisions"
+    ],
+    "policy_id": "ASVS-006"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Each requirement has an identifier in the format <chapter>.<section>.<requirement>,where each element is a number.",
+    "reference": [
+      "HowtoReferenceASVSRequirements"
+    ],
+    "policy_id": "ASVS-007"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "The v preceding the version number in the format should always be lowercase.",
+    "reference": [
+      "HowtoReferenceASVSRequirements"
+    ],
+    "policy_id": "ASVS-008"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "If identifiers are used without including the v<version> element then they should be assumed to refer to the latest Application Security Verification Standard content.",
+    "reference": [
+      "HowtoReferenceASVSRequirements"
+    ],
+    "policy_id": "ASVS-009"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Merely running an automated tool without thorough testing is insufficient for certification, as each requirement must be verifiably tested.",
+    "reference": [
+      "VerificationMechanisms",
+      "TheRoleofAutomatedSecurityTestingTools"
+    ],
+    "policy_id": "ASVS-010"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "It is strongly encouraged to perform documentation or source code‑led (hybrid) penetration testing, which have full access to the application developers and the application’s documentation, rather than traditional penetration tests.",
+    "reference": [
+      "TheRoleofPenetrationTesting",
+      "VerificationMechanisms"
+    ],
+    "policy_id": "ASVS-011"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Organizations may offer assurance services, provided they do not claim official OWASP certification.",
+    "reference": [
+      "AssessmentandCertification",
+      "OWASP’sStanceonASVSCertificationsandTrustMarks"
+    ],
+    "policy_id": "ASVS-012"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "1.1.1 Verify that input is decoded or unescaped into a canonical form only once, it is only decoded when encoded data in that form is expected, and that this is done before processing the input further, for example it is not performed after input validation or sanitization.",
+    "reference": [
+      "1.1.1",
+      "v5.0.0-1.1.1",
+      "V1.1EncodingandSanitizationArchitecture"
+    ],
+    "policy_id": "ASVS-013"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "1.1.2 Verify that the application performs output encoding and escaping either as a final step before being used by the interpreter for which it is intended or by the interpreter itself.",
+    "reference": [
+      "1.1.2",
+      "v5.0.0-1.1.2",
+      "V1.1EncodingandSanitizationArchitecture"
+    ],
+    "policy_id": "ASVS-014"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "1.2.1 Verify that output encoding for an HTTP response, HTML document, or XML document is relevant for the context required, such as encoding the relevant characters for HTML elements, HTML attributes, HTML comments, CSS, or HTTP header fields, to avoid changing the message or document structure.",
+    "reference": [
+      "1.2.1",
+      "v5.0.0-1.2.1",
+      "V1.2InjectionPrevention"
+    ],
+    "policy_id": "ASVS-015"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that when dynamically building URLs, untrusted data is encoded according to its context (e.g., URL encoding or base64url encoding for query or path parameters). Ensure that only safe URL protocols are permitted (e.g., disallow javascript: or data:).",
+    "reference": [
+      "1.2.2",
+      "V1.2 Injection Prevention",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-016"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that output encoding or escaping is used when dynamically building JavaScript content (including JSON), to avoid changing the message or document structure (to avoid JavaScript and JSON injection).",
+    "reference": [
+      "1.2.3",
+      "V1.2 Injection Prevention",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-017"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that data selection or database queries (e.g., SQL, HQL, NoSQL, Cypher) use parameterized queries, ORMs, entity frameworks, or are otherwise protected from SQL Injection and other database injection attacks. This is also relevant when writing stored procedures.",
+    "reference": [
+      "1.2.4",
+      "V1.2 Injection Prevention",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-018"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application protects against OS command injection and that operating system calls use parameterized OS queries or use contextual command line output encoding.",
+    "reference": [
+      "1.2.5",
+      "V1.2 Injection Prevention",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-019"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application protects against LDAP injection vulnerabilities, or that specific security controls to prevent LDAP injection have been implemented.",
+    "reference": [
+      "1.2.6",
+      "V1.2 Injection Prevention",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-020"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application is protected against XPath injection attacks by using query parameterization or precompiled queries.",
+    "reference": [
+      "1.2.7",
+      "V1.2 Injection Prevention",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-021"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that LaTeX processors are configured securely (such as not using the \"--shell-escape\" flag) and an allowlist of commands is used to prevent LaTeX injection attacks.",
+    "reference": [
+      "1.2.8",
+      "V1.2 Injection Prevention",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-022"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application escapes special characters in regular expressions (typically using a backslash) to prevent them from being misinterpreted as metacharacters.",
+    "reference": [
+      "1.2.9",
+      "V1.2 Injection Prevention",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-023"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application is protected against CSV and Formula Injection. The application must follow the escaping rules defined in RFC4180 sections 2.6 and 2.7 when exporting CSV content. Additionally, when exporting to CSV or other spreadsheet formats (such as XLS, XLSX, or ODF), special characters (including '=', '+', '-', '@', '\\t' (tab), and '\\0' (null character)) must be escaped with a single quote if they appear as the first character in a field value.",
+    "reference": [
+      "1.2.10",
+      "V1.2 Injection Prevention",
+      "RFC4180",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-024"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that all untrusted HTML input from WYSIWYG editors or similar is sanitized using a well-known and secure HTML sanitization library or framework feature.",
+    "reference": [
+      "1.3.1",
+      "V1.3 Sanitization",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-025"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application avoids the use of eval() or other dynamic code execution features such as Spring Expression Language (SpEL). Where there is no alternative, any user input being included must be sanitized before being executed.",
+    "reference": [
+      "1.3.2",
+      "V1.3 Sanitization",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-026"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that data being passed to a potentially dangerous context is sanitized beforehand to enforce safety measures, such as only allowing characters which are safe for this context and trimming input which is too long.",
+    "reference": [
+      "1.3.3",
+      "V1.3 Sanitization",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-027"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that user-supplied Scalable Vector Graphics (SVG) scriptable content is validated or sanitized to contain only tags and attributes (such as draw graphics) that are safe for the application, e.g., do not contain scripts and foreignObject.",
+    "reference": [
+      "1.3.4",
+      "V1.3 Sanitization",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-028"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application sanitizes or disables user-supplied scriptable or expression template language content, such as Markdown, CSS or XSL stylesheets, BBCode, or similar.",
+    "reference": [
+      "1.3.5",
+      "V1.3 Sanitization",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-029"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application protects against Server-side Request Forgery (SSRF) attacks, by validating untrusted data against an allowlist of protocols, domains, paths and ports and sanitizing potentially dangerous characters before using the data to call another service.",
+    "reference": [
+      "1.3.6",
+      "V1.3 Sanitization",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-030"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application protects against template injection attacks by not allowing templates to be built based on untrusted input. Where there is no alternative, any untrusted input being included dynamically during template creation must be sanitized or strictly validated.",
+    "reference": [
+      "1.3.7",
+      "V1.3 Sanitization",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-031"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application appropriately sanitizes untrusted input before use in Java Naming and Directory Interface (JNDI) queries and that JNDI is configured securely to prevent JNDI injection attacks.",
+    "reference": [
+      "1.3.8",
+      "V1.3 Sanitization",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-032"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application sanitizes content before it is sent to memcache to prevent injection attacks.",
+    "reference": [
+      "1.3.9",
+      "V1.3 Sanitization",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-033"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that format strings which might resolve in an unexpected or malicious way when used are sanitized before being processed.",
+    "reference": [
+      "1.3.10",
+      "V1.3 Sanitization",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-034"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application sanitizes user input before passing to mail systems to protect against SMTP or IMAP injection.",
+    "reference": [
+      "1.3.11",
+      "V1.3 Sanitization",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-035"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that regular expressions are free from elements causing exponential backtracking, and ensure untrusted input is sanitized to mitigate ReDoS or Runaway Regex attacks.",
+    "reference": [
+      "1.3.12",
+      "V1.3 Sanitization",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-036"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application uses memory-safe string, safer memory copy and pointer arithmetic to detect or prevent stack, buffer, or heap overflows.",
+    "reference": [
+      "1.4.1",
+      "V1.4 Memory, String, and Unmanaged Code",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-037"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that sign, range, and input validation techniques are used to prevent integer overflows.",
+    "reference": [
+      "1.4.2",
+      "V1.4 Memory, String, and Unmanaged Code",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-038"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that dynamically allocated memory and resources are released, and that references or pointers to freed memory are removed or set to null to prevent dangling pointers and use-after-free vulnerabilities.",
+    "reference": [
+      "1.4.3",
+      "V1.4 Memory, String, and Unmanaged Code",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-039"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application configures XML parsers to use a restrictive configuration and that unsafe features such as resolving external entities are disabled to prevent XML External Entity (XXE) attacks.",
+    "reference": [
+      "1.5.1",
+      "V1.5 Safe Deserialization",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-040"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that deserialization of untrusted data enforces safe input handling, such as using an allowlist of object types or restricting client-defined object types, to prevent deserialization attacks. Deserialization mechanisms that are explicitly defined as insecure must not be used with untrusted input.",
+    "reference": [
+      "1.5.2",
+      "V1.5 Safe Deserialization",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-041"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that different parsers used in the application for the same data type (e.g., JSON parsers, XML parsers, URL parsers), perform parsing in a consistent way and use the same character encoding mechanism to avoid issues such as JSON Interoperability vulnerabilities or different URI or file parsing behavior being exploited in Remote File Inclusion (RFI) or Server-side Request Forgery (SSRF) attacks.",
+    "reference": [
+      "1.5.3",
+      "V1.5 Safe Deserialization",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-042"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application's documentation defines input validation rules for how to check the validity of data items against an expected structure. This could be common data formats such as credit card numbers, email addresses, telephone numbers, or it could be an internal data format.",
+    "reference": [
+      "2.1.1",
+      "V2.1 Validation and Business Logic Documentation",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-043"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application’s documentation defines how to validate the logical and contextual consistency of combined data items, such as checking that suburb and ZIP code match.",
+    "reference": [
+      "2.1.2",
+      "V2.1 Validation and Business Logic Documentation",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-044"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that expectations for business logic limits and validations are documented, including both per-user and globally across the application.",
+    "reference": [
+      "2.1.3",
+      "V2.1 Validation and Business Logic Documentation",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-045"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that input is validated to enforce business or functional expectations for that input. This should either use positive validation against an allowlist of values, patterns, and ranges, or be based on comparing the input to an expected structure and logical limits according to predefined rules. For L1, this can focus on input which is used to make specific business or security decisions. For L2 and up, this should apply to all input.",
+    "reference": [
+      "2.2.1",
+      "V2.2 Input Validation",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-046"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application is designed to enforce input validation at a trusted service layer. While client-side validation improves usability and should be encouraged, it must not be relied upon as a security control.",
+    "reference": [
+      "2.2.2",
+      "V2.2 Input Validation",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-047"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application ensures that combinations of related data items are reasonable according to the pre-defined rules.",
+    "reference": [
+      "2.2.3",
+      "V2.2 Input Validation",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-048"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application will only process business logic flows for the same user in the expected sequential step order and without skipping steps.",
+    "reference": [
+      "2.3.1",
+      "V2.3 Business Logic Security",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-049"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that business logic limits are implemented per the application’s documentation to avoid business logic flaws being exploited.",
+    "reference": [
+      "2.3.2",
+      "V2.3 Business Logic Security",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-050"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that transactions are being used at the business logic level such that either a business logic operation succeeds in its entirety or it is rolled back to the previous correct state.",
+    "reference": [
+      "2.3.3",
+      "V2.3 Business Logic Security",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-051"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that business logic level locking mechanisms are used to ensure that limited quantity resources (such as theater seats or delivery slots) cannot be double-booked by manipulating the application’s logic.",
+    "reference": [
+      "2.3.4",
+      "V2.3 Business Logic Security",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-052"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that high-value business logic flows require multi-user approval to prevent unauthorized or accidental actions. This could include but is not limited to large monetary transfers, contract approvals, access to classified information, or safety overrides in manufacturing.",
+    "reference": [
+      "2.3.5",
+      "V2.3 Business Logic Security",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-053"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that anti-automation controls are in place to protect against excessive calls to application functions that could lead to data exfiltration, garbage-data creation, quota exhaustion, rate-limit breaches, denial-of-service, or overuse of costly resources.",
+    "reference": [
+      "2.4.1",
+      "V2.4 Anti-automation",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-054"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that business logic flows require realistic human timing, preventing excessively rapid transaction submissions.",
+    "reference": [
+      "2.4.2",
+      "V2.4 Anti-automation",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-055"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that application documentation states the expected security features that browsers using the application must support (such as HTTPS, HTTP Strict Transport Security (HSTS), Content Security Policy (CSP), and other relevant HTTP security mechanisms). It must also define how the application must behave when some of these features are not available (such as warning the user or blocking access).",
+    "reference": [
+      "3.1.1",
+      "V3.1 Web Frontend Security Documentation",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-056"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that security controls are in place to prevent browsers from rendering content or functionality in HTTP responses in an incorrect context (e.g., when an API, a user-uploaded file or other resource is requested directly). Possible controls could include: not serving the content unless HTTP request header fields (such as Sec-Fetch-*) indicate it is the correct context, using the sandbox directive of the Content-Security-Policy header field or using the attachment disposition type in the Content-Disposition header field.",
+    "reference": [
+      "3.2.1",
+      "V3.2 Unintended Content Interpretation",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-057"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that content intended to be displayed as text, rather than rendered as HTML, is handled using safe rendering functions (such as createTextNode or textContent) to prevent unintended execution of contents such as HTML or JavaScript.",
+    "reference": [
+      "3.2.2",
+      "V3.2 Unintended Content Interpretation",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-058"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application avoids DOM clobbering when using client-side JavaScript by employing explicit variable declarations, performing strict type checking, avoiding storing global variables on the document object, and implementing namespace isolation.",
+    "reference": [
+      "3.2.3",
+      "V3.2 Unintended Content Interpretation",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-059"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that cookies have the 'Secure' attribute set, and if the '__Host-' prefix is not used for the cookie name, the '__Secure-' prefix must be used for the cookie name.",
+    "reference": [
+      "3.3.1",
+      "V3.3 Cookie Setup",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-060"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that each cookie’s 'SameSite' attribute value is set according to the purpose of the cookie, to limit exposure to user interface redress attacks and browser-based request forgery attacks, commonly known as cross-site request forgery (CSRF).",
+    "reference": [
+      "3.3.2",
+      "V3.3 Cookie Setup",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-061"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that cookies have the '__Host-' prefix for the cookie name unless they are explicitly designed to be shared with other hosts.",
+    "reference": [
+      "3.3.3",
+      "V3.3 Cookie Setup",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-062"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that if the value of a cookie is not meant to be accessible to client-side scripts (such as a session token), the cookie must have the 'HttpOnly' attribute set and the same value (e.g. session token) must only be transferred to the client via the 'Set-Cookie' header field.",
+    "reference": [
+      "3.3.4",
+      "V3.3 Cookie Setup",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-063"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that when the application writes a cookie, the cookie name and value length combined are not over 4096 bytes. Overly large cookies will not be stored by the browser and therefore not sent with requests, preventing the user from using application functionality which relies on that cookie.",
+    "reference": [
+      "3.3.5",
+      "V3.3 Cookie Setup",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-064"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that a Strict-Transport-Security header field is included on all responses to enforce an HTTP Strict Transport Security (HSTS) policy. A maximum age of at least 1 year must be defined, and for L2 and up, the policy must apply to all subdomains as well.",
+    "reference": [
+      "3.4.1",
+      "V3.4 Browser Security Mechanism Headers",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-065"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the Cross-Origin Resource Sharing (CORS) Access-Control-Allow-Origin header field is a fixed value by the application, or if the Origin HTTP request header field value is used, it is validated against an allowlist of trusted origins. When 'Access-Control-Allow-Origin: *' needs to be used, verify that the response does not include any sensitive information.",
+    "reference": [
+      "3.4.2",
+      "V3.4 Browser Security Mechanism Headers",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-066"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that HTTP responses include a Content-Security-Policy response header field which defines directives to ensure the browser only loads and executes trusted content or resources, in order to limit execution of malicious JavaScript. As a minimum, a global policy must be used which includes the directives object-src 'none' and base-uri 'none' and define either an allowlist or uses nonces or hashes. For an L3 application, a per-response policy with nonces or hashes must be defined.",
+    "reference": [
+      "3.4.3",
+      "V3.4 Browser Security Mechanism Headers",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-067"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that all HTTP responses contain an 'X-Content-Type-Options: nosniff' header field. This instructs browsers not to use content sniffing and MIME type guessing for the given response, and to require the response’s Content-Type header field value to match the destination resource. For example, the response to a request for a style is only accepted if the response’s Content-Type is 'text/css'. This also enables the use of the Cross-Origin Read Blocking (CORB) functionality by the browser.",
+    "reference": [
+      "3.4.4",
+      "V3.4 Browser Security Mechanism Headers",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-068"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application sets a referrer policy to prevent leakage of technically sensitive data to third-party services via the 'Referer' HTTP request header field. This can be done using the Referrer-Policy HTTP response header field or via HTML element attributes. Sensitive data could include path and query data in the URL, and for internal non-public applications also the hostname.",
+    "reference": [
+      "3.4.5",
+      "V3.4 Browser Security Mechanism Headers",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-069"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the web application uses the frame-ancestors directive of the Content-Security-Policy header field for every HTTP response to ensure that it cannot be embedded by default and that embedding of specific resources is allowed only when necessary. Note that the X-Frame-Options header field, although supported by browsers, is obsolete and may not be relied upon.",
+    "reference": [
+      "3.4.6",
+      "V3.4 Browser Security Mechanism Headers",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-070"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the Content-Security-Policy header field specifies a location to report violations.",
+    "reference": [
+      "3.4.7",
+      "V3.4 Browser Security Mechanism Headers",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-071"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that all HTTP responses that initiate a document rendering (such as responses with Content-Type text/html), include the Cross-Origin-Opener-Policy header field with the same-origin directive or the same-origin-allow-popups directive as required. This prevents attacks that abuse shared access to Window objects, such as tabnabbing and frame counting.",
+    "reference": [
+      "3.4.8",
+      "V3.4 Browser Security Mechanism Headers",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-072"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that, if the application does not rely on the CORS preflight mechanism to prevent disallowed cross-origin requests to use sensitive functionality, these requests are validated to ensure they originate from the application itself. This may be done by using and validating anti-forgery tokens or requiring extra HTTP header fields that are not CORS-safelisted request-header fields. This is to defend against browser-based request forgery attacks, commonly known as cross-site request forgery (CSRF).",
+    "reference": [
+      "3.5.1",
+      "V3.5 Browser Origin Separation",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-073"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that, if the application relies on the CORS preflight mechanism to prevent disallowed cross-origin use of sensitive functionality, it is not possible to call the functionality with a request which does not trigger a CORS-preflight request. This may require checking the values of the 'Origin' and 'Content-Type' request header fields or using an extra header field that is not a CORS-safelisted header-field.",
+    "reference": [
+      "3.5.2",
+      "V3.5 Browser Origin Separation",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-074"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that HTTP requests to sensitive functionality use appropriate HTTP methods such as POST, PUT, PATCH, or DELETE, and not methods defined by the HTTP specification as \"safe\" such as HEAD, OPTIONS, or GET. Alternatively, strict validation of the Sec-Fetch-* request header field can be used to ensure that the request did not originate from an inappropriate cross-origin call, a navigation request, or a resource load (such as an image source) where this is not expected.",
+    "reference": [
+      "3.5.3",
+      "V3.5 Browser Origin Separation",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-075"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that separate applications are hosted on different host names to leverage the restrictions provided by same-origin policy, including how documents or scripts loaded by one origin can interact with resources from another origin and hostname-based restrictions on cookies.",
+    "reference": [
+      "3.5.4",
+      "V3.5 Browser Origin Separation",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-076"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that messages received by the postMessage interface are discarded if the origin of the message is not trusted, or if the syntax of the message is invalid.",
+    "reference": [
+      "3.5.5",
+      "V3.5 Browser Origin Separation",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-077"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that JSONP functionality is not enabled anywhere across the application to avoid Cross-Site Script Inclusion (XSSI) attacks.",
+    "reference": [
+      "3.5.6",
+      "V3.5 Browser Origin Separation",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-078"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that data requiring authorization is not included in script resource responses, like JavaScript files, to prevent Cross-Site Script Inclusion (XSSI) attacks.",
+    "reference": [
+      "3.5.7",
+      "V3.5 Browser Origin Separation",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-079"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that authenticated resources (such as images, videos, scripts, and other documents) can be loaded or embedded on behalf of the user only when intended. This can be accomplished by strict validation of the Sec-Fetch-* HTTP request header field to ensure that the request did not originate from an inappropriate cross-origin call, or by setting a restrictive Cross-Origin-Resource-Policy HTTP response header field to instruct the browser to block returned content.",
+    "reference": [
+      "3.5.8",
+      "V3.5 Browser Origin Separation",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-080"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that client-side assets, such as JavaScript libraries, CSS, or webfonts, are only hosted externally (e.g., on a Content Delivery Network) if the resource is static and versioned and Subresource Integrity (SRI) is used to validate the integrity of the asset. If this is not possible, there should be a documented security decision to justify this for each resource.",
+    "reference": [
+      "3.6.1",
+      "V3.6 External Resource Integrity",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-081"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application only uses client-side technologies which are still supported and considered secure. Examples of technologies which do not meet this requirement include NSAPI plugins, Flash, Shockwave, ActiveX, Silverlight, NACL, or client-side Java applets.",
+    "reference": [
+      "3.7.1",
+      "V3.7 Other Browser Security Considerations",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-082"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application will only automatically redirect the user to a different hostname or domain (which is not controlled by the application) where the destination appears on an allowlist.",
+    "reference": [
+      "3.7.2",
+      "V3.7 Other Browser Security Considerations",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-083"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application shows a notification when the user is being redirected to a URL outside of the application’s control, with an option to cancel the navigation.",
+    "reference": [
+      "3.7.3",
+      "V3.7 Other Browser Security Considerations",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-084"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application’s top-level domain (e.g., site.tld) is added to the public preload list for HTTP Strict Transport Security (HSTS). This ensures that the use of TLS for the application is built directly into the main browsers, rather than relying only on the Strict-Transport-Security response header field.",
+    "reference": [
+      "3.7.4",
+      "V3.7 Other Browser Security Considerations",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-085"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application behaves as documented (such as warning the user or blocking access) if the browser used to access the application does not support the expected security features.",
+    "reference": [
+      "3.7.5",
+      "V3.7 Other Browser Security Considerations",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-086"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that every HTTP response with a message body contains a Content-Type header field that matches the actual content of the response, including the charset parameter to specify safe character encoding (e.g., UTF-8, ISO-8859-1) according to IANA Media Types, such as \"text/\", \"/+xml\" and \"/xml\".",
+    "reference": [
+      "4.1.1",
+      "V4.1 Generic Web Service Security",
+      "IANAMediaTypes",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-087"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that only user-facing endpoints (intended for manual web-browser access) automatically redirect from HTTP to HTTPS, while other services or endpoints do not implement transparent redirects. This is to avoid a situation where a client is erroneously sending unencrypted HTTP requests, but since the requests are being automatically redirected to HTTPS, the leakage of sensitive data goes undiscovered.",
+    "reference": [
+      "4.1.2",
+      "V4.1 Generic Web Service Security",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-088"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that any HTTP header field used by the application and set by an intermediary layer, such as a load balancer, a web proxy, or a backend-for-frontend service, cannot be overridden by the end-user. Example headers might include X-Real-IP, X-Forwarded-*, or X-User-ID.",
+    "reference": [
+      "4.1.3",
+      "V4.1 Generic Web Service Security",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-089"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that only HTTP methods that are explicitly supported by the application or its API (including OPTIONS during preflight requests) can be used and that unused methods are blocked.",
+    "reference": [
+      "4.1.4",
+      "V4.1 Generic Web Service Security",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-090"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that per-message digital signatures are used to provide additional assurance on top of transport protections for requests or transactions which are highly sensitive or which traverse a number of systems.",
+    "reference": [
+      "4.1.5",
+      "V4.1 Generic Web Service Security",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-091"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that all application components (including load balancers, firewalls, and application servers) determine boundaries of incoming HTTP messages using the appropriate mechanism for the HTTP version to prevent HTTP request smuggling. In HTTP/1.x, if a Transfer-Encoding header field is present, the Content-Length header must be ignored per RFC2616. When using HTTP/2 or HTTP/3, if a Content-Length header field is present, the receiver must ensure that it is consistent with the length of the DATA frames.",
+    "reference": [
+      "4.2.1",
+      "V4.2 HTTP Message Structure Validation",
+      "RFC2616",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-092"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that when generating HTTP messages, the Content-Length header field does not conflict with the length of the content as determined by the framing of the HTTP protocol, in order to prevent request smuggling attacks.",
+    "reference": [
+      "4.2.2",
+      "V4.2 HTTP Message Structure Validation",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-093"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application does not send nor accept HTTP/2 or HTTP/3 messages with connection-specific header fields such as Transfer-Encoding to prevent response splitting and header injection attacks.",
+    "reference": [
+      "4.2.3",
+      "V4.2 HTTP Message Structure Validation",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-094"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application only accepts HTTP/2 and HTTP/3 requests where the header fields and values do not contain any CR (\\r), LF (\\n), or CRLF (\\r\\n) sequences, to prevent header injection attacks.",
+    "reference": [
+      "4.2.4",
+      "V4.2 HTTP Message Structure Validation",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-095"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that, if the application (backend or frontend) builds and sends requests, it uses validation, sanitization, or other mechanism to avoid creating URIs (such as for API calls) or HTTP request header fields (such as Authorization or Cookie), which are too long to be accepted by the receiving component. This could cause a denial of service, such as when sending an overly long request (e.g., a long cookie header field), which results in the server always responding with an error status.",
+    "reference": [
+      "4.2.5",
+      "V4.2 HTTP Message Structure Validation",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-096"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that a query allowlist, depth limiting, amount limiting, or query cost analysis is used to prevent GraphQL or data layer expression Denial of Service (DoS) as a result of expensive, nested queries.",
+    "reference": [
+      "4.3.1",
+      "V4.3 GraphQL",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-097"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that GraphQL introspection queries are disabled in the production environment unless the GraphQL API is meant to be used by other parties.",
+    "reference": [
+      "4.3.2",
+      "V4.3 GraphQL",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-098"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that WebSocket over TLS (WSS) is used for all WebSocket connections.",
+    "reference": [
+      "4.4.1",
+      "V4.4 WebSocket",
+      "RFC6455",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-099"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that, during the initial HTTP WebSocket handshake, the Origin header field is checked against a list of origins allowed for the application.",
+    "reference": [
+      "4.4.2",
+      "V4.4 WebSocket",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-100"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that, if the application’s standard session management cannot be used, dedicated tokens are being used for this, which comply with the relevant Session Management security requirements.",
+    "reference": [
+      "4.4.3",
+      "V4.4 WebSocket",
+      "V7 Session Management",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-101"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that dedicated WebSocket session management tokens are initially obtained or validated through the previously authenticated HTTPS session when transitioning an existing HTTPS session to a WebSocket channel.",
+    "reference": [
+      "4.4.4",
+      "V4.4 WebSocket",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-102"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the documentation defines the permitted file types, expected file extensions, and maximum size (including unpacked size) for each upload feature. Additionally, ensure that the documentation specifies how files are made safe for end-users to download and process, such as how the application behaves when a malicious file is detected.",
+    "reference": [
+      "5.1.1",
+      "V5.1 File Handling Documentation",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-103"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application will only accept files of a size which it can process without causing a loss of performance or a denial of service attack.",
+    "reference": [
+      "5.2.1",
+      "V5.2 File Upload and Content",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-104"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that when the application accepts a file, either on its own or within an archive such as a zip file, it checks if the file extension matches an expected file extension and validates that the contents correspond to the type represented by the extension. This includes, but is not limited to, checking the initial 'magic bytes', performing image re-writing, and using specialized libraries for file content validation. For L1, this can focus just on files which are used to make specific business or security decisions. For L2 and up, this must apply to all files being accepted.",
+    "reference": [
+      "5.2.2",
+      "V5.2 File Upload and Content",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-105"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application checks compressed files (e.g., zip, gz, docx, odt) against maximum allowed uncompressed size and against maximum number of files before uncompressing the file.",
+    "reference": [
+      "5.2.3",
+      "V5.2 File Upload and Content",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-106"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that a file size quota and maximum number of files per user are enforced to ensure that a single user cannot fill up the storage with too many files, or excessively large files.",
+    "reference": [
+      "5.2.4",
+      "V5.2 File Upload and Content",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-107"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application does not allow uploading compressed files containing symlinks unless this is specifically required (in which case it will be necessary to enforce an allowlist of the files that can be symlinked to).",
+    "reference": [
+      "5.2.5",
+      "V5.2 File Upload and Content",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-108"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application rejects uploaded images with a pixel size larger than the maximum allowed, to prevent pixel flood attacks.",
+    "reference": [
+      "5.2.6",
+      "V5.2 File Upload and Content",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-109"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that files uploaded or generated by untrusted input and stored in a public folder, are not executed as server-side program code when accessed directly with an HTTP request.",
+    "reference": [
+      "5.3.1",
+      "V5.3 File Storage",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-110"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that when the application creates file paths for file operations, instead of user-submitted filenames, it uses internally generated or trusted data, or if user-submitted filenames or file metadata must be used, strict validation and sanitization must be applied. This is to protect against path traversal, local or remote file inclusion (LFI, RFI), and server-side request forgery (SSRF) attacks.",
+    "reference": [
+      "5.3.2",
+      "V5.3 File Storage",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-111"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that server-side file processing, such as file decompression, ignores user-provided path information to prevent vulnerabilities such as zip slip.",
+    "reference": [
+      "5.3.3",
+      "V5.3 File Storage",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-112"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application validates or ignores user-submitted filenames, including in a JSON, JSONP, or URL parameter and specifies a filename in the Content-Disposition header field in the response.",
+    "reference": [
+      "5.4.1",
+      "V5.4 File Download",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-113"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that filenames served (e.g., in HTTP response header fields or email attachments) are encoded or sanitized (e.g., following RFC6266) to preserve document structure and prevent injection attacks.",
+    "reference": [
+      "5.4.2",
+      "V5.4 File Download",
+      "RFC6266",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-114"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that files obtained from untrusted sources are scanned by antivirus scanners to prevent serving of known malicious content.",
+    "reference": [
+      "5.4.3",
+      "V5.4 File Download",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-115"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that application documentation defines how controls such as rate limiting, anti-automation, and adaptive response, are used to defend against attacks such as credential stuffing and password brute force. The documentation must make clear how these controls are configured and prevent malicious account lockout.",
+    "reference": [
+      "6.1.1",
+      "V6.1 Authentication Documentation",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-116"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that a list of context-specific words is documented in order to prevent their use in passwords. The list could include permutations of organization names, product names, system identifiers, project code names, department or role names, and similar.",
+    "reference": [
+      "6.1.2",
+      "V6.1 Authentication Documentation",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-117"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that, if the application includes multiple authentication pathways, these are all documented together with the security controls and authentication strength which must be consistently enforced across them.",
+    "reference": [
+      "6.1.3",
+      "V6.1 Authentication Documentation",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-118"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that user set passwords are at least 8 characters in length although a minimum of 15 characters is strongly recommended.",
+    "reference": [
+      "6.2.1",
+      "V6.2 Password Security",
+      "NISTSP800-63",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-119"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that users can change their password.",
+    "reference": [
+      "6.2.2",
+      "V6.2 Password Security",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-120"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that password change functionality requires the user’s current and new password.",
+    "reference": [
+      "6.2.3",
+      "V6.2 Password Security",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-121"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that passwords submitted during account registration or password change are checked against an available set of, at least, the top 3000 passwords which match the application’s password policy, e.g. minimum length.",
+    "reference": [
+      "6.2.4",
+      "V6.2 Password Security",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-122"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that passwords of any composition can be used, without rules limiting the type of characters permitted. There must be no requirement for a minimum number of uppercase or lowercase characters, numbers, or special characters.",
+    "reference": [
+      "6.2.5",
+      "V6.2 Password Security",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-123"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that password input fields use type=password to mask the entry. Applications may allow the user to temporarily view the entire masked password, or the last typed character of the password.",
+    "reference": [
+      "6.2.6",
+      "V6.2 Password Security",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-124"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that 'paste' functionality, browser password helpers, and external password managers are permitted.",
+    "reference": [
+      "6.2.7",
+      "V6.2 Password Security",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-125"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application verifies the user’s password exactly as received from the user, without any modifications such as truncation or case transformation.",
+    "reference": [
+      "6.2.8",
+      "V6.2 Password Security",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-126"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that passwords of at least 64 characters are permitted.",
+    "reference": [
+      "6.2.9",
+      "V6.2 Password Security",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-127"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that a user’s passwords stay valid until it is discovered to be compromised or the user rotates it. The application must not require periodic credential rotation.",
+    "reference": [
+      "6.2.10",
+      "V6.2 Password Security",
+      "NISTSP800-63",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-128"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the documented list of context specific words is used to prevent easy to guess passwords being created.",
+    "reference": [
+      "6.2.11",
+      "V6.2 Password Security",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-129"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that passwords submitted during account registration or password changes are checked against a set of breached passwords.",
+    "reference": [
+      "6.2.12",
+      "V6.2 Password Security",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-130"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that controls to prevent attacks such as credential stuffing and password brute force are implemented according to the application’s security documentation.",
+    "reference": [
+      "6.3.1",
+      "V6.3 General Authentication Security",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-131"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that default user accounts (e.g., 'root', 'admin', or 'sa') are not present in the application or are disabled.",
+    "reference": [
+      "6.3.2",
+      "V6.3 General Authentication Security",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-132"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that either a multi-factor authentication mechanism or a combination of single-factor authentication mechanisms, must be used in order to access the application. For L3, one of the factors must be a hardware-based authentication mechanism which provides compromise and impersonation resistance against phishing attacks while verifying the intent to authenticate by requiring a user-initiated action (such as a button press on a FIDO hardware key or a mobile phone). Relaxing any of the considerations in this requirement requires a fully documented rationale and a comprehensive set of mitigating controls.",
+    "reference": [
+      "6.3.3",
+      "V6.3 General Authentication Security",
+      "NISTSP800-63",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-133"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that, if the application includes multiple authentication pathways, there are no undocumented pathways and that security controls and authentication strength are enforced consistently.",
+    "reference": [
+      "6.3.4",
+      "V6.3 General Authentication Security",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-134"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that users are notified of suspicious authentication attempts (successful or unsuccessful). This may include authentication attempts from an unusual location or client, partially successful authentication (only one of multiple factors), an authentication attempt after a long period of inactivity or a successful authentication after several unsuccessful attempts.",
+    "reference": [
+      "6.3.5",
+      "V6.3 General Authentication Security",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-135"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that email is not used as either a single-factor or multi-factor authentication mechanism.",
+    "reference": [
+      "6.3.6",
+      "V6.3 General Authentication Security",
+      "NISTSP800-63 (archived note)",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-136"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that users are notified after updates to authentication details, such as credential resets or modification of the username or email address.",
+    "reference": [
+      "6.3.7",
+      "V6.3 General Authentication Security",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-137"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that valid users cannot be deduced from failed authentication challenges, such as by basing on error messages, HTTP response codes, or different response times. Registration and forgot password functionality must also have this protection.",
+    "reference": [
+      "6.3.8",
+      "V6.3 General Authentication Security",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-138"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that system generated initial passwords or activation codes are securely randomly generated, follow the existing password policy, and expire after a short period of time or after they are initially used. These initial secrets must not be permitted to become the long term password.",
+    "reference": [
+      "6.4.1",
+      "V6.4 Authentication Factor Lifecycle and Recovery",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-139"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that password hints or knowledge-based authentication (so-called 'secret questions') are not present.",
+    "reference": [
+      "6.4.2",
+      "V6.4 Authentication Factor Lifecycle and Recovery",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-140"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that a secure process for resetting a forgotten password is implemented, that does not bypass any enabled multi-factor authentication mechanisms.",
+    "reference": [
+      "6.4.3",
+      "V6.4 Authentication Factor Lifecycle and Recovery",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-141"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that if a multi-factor authentication factor is lost, evidence of identity proofing is performed at the same level as during enrollment.",
+    "reference": [
+      "6.4.4",
+      "V6.4 Authentication Factor Lifecycle and Recovery",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-142"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that renewal instructions for authentication mechanisms which expire are sent with enough time to be carried out before the old authentication mechanism expires, configuring automated reminders if necessary.",
+    "reference": [
+      "6.4.5",
+      "V6.4 Authentication Factor Lifecycle and Recovery",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-143"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that administrative users can initiate the password reset process for the user, but that this does not allow them to change or choose the user’s password. This prevents a situation where they know the user’s password.",
+    "reference": [
+      "6.4.6",
+      "V6.4 Authentication Factor Lifecycle and Recovery",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-144"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that lookup secrets, out-of-band authentication requests or codes, and time-based one-time passwords (TOTPs) are only successfully usable once.",
+    "reference": [
+      "6.5.1",
+      "V6.5 General Multi-factor authentication requirements",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-145"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that, when being stored in the application’s backend, lookup secrets with less than 112 bits of entropy (19 random alphanumeric characters or 34 random digits) are hashed with an approved password storage hashing algorithm that incorporates a 32-bit random salt. A standard hash function can be used if the secret has 112 bits of entropy or more.",
+    "reference": [
+      "6.5.2",
+      "V6.5 General Multi-factor authentication requirements",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-146"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that lookup secrets, out-of-band authentication code, and time-based one-time password seeds, are generated using a Cryptographically Secure Pseudorandom Number Generator (CSPRNG) to avoid predictable values.",
+    "reference": [
+      "6.5.3",
+      "V6.5 General Multi-factor authentication requirements",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-147"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that lookup secrets and out-of-band authentication codes have a minimum of 20 bits of entropy (typically 4 random alphanumeric characters or 6 random digits is sufficient).",
+    "reference": [
+      "6.5.4",
+      "V6.5 General Multi-factor authentication requirements",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-148"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that out-of-band authentication requests, codes, or tokens, as well as time-based one-time passwords (TOTPs) have a defined lifetime. Out of band requests must have a maximum lifetime of 10 minutes and for TOTP a maximum lifetime of 30 seconds.",
+    "reference": [
+      "6.5.5",
+      "V6.5 General Multi-factor authentication requirements",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-149"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that any authentication factor (including physical devices) can be revoked in case of theft or other loss.",
+    "reference": [
+      "6.5.6",
+      "V6.5 General Multi-factor authentication requirements",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-150"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that biometric authentication mechanisms are only used as secondary factors together with either something you have or something you know.",
+    "reference": [
+      "6.5.7",
+      "V6.5 General Multi-factor authentication requirements",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-151"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that time-based one-time passwords (TOTPs) are checked based on a time source from a trusted service and not from an untrusted or client provided time.",
+    "reference": [
+      "6.5.8",
+      "V6.5 General Multi-factor authentication requirements",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-152"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that authentication mechanisms using the Public Switched Telephone Network (PSTN) to deliver One-time Passwords (OTPs) via phone or SMS are offered only when the phone number has previously been validated, alternate stronger methods (such as Time based One-time Passwords) are also offered, and the service provides information on their security risks to users. For L3 applications, phone and SMS must not be available as options.",
+    "reference": [
+      "6.6.1",
+      "V6.6 Out-of-Band authentication mechanisms",
+      "NISTSP800-63",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-153"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that out-of-band authentication requests, codes, or tokens are bound to the original authentication request for which they were generated and are not usable for a previous or subsequent one.",
+    "reference": [
+      "6.6.2",
+      "V6.6 Out-of-Band authentication mechanisms",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-154"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that a code based out-of-band authentication mechanism is protected against brute force attacks by using rate limiting. Consider also using a code with at least 64 bits of entropy.",
+    "reference": [
+      "6.6.3",
+      "V6.6 Out-of-Band authentication mechanisms",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-155"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that, where push notifications are used for multi-factor authentication, rate limiting is used to prevent push bombing attacks. Number matching may also mitigate this risk.",
+    "reference": [
+      "6.6.4",
+      "V6.6 Out-of-Band authentication mechanisms",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-156"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the certificates used to verify cryptographic authentication assertions are stored in a way that protects them from modification.",
+    "reference": [
+      "6.7.1",
+      "V6.7 Cryptographic authentication mechanism",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-157"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the challenge nonce is at least 64 bits in length, and statistically unique or unique over the lifetime of the cryptographic device.",
+    "reference": [
+      "6.7.2",
+      "V6.7 Cryptographic authentication mechanism",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-158"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that, if the application supports multiple identity providers (IdPs), the user’s identity cannot be spoofed via another supported identity provider (eg. by using the same user identifier). The standard mitigation would be for the application to register and identify the user using a combination of the IdP ID (serving as a namespace) and the user’s ID in the IdP.",
+    "reference": [
+      "6.8.1",
+      "V6.8 Authentication with an Identity Provider",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-159"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the presence and integrity of digital signatures on authentication assertions (for example on JWTs or SAML assertions) are always validated, rejecting any assertions that are unsigned or have invalid signatures.",
+    "reference": [
+      "6.8.2",
+      "V6.8 Authentication with an Identity Provider",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-160"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that SAML assertions are uniquely processed and used only once within the validity period to prevent replay attacks.",
+    "reference": [
+      "6.8.3",
+      "V6.8 Authentication with an Identity Provider",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-161"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that, if an application uses a separate Identity Provider (IdP) and expects specific authentication strength, methods, or recentness for specific functions, the application verifies this using the information returned by the IdP. For example, if OIDC is used, this might be achieved by validating ID Token claims such as 'acr', 'amr', and 'auth_time' (if present). If the IdP does not provide this information, the application must have a documented fallback approach that assumes that the minimum strength authentication mechanism was used (for example, single-factor authentication using username and password).",
+    "reference": [
+      "6.8.4",
+      "V6.8 Authentication with an Identity Provider",
+      "OIDC",
+      "ApplicationSecurityVerificationStandard May2025"
+    ],
+    "policy_id": "ASVS-162"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "VerifythatauthenticationmechanismsusingthePublicSwitchedTelephone Network(PSTN)todeliverOne‑timePasswords(OTPs)viaphoneorSMSare offeredonlywhenthephonenumberhaspreviouslybeenvalidated, alternatestrongermethods(suchasTimebasedOne‑timePasswords)are alsooffered,andtheserviceprovidesinformationontheirsecurityrisksto users. ForL3applications,phoneandSMSmustnotbeavailableasoptions.",
+    "reference": [
+      "6.6.1"
+    ],
+    "policy_id": "ASVS-163"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatout‑of‑bandauthenticationrequests,codes,ortokensarebound totheoriginalauthenticationrequestforwhichtheyweregeneratedandare notusableforapreviousorsubsequentone.",
+    "reference": [
+      "6.6.2"
+    ],
+    "policy_id": "ASVS-164"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatacodebasedout‑of‑bandauthenticationmechanismisprotected againstbruteforceattacksbyusingratelimiting. Consideralsousingacode withatleast64bitsofentropy.",
+    "reference": [
+      "6.6.3"
+    ],
+    "policy_id": "ASVS-165"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Wheresharedorsecretkeysareusedforcryptographicauthentication,theseshouldbestoredusing the same mechanisms as other system secrets, as documented in the “Secret Management”section in the “Configuration”chapter.",
+    "reference": [
+      "V6.7",
+      "Configuration: Secret Management"
+    ],
+    "policy_id": "ASVS-166"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatthecertificatesusedtoverifycryptographicauthentication assertionsarestoredinawayprotectsthemfrommodification.",
+    "reference": [
+      "6.7.1"
+    ],
+    "policy_id": "ASVS-167"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatthechallengenonceisatleast64bitsinlength,andstatistically uniqueoruniqueoverthelifetimeofthecryptographicdevice.",
+    "reference": [
+      "6.7.2"
+    ],
+    "policy_id": "ASVS-168"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheapplicationsupportsmultipleidentityproviders(IdPs),the user’sidentitycannotbespoofedviaanothersupportedidentityprovider (eg. byusingthesameuseridentifier). Thestandardmitigationwouldbefor theapplicationtoregisterandidentifytheuserusingacombinationofthe IdPID(servingasanamespace)andtheuser’sIDintheIdP.",
+    "reference": [
+      "6.8.1"
+    ],
+    "policy_id": "ASVS-169"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatthepresenceandintegrityofdigitalsignaturesonauthentication assertions(forexampleonJWTsorSAMLassertions)arealwaysvalidated, rejectinganyassertionsthatareunsignedorhaveinvalidsignatures.",
+    "reference": [
+      "6.8.2"
+    ],
+    "policy_id": "ASVS-170"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheapplicationverifiesthisusingtheinformationreturnedbythe IdP.Forexample,ifOIDCisused,thismightbeachievedbyvalidatingID Tokenclaimssuchas‘acr’,‘amr’,and‘auth_time’(ifpresent). IftheIdPdoes notprovidethisinformation,theapplicationmusthavedocumentedfallbackapproachthatassumesthattheminimumstrengthauthentication mechanismwasused(forexample,single‑factorauthenticationusing usernameandpassword).",
+    "reference": [
+      "6.8.4"
+    ],
+    "policy_id": "ASVS-171"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Sessionsareuniquetoeachindividualandcannotbeguessedorshared.",
+    "reference": [
+      "V7SessionManagement"
+    ],
+    "policy_id": "ASVS-172"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Sessionsareinvalidatedwhennolongerrequiredandaretimedoutduringperiodsofinactivity.",
+    "reference": [
+      "V7SessionManagement"
+    ],
+    "policy_id": "ASVS-173"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheuser’ssessioninactivitytimeoutandabsolutemaximum sessionlifetimearedocumented,areappropriateincombinationwithother controls,andthatthedocumentationincludesjustificationforany deviationsfromNISTSP800‑63Bre‑authenticationrequirements.",
+    "reference": [
+      "7.1.1"
+    ],
+    "policy_id": "ASVS-174"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatthedocumentationdefineshowmanyconcurrent(parallel) sessionsareallowedforoneaccountaswellastheintendedbehaviorsand actionstobetakenwhenthemaximumnumberofactivesessionsisreached.",
+    "reference": [
+      "7.1.2"
+    ],
+    "policy_id": "ASVS-175"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatallsystemsthatcreateandmanageusersessionsaspartofa federatedidentitymanagementecosystem(suchasSSOsystems)are documentedalongwithcontrolstocoordinatesessionlifetimes, termination,andanyotherconditionsthatrequirere‑authentication.",
+    "reference": [
+      "7.1.3"
+    ],
+    "policy_id": "ASVS-176"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheapplicationperformsallsessiontokenverificationusinga trusted,backendservice.",
+    "reference": [
+      "7.2.1"
+    ],
+    "policy_id": "ASVS-177"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheapplicationuseseitherself‑containedorreferencetokensthat aredynamicallygeneratedforsessionmanagement,i.e.notusingstaticAPI secretsandkeys.",
+    "reference": [
+      "7.2.2"
+    ],
+    "policy_id": "ASVS-178"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatifreferencetokensareusedtorepresentusersessions,theyare uniqueandgeneratedusingacryptographicallysecurepseudo‑random numbergenerator(CSPRNG)andpossessatleast128bitsofentropy.",
+    "reference": [
+      "7.2.3"
+    ],
+    "policy_id": "ASVS-179"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheapplicationgeneratesanewsessiontokenonuser authentication,includingre‑authentication,andterminatesthecurrent sessiontoken.",
+    "reference": [
+      "7.2.4"
+    ],
+    "policy_id": "ASVS-180"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatthereisaninactivitytimeoutsuchthatre‑authenticationis enforcedaccordingtoriskanalysisanddocumentedsecuritydecisions.",
+    "reference": [
+      "7.3.1"
+    ],
+    "policy_id": "ASVS-181"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatthereisanabsolutemaximumsessionlifetimesuchthat re‑authenticationisenforcedaccordingtoriskanalysisanddocumented securitydecisions.",
+    "reference": [
+      "7.3.2"
+    ],
+    "policy_id": "ASVS-182"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatwhensessionterminationistriggered(suchaslogoutor expiration),theapplicationdisallowsanyfurtheruseofthesession. For referencetokensorstatefulsessions,thismeansinvalidatingthesession dataattheapplicationbackend. Applicationsusingself‑containedtokens willneedasolutionsuchasmaintainingalistofterminatedtokens, disallowingtokensproducedbeforeaper‑userdateandtimeorrotatinga per‑usersigningkey.",
+    "reference": [
+      "7.4.1"
+    ],
+    "policy_id": "ASVS-183"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheapplicationterminatesallactivesessionswhenauseraccount isdisabledordeleted(suchasanemployeeleavingthecompany).",
+    "reference": [
+      "7.4.2"
+    ],
+    "policy_id": "ASVS-184"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheapplicationgivestheoptiontoterminateallotheractive sessionsafterasuccessfulchangeorremovalofanyauthenticationfactor (includingpasswordchangeviaresetorrecoveryand,ifpresent,anMFA settingsupdate).",
+    "reference": [
+      "7.4.3"
+    ],
+    "policy_id": "ASVS-185"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatallpagesthatrequireauthenticationhaveeasyandvisibleaccess tologoutfunctionality.",
+    "reference": [
+      "7.4.4"
+    ],
+    "policy_id": "ASVS-186"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatapplicationadministratorsareabletoterminateactivesessions foranindividualuserorforallusers.",
+    "reference": [
+      "7.4.5"
+    ],
+    "policy_id": "ASVS-187"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheapplicationrequiresfullre‑authenticationbeforeallowing modificationstosensitiveaccountattributeswhichmayaffect authenticationsuchasemailaddress,phonenumber,MFAconfiguration,or otherinformationusedinaccountrecovery.",
+    "reference": [
+      "7.5.1"
+    ],
+    "policy_id": "ASVS-188"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatusersareabletoviewand(havingauthenticatedagainwithat leastonefactor)terminateanyorallcurrentlyactivesessions.",
+    "reference": [
+      "7.5.2"
+    ],
+    "policy_id": "ASVS-189"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheapplicationrequiresfurtherauthenticationwithatleastone factororsecondaryverificationbeforeperforminghighlysensitive transactionsoroperations.",
+    "reference": [
+      "7.5.3"
+    ],
+    "policy_id": "ASVS-190"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "VerifythatsessionlifetimeandterminationbetweenRelyingParties(RPs) andIdentityProviders(IdPs)behaveasdocumented,requiring re‑authenticationasnecessarysuchaswhenthemaximumtimebetween IdPauthenticationeventsisreached.",
+    "reference": [
+      "7.6.1"
+    ],
+    "policy_id": "ASVS-191"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatcreationofasessionrequireseithertheuser’sconsentoran explicitaction,preventingthecreationofnewapplicationsessionswithout userinteraction.",
+    "reference": [
+      "7.6.2"
+    ],
+    "policy_id": "ASVS-192"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatauthorizationdocumentationdefinesrulesforrestricting function‑levelanddata‑specificaccessbasedonconsumerpermissionsand resourceattributes.",
+    "reference": [
+      "8.1.1"
+    ],
+    "policy_id": "ASVS-193"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatauthorizationdocumentationdefinesrulesforfield‑levelaccess restrictions(bothreadandwrite)basedonconsumerpermissionsand resourceattributes. Notethattheserulesmightdependonotherattribute valuesoftherelevantdataobject,suchasstateorstatus.",
+    "reference": [
+      "8.1.2"
+    ],
+    "policy_id": "ASVS-194"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheapplication’sdocumentationdefinestheenvironmentaland contextualattributes(includingbutnotlimitedto,timeofday,userlocation, IPaddress,ordevice)thatareusedintheapplicationtomakesecurity decisions,includingthosepertainingtoauthenticationandauthorization.",
+    "reference": [
+      "8.1.3"
+    ],
+    "policy_id": "ASVS-195"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatauthenticationandauthorizationdocumentationdefineshow environmentalandcontextualfactorsareusedindecision‑making,in additiontofunction‑level,data‑specific,andfield‑levelauthorization. This shouldincludetheattributesevaluated,thresholdsforrisk,andactions taken(e.g.,allow,challenge,deny,step‑upauthentication).",
+    "reference": [
+      "8.1.4"
+    ],
+    "policy_id": "ASVS-196"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheapplicationensuresthatfunction‑levelaccessisrestrictedto consumerswithexplicitpermissions.",
+    "reference": [
+      "8.2.1"
+    ],
+    "policy_id": "ASVS-197"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheapplicationensuresthatdata‑specificaccessisrestrictedto consumerswithexplicitpermissionstospecificdataitemstomitigate insecuredirectobjectreference(IDOR)andbrokenobjectlevel authorization(BOLA).",
+    "reference": [
+      "8.2.2"
+    ],
+    "policy_id": "ASVS-198"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheapplicationensuresthatfield‑levelaccessisrestrictedto consumerswithexplicitpermissionstospecificfieldstomitigatebroken objectpropertylevelauthorization(BOPLA).",
+    "reference": [
+      "8.2.3"
+    ],
+    "policy_id": "ASVS-199"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatadaptivesecuritycontrolsbasedonaconsumer’senvironmental andcontextualattributes(suchastimeofday,location,IPaddress,ordevice) areimplementedforauthenticationandauthorizationdecisions,asdefined intheapplication’sdocumentation. Thesecontrolsmustbeappliedwhen theconsumertriestostartanewsessionandalsoduringanexistingsession.",
+    "reference": [
+      "8.2.4"
+    ],
+    "policy_id": "ASVS-200"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheapplicationenforcesauthorizationrulesatatrustedservice layeranddoesn’trelyoncontrolsthatanuntrustedconsumercould manipulate,suchasclient‑sideJavaScript.",
+    "reference": [
+      "8.3.1"
+    ],
+    "policy_id": "ASVS-201"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatchangestovaluesonwhichauthorizationdecisionsaremadeare appliedimmediately. Wherechangescannotbeappliedimmediately,(such aswhenrelyingondatainself‑containedtokens),theremustbemitigating controlstoalertwhenaconsumerperformsanactionwhentheyareno longerauthorizedtodosoandrevertthechange. Notethatthisalternative wouldnotmitigateinformationleakage.",
+    "reference": [
+      "8.3.2"
+    ],
+    "policy_id": "ASVS-202"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythataccesstoanobjectisbasedontheoriginatingsubject’s (e.g.consumer’s)permissions,notonthepermissionsofanyintermediary orserviceactingontheirbehalf. Forexample,ifaconsumercallsaweb serviceusingaself‑containedtokenforauthentication,andtheservicethen requestsdatafromadifferentservice,thesecondservicewillusethe consumer’stoken,ratherthanamachine‑to‑machinetokenfromthefirst service,tomakepermissiondecisions.",
+    "reference": [
+      "8.3.3"
+    ],
+    "policy_id": "ASVS-203"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatmulti‑tenantapplicationsusecross‑tenantcontrolstoensure consumeroperationswillneveraffecttenantswithwhichtheydonothave permissionstointeract.",
+    "reference": [
+      "8.4.1"
+    ],
+    "policy_id": "ASVS-204"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythataccesstoadministrativeinterfacesincorporatesmultiplelayersof security,includingcontinuousconsumeridentityverification,device securitypostureassessment,andcontextualriskanalysis,ensuringthat networklocationortrustedendpointsarenotthesolefactorsfor authorizationeventhoughtheymayreducethelikelihoodofunauthorized access.",
+    "reference": [
+      "8.4.2"
+    ],
+    "policy_id": "ASVS-205"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatself‑containedtokensarevalidatedusingtheirdigitalsignatureor MACtoprotectagainsttamperingbeforeacceptingthetoken’scontents.",
+    "reference": [
+      "9.1.1"
+    ],
+    "policy_id": "ASVS-206"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatonlyalgorithmsonanallowlistcanbeusedtocreateandverify self‑containedtokens,foragivencontext. Theallowlistmustincludethe permittedalgorithms,ideallyonlyeithersymmetricorasymmetric algorithms,andmustnotincludethe‘None’algorithm. Ifbothsymmetric andasymmetricmustbesupported,additionalcontrolswillbeneededto preventkeyconfusion.",
+    "reference": [
+      "9.1.2"
+    ],
+    "policy_id": "ASVS-207"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatkeymaterialthatisusedtovalidateself‑containedtokensisfrom trustedpre‑configuredsourcesforthetokenissuer,preventingattackers fromspecifyinguntrustedsourcesandkeys. ForJWTsandotherJWS structures,headerssuchas‘jku’,‘x5u’,and‘jwk’mustbevalidatedagainstan allowlistoftrustedsources.",
+    "reference": [
+      "9.1.3"
+    ],
+    "policy_id": "ASVS-208"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythat,ifavaliditytimespanispresentinthetokendata,thetokenand itscontentareacceptedonlyiftheverificationtimeiswithinthisvalidity timespan. Forexample,forJWTs,theclaims‘nbf’and‘exp’mustbeverified.",
+    "reference": [
+      "9.2.1"
+    ],
+    "policy_id": "ASVS-209"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheservicereceivingatokenvalidatesthetokentobethecorrect typeandismeantfortheintendedpurposebeforeacceptingthetoken’s contents. Forexample,onlyaccesstokenscanbeacceptedforauthorization decisionsandonlyIDTokenscanbeusedforprovinguserauthentication.",
+    "reference": [
+      "9.2.2"
+    ],
+    "policy_id": "ASVS-210"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheserviceonlyacceptstokenswhichareintendedforusewith thatservice(audience). ForJWTs,thiscanbeachievedbyvalidatingthe‘aud’ claimagainstanallowlistdefinedintheservice.",
+    "reference": [
+      "9.2.3"
+    ],
+    "policy_id": "ASVS-211"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythat,ifatokenissuerusesthesameprivatekeyforissuingtokensto differentaudiences,theissuedtokenscontainanaudiencerestrictionthat uniquelyidentifiestheintendedaudiences. Thiswillpreventatokenfrom beingreusedwithanunintendedaudience. Iftheaudienceidentifieris dynamicallyprovisioned,thetokenissuermustvalidatetheseaudiencesin ordertomakesurethattheydonotresultinaudienceimpersonation.",
+    "reference": [
+      "9.2.4"
+    ],
+    "policy_id": "ASVS-212"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattokensareonlysenttocomponentsthatstrictlyneedthem. For example,whenusingabackend‑for‑frontendpatternforbrowser‑based JavaScriptapplications,accessandrefreshtokensshallonlybeaccessiblefor thebackend.",
+    "reference": [
+      "10.1.1"
+    ],
+    "policy_id": "ASVS-213"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheclientonlyacceptsvaluesfromtheauthorizationserver(such astheauthorizationcodeorIDToken)ifthesevaluesresultfroman authorizationflowthatwasinitiatedbythesameuseragentsessionand transaction. Thisrequiresthatclient‑generatedsecrets,suchastheproof keyforcodeexchange(PKCE)‘code_verifier’,‘state’orOIDC‘nonce’,arenot guessable,arespecifictothetransaction,andaresecurelyboundtoboththe clientandtheuseragentsessioninwhichthetransactionwasstarted.",
+    "reference": [
+      "10.1.2"
+    ],
+    "policy_id": "ASVS-214"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatt,ifthecodeflowisused,theOAuthclienthasprotectionagainst browser‑basedrequestforgeryattacks,commonlyknownascross‑site requestforgery(CSRF),whichtriggertokenrequests,eitherbyusingproof keyforcodeexchange(PKCE)functionalityorcheckingthe‘state’parameter thatwassentintheauthorizationrequest.",
+    "reference": [
+      "10.2.1"
+    ],
+    "policy_id": "ASVS-215"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatt,iftheOAuthclientcaninteractwithmorethanoneauthorization server,ithasadefenseagainstmix‑upattacks. Forexample,itcouldrequire thattheauthorizationserverreturnthe‘iss’parametervalueandvalidateit intheauthorizationresponseandthetokenresponse.",
+    "reference": [
+      "10.2.2"
+    ],
+    "policy_id": "ASVS-216"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "VerifythattheOAuthclientonlyrequeststherequiredscopes(orother authorizationparameters)inrequeststotheauthorizationserver.",
+    "reference": [
+      "10.2.3"
+    ],
+    "policy_id": "ASVS-217"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheresourceserveronlyacceptsaccesstokensthatareintended forusewiththatservice(audience). Theaudiencemaybeincludedina structuredaccesstoken(suchasthe‘aud’claiminJWT),oritcanbechecked usingthetokenintrospectionendpoint.",
+    "reference": [
+      "10.3.1"
+    ],
+    "policy_id": "ASVS-218"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheresourceserverenforcesauthorizationdecisionsbasedon claimsfromtheaccesstokenthatdefinedelegatedauthorization. Ifclaims suchas‘sub’,‘scope’,and‘authorization_details’arepresent,theymustbe partofthedecision.",
+    "reference": [
+      "10.3.2"
+    ],
+    "policy_id": "ASVS-219"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatifanaccesscontroldecisionrequiresidentifyingauniqueuser fromanaccesstoken(JWTorrelatedtokenintrospectionresponse),the resourceserveridentifiestheuserfromclaimsthatcannotbereassignedto otherusers. Typically,itmeansusingacombinationof‘iss’and‘sub’claims.",
+    "reference": [
+      "10.3.3"
+    ],
+    "policy_id": "ASVS-220"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythat,iftheresourceserverrequiresspecificauthenticationstrength, methods,orrecentness,itverifiesthatthepresentedaccesstokensatisfies theseconstraints. Forexample,ifpresent,usingtheOIDC‘acr’,‘amr’and ‘auth_time’claimsrespectively.",
+    "reference": [
+      "10.3.4"
+    ],
+    "policy_id": "ASVS-221"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheresourceserverpreventstheuseofstolenaccesstokensor replayofaccesstokens(fromunauthorizedparties)byrequiring sender‑constrainedaccesstokens,eitherMutualTLSforOAuth2orOAuth2 DemonstrationofProofofPossession(DPoP).",
+    "reference": [
+      "10.3.5"
+    ],
+    "policy_id": "ASVS-222"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "VerifythattheauthorizationservervalidatesredirectURIsbasedona client‑specificallowlistofpre‑registeredURIsusingexactstringcomparison.",
+    "reference": [
+      "10.4.1"
+    ],
+    "policy_id": "ASVS-223"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythat,iftheauthorizationserverreturnstheauthorizationcodeinthe authorizationresponse,itcanbeusedonlyonceforatokenrequest. Forthe secondvalidrequestwithanauthorizationcodethathasalreadybeenused toissueanaccesstoken,theauthorizationservermustrejectatokenrequest andrevokeanyissuedtokensrelatedtotheauthorizationcode.",
+    "reference": [
+      "10.4.2"
+    ],
+    "policy_id": "ASVS-224"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheauthorizationcodeisshort‑lived. Themaximumlifetimecan beupto10minutesforL1andL2applicationsandupto1minuteforL3 applications.",
+    "reference": [
+      "10.4.3"
+    ],
+    "policy_id": "ASVS-225"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatforagivenclient,theauthorizationserveronlyallowstheusage ofgrantsthatthisclientneedstouse. Notethatthegrants‘token’(Implicit flow)and‘password’(ResourceOwnerPasswordCredentialsflow)mustno longerbeused.",
+    "reference": [
+      "10.4.4"
+    ],
+    "policy_id": "ASVS-226"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheauthorizationservermitigatesrefreshtokenreplayattacksfor publicclients,preferablyusingsender‑constrainedrefreshtokens,i.e., DemonstratingProofofPossession(DPoP)orCertificate‑BoundAccess TokensusingmutualTLS(mTLS).ForL1andL2applications,refreshtoken rotationmaybeused. Ifrefreshtokenrotationisused,theauthorization servermustinvalidatetherefreshtokenafterusage,andrevokeallrefresh tokensforthatauthorizationifanalreadyusedandinvalidatedrefreshtoken isprovided.",
+    "reference": [
+      "10.4.5"
+    ],
+    "policy_id": "ASVS-227"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythat,ifthecodegrantisused,theauthorizationservermitigates authorizationcodeinterceptionattacksbyrequiringproofkeyforcode exchange(PKCE).Forauthorizationrequests,theauthorizationservermust requireavalid‘code_challenge’valueandmustnotaccepta ‘code_challenge_method’valueof‘plain’. Foratokenrequest,itmustrequire validationofthe‘code_verifier’parameter.",
+    "reference": [
+      "10.4.6"
+    ],
+    "policy_id": "ASVS-228"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatiftheauthorizationserversupportsunauthenticateddynamic clientregistration,itmitagestheriskofmaliciousclientapplications. It mustvalidateclientmetadatasuchasanyregisteredURIs,ensuretheuser’s consent,andwarntheuserbeforeprocessinganauthorizationrequestwith anuntrustedclientapplication.",
+    "reference": [
+      "10.4.7"
+    ],
+    "policy_id": "ASVS-229"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatrefreshtokenshaveanabsoluteexpiration,includingifsliding refreshtokenexpirationisapplied.",
+    "reference": [
+      "10.4.8"
+    ],
+    "policy_id": "ASVS-230"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatrefreshtokensandreferenceaccesstokenscanberevokedbyan authorizeduserusingtheauthorizationserveruserinterface,tomitigatethe riskofmaliciousclientsorstolentokens.",
+    "reference": [
+      "10.4.9"
+    ],
+    "policy_id": "ASVS-231"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatconfidentialclientisauthenticatedforclient‑to‑authorizedserver backchannelrequestssuchastokenrequests,pushedauthorizationrequests (PAR),andtokenrevocationrequests.",
+    "reference": [
+      "10.4.10"
+    ],
+    "policy_id": "ASVS-232"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheauthorizationserverconfigurationonlyassignstherequired scopestotheOAuthclient.",
+    "reference": [
+      "10.4.11"
+    ],
+    "policy_id": "ASVS-233"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatforagivenclient,theauthorizationserveronlyallowsthe ‘response_mode’valuethatthisclientneedstouse. Forexample,byhaving theauthorizationservervalidatethisvalueagainsttheexpectedvaluesorby usingpushedauthorizationrequest(PAR)orJWT‑securedAuthorization Request(JAR).",
+    "reference": [
+      "10.4.12"
+    ],
+    "policy_id": "ASVS-234"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatgranttype‘code’isalwaysusedtogetherwithpushed authorizationrequests(PAR).",
+    "reference": [
+      "10.4.13"
+    ],
+    "policy_id": "ASVS-235"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheauthorizationserverissuesonlysender‑constrained (Proof‑of‑Possession)accesstokens,eitherwithcertificate‑boundaccess tokensusingmutualTLS(mTLS)orDPoP‑boundaccesstokens (DemonstrationofProofofPossession).",
+    "reference": [
+      "10.4.14"
+    ],
+    "policy_id": "ASVS-236"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythat,foraserver‑sideclient(whichisnotexecutedontheend‑user device),theauthorizationserverensuresthatthe‘authorization_details’ parametervalueisfromtheclientbackendandthattheuserhasnottamperedwithit. Forexample,byrequiringtheusageofpushed authorizationrequest(PAR)orJWT‑securedAuthorizationRequest(JAR).",
+    "reference": [
+      "10.4.15"
+    ],
+    "policy_id": "ASVS-237"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheclientisconfidentialandtheauthorizationserverrequiresthe useofstrongclientauthenticationmethods(basedonpublic‑key cryptographyandresistanttoreplayattacks),suchasmutualTLS( ‘tls_client_auth’,‘self_signed_tls_client_auth’)orprivatekeyJWT( ‘private_key_jwt’).",
+    "reference": [
+      "10.4.16"
+    ],
+    "policy_id": "ASVS-238"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheclient(astherelyingparty)mitigatesIDTokenreplayattacks. Forexample,byensuringthatthe‘nonce’claimintheIDTokenmatchesthe ‘nonce’valuesentintheauthenticationrequesttotheOpenIDProvider(in OAuth2refereedtoastheauthorizationrequestsenttotheauthorization server).",
+    "reference": [
+      "10.5.1"
+    ],
+    "policy_id": "ASVS-239"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "VerifythattheclientuniquelyidentifiestheuserfromIDTokenclaims, usuallythe‘sub’claim,whichcannotbereassignedtootherusers(forthe scopeofanidentityprovider).",
+    "reference": [
+      "10.5.2"
+    ],
+    "policy_id": "ASVS-240"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheclientrejectsattemptsbyamaliciousauthorizationserverto impersonateanotherauthorizationserverthroughauthorizationserver metadata. Theclientmustrejectauthorizationservermetadataiftheissuer URLintheauthorizationservermetadatadoesnotexactlymatchthe pre‑configuredissuerURLexpectedbytheclient.",
+    "reference": [
+      "10.5.3"
+    ],
+    "policy_id": "ASVS-241"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "VerifythattheclientvalidatesthattheIDTokenisintendedtobeusedfor thatclient(audience)bycheckingthatthe‘aud’claimfromthetokenisequal tothe‘client_id’valuefortheclient.",
+    "reference": [
+      "10.5.4"
+    ],
+    "policy_id": "ASVS-242"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythat,whenusingOIDCback‑channellogout,therelyingparty mitigatesdenialofservicethroughforcedlogoutandcross‑JWTconfusionin thelogoutflow. Theclientmustverifythatthelogouttokeniscorrectlytyped withavalueof‘logout+jwt’,containsthe‘event’claimwiththecorrect membername,anddoesnotcontaina‘nonce’claim. Notethatitisalso recommendedtohaveashortexpiration(e.g.,2minutes).",
+    "reference": [
+      "10.5.5"
+    ],
+    "policy_id": "ASVS-243"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "VerifythattheOpenIDProvideronlyallowsvalues‘code’,‘ciba’,‘id_token’, or‘id_tokencode’forresponsemode. Notethat‘code’ispreferredover ‘id_tokencode’(theOIDCHybridflow),and‘token’(anyImplicitflow)must notbeused.",
+    "reference": [
+      "10.6.1"
+    ],
+    "policy_id": "ASVS-244"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "VerifythattheOpenIDProvidermitigatesdenialofservicethroughforced logout. Byobtainingexplicitconfirmationfromtheend‑useror,ifpresent, validatingparametersinthelogoutrequest(initiatedbytherelyingparty), suchasthe‘id_token_hint’.",
+    "reference": [
+      "10.6.2"
+    ],
+    "policy_id": "ASVS-245"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheauthorizationserverensuresthattheuserconsentstoeach authorizationrequest. Iftheidentityoftheclientcannotbeassured,the authorizationservermustalwaysexplicitlyprompttheuserforconsent.",
+    "reference": [
+      "10.7.1"
+    ],
+    "policy_id": "ASVS-246"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatwhentheauthorizationserverpromptsforuserconsent,it presentssufficientandclearinformationaboutwhatisbeingconsentedto. Whenapplicable,thisshouldincludethenatureoftherequested authorizations(typicallybasedonscope,resourceserver,RichAuthorization Requests(RAR)authorizationdetails),theidentityoftheauthorized application,andthelifetimeoftheseauthorizations.",
+    "reference": [
+      "10.7.2"
+    ],
+    "policy_id": "ASVS-247"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheusercanreview,modify,andrevokeconsentswhichtheuser hasgrantedthroughtheauthorizationserver.",
+    "reference": [
+      "10.7.3"
+    ],
+    "policy_id": "ASVS-248"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatthereisadocumentedpolicyformanagementofcryptographic keysandacryptographickeylifecyclethatfollowsakeymanagement suchasNISTSP800‑57. Thisshouldincludeensuringthatkeysare notovershared(forexample,withmorethantwoentitiesforsharedsecrets andmorethanoneentityforprivatekeys).",
+    "reference": [
+      "11.1.1",
+      "NISTSP800‑57"
+    ],
+    "policy_id": "ASVS-249"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatacryptographicinventoryisperformed,maintained,regularly updated,andincludesallcryptographickeys,algorithms,andcertificates usedbytheapplication. Itmustalsodocumentwherekeyscanandcannot beusedinthesystem,andthetypesofdatathatcanandcannotbeprotected usingthekeys.",
+    "reference": [
+      "11.1.2"
+    ],
+    "policy_id": "ASVS-250"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatcryptographicdiscoverymechanismsareemployedtoidentifyall instancesofcryptographyinthesystem,includingencryption,hashing,and signingoperations.",
+    "reference": [
+      "11.1.3"
+    ],
+    "policy_id": "ASVS-251"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatacryptographicinventoryismaintained. Thismustincludea documentedplanthatoutlinesthemigrationpathtonewcryptographic standards,suchaspost‑quantumcryptography,inordertoreacttofuture threats.",
+    "reference": [
+      "11.1.4"
+    ],
+    "policy_id": "ASVS-252"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatindustry‑validatedimplementations(includinglibrariesand hardware‑acceleratedimplementations)areusedforcryptographic operations.",
+    "reference": [
+      "11.2.1"
+    ],
+    "policy_id": "ASVS-253"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheapplicationisdesignedwithcryptoagilitysuchthatrandom number,authenticatedencryption,MAC,orhashingalgorithms,key lengths,rounds,ciphersandmodescanbereconfigured,upgraded,or swappedatanytime,toprotectagainstcryptographicbreaks. Similarly,it mustalsobepossibletoreplacekeysandpasswordsandre‑encryptdata. Thiswillallowforseamlessupgradestopost‑quantumcryptography(PQC),oncehigh‑assuranceimplementationsofapprovedPQCschemesor standardsarewidelyavailable.",
+    "reference": [
+      "11.2.2"
+    ],
+    "policy_id": "ASVS-254"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatallcryptographicprimitivesutilizeaminimumof128‑bitsof securitybasedonthealgorithm,keysize,andconfiguration. Forexample,a 256‑bitECCkeyprovidesroughly128bitsofsecuritywhereRSArequiresa 3072‑bitkeytoachieve128bitsofsecurity.",
+    "reference": [
+      "11.2.3"
+    ],
+    "policy_id": "ASVS-255"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatallcryptographicoperationsareconstant‑time,withno ‘short‑circuit’operationsincomparisons,calculations,orreturns,toavoid leakinginformation.",
+    "reference": [
+      "11.2.4"
+    ],
+    "policy_id": "ASVS-256"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatallcryptographicmodulesfailsecurely,anderrorsarehandledin awaythatdoesnotenablevulnerabilities,suchasPaddingOracleattacks.",
+    "reference": [
+      "11.2.5"
+    ],
+    "policy_id": "ASVS-257"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatinsecureblockmodes(e.g.,ECB)andweakpaddingschemes (e.g.,PKCS#1v1.5)arenotused.",
+    "reference": [
+      "11.3.1"
+    ],
+    "policy_id": "ASVS-258"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "VerifythatonlyapprovedciphersandmodessuchasAESwithGCMareused.",
+    "reference": [
+      "11.3.2"
+    ],
+    "policy_id": "ASVS-259"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatencrypteddataisprotectedagainstunauthorizedmodification preferablybyusinganapprovedauthenticatedencryptionmethodorby combininganapprovedencryptionmethodwithanapprovedMAC algorithm.",
+    "reference": [
+      "11.3.3"
+    ],
+    "policy_id": "ASVS-260"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatnonces,initializationvectors,andothersingle‑usenumbersare notusedformorethanoneencryptionkeyanddata‑elementpair. The methodofgenerationmustbeappropriateforthealgorithmbeingused.",
+    "reference": [
+      "11.3.4"
+    ],
+    "policy_id": "ASVS-261"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "VerifythatanycombinationofanencryptionalgorithmandaMAC algorithmisoperatinginencrypt‑then‑MACmode.",
+    "reference": [
+      "11.3.5"
+    ],
+    "policy_id": "ASVS-262"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatonlyapprovedhashfunctionsareusedforgeneralcryptographic usecases,includingdigitalsignatures,HMAC,KDF,andrandombit generation. Disallowedhashfunctions,suchasMD5,mustnotbeusedfor anycryptographicpurpose.",
+    "reference": [
+      "11.4.1"
+    ],
+    "policy_id": "ASVS-263"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatpasswordsarestoredusinganapproved,computationally intensive,keyderivationfunction(alsoknownasa“passwordhashing function”),withparametersettingsconfiguredbasedoncurrentguidance. Thesettingsshouldbalancesecurityandperformancetomakebrute‑force attackssufficientlychallengingfortherequiredlevelofsecurity.",
+    "reference": [
+      "11.4.2"
+    ],
+    "policy_id": "ASVS-264"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythathashfunctionsusedindigitalsignatures,aspartofdata authenticationordataintegrityarecollisionresistantandhaveappropriate bit‑lengths. Ifcollisionresistanceisrequired,theoutputlengthmustbeat least256bits. Ifonlyresistancetosecondpre‑imageattacksisrequired,the outputlengthmustbeatleast128bits.",
+    "reference": [
+      "11.4.3"
+    ],
+    "policy_id": "ASVS-265"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheapplicationusesapprovedkeyderivationfunctionswithkey stretchingparameterswhenderivingsecretkeysfrompasswords. The parametersinusemustbalancesecurityandperformancetoprevent brute‑forceattacksfromcompromisingtheresultingcryptographickey.",
+    "reference": [
+      "11.4.4"
+    ],
+    "policy_id": "ASVS-266"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatallrandomnumbersandstringswhichareintendedtobe non‑guessablemustbegeneratedusingacryptographicallysecure pseudo‑randomnumbergenerator(CSPRNG)andhaveatleast128bitsof entropy. NotethatUUIDsdonotrespectthiscondition.",
+    "reference": [
+      "11.5.1"
+    ],
+    "policy_id": "ASVS-267"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattherandomnumbergenerationmechanisminuseisdesignedto worksecurely,evenunderheavydemand.",
+    "reference": [
+      "11.5.2"
+    ],
+    "policy_id": "ASVS-268"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatonlyapprovedcryptographicalgorithmsandmodesofoperation areusedforkeygenerationandseeding,anddigitalsignaturegeneration andverification. Keygenerationalgorithmsmustnotgenerateinsecurekeys vulnerabletoknownattacks,forexample,RSAkeyswhicharevulnerableto Fermatfactorization.",
+    "reference": [
+      "11.6.1"
+    ],
+    "policy_id": "ASVS-269"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatapprovedcryptographicalgorithmsareusedforkeyexchange (suchasDiffie‑Hellman)withafocusonensuringthatkeyexchange mechanismsusesecureparameters. Thiswillpreventattacksonthekey establishmentprocesswhichcouldleadtoadversary‑in‑the‑middleattacks orcryptographicbreaks.",
+    "reference": [
+      "11.6.2"
+    ],
+    "policy_id": "ASVS-270"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatfullmemoryencryptionisinusethatprotectssensitivedata whileitisinuse,preventingaccessbyunauthorizedusersorprocesses.",
+    "reference": [
+      "11.7.1"
+    ],
+    "policy_id": "ASVS-271"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatdataminimizationensurestheminimalamountofdatais exposedduringprocessing,andensurethatdataisencryptedimmediately afteruseorassoonasfeasible.",
+    "reference": [
+      "11.7.2"
+    ],
+    "policy_id": "ASVS-272"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "VerifythatonlythelatestrecommendedversionsoftheTLSprotocolare enabled,suchasTLS1.2andTLS1.3. ThelatestversionoftheTLSprotocol mustbethepreferredoption.",
+    "reference": [
+      "12.1.1"
+    ],
+    "policy_id": "ASVS-273"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatonlyrecommendedciphersuitesareenabled,withthestrongest ciphersuitessetaspreferred. L3applicationsmustonlysupportcipher suiteswhichprovideforwardsecrecy.",
+    "reference": [
+      "12.1.2"
+    ],
+    "policy_id": "ASVS-274"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "VerifythattheapplicationvalidatesthatmTLSclientcertificatesaretrusted beforeusingthecertificateidentityforauthenticationorauthorization.",
+    "reference": [
+      "12.1.3"
+    ],
+    "policy_id": "ASVS-275"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatpropercertificationrevocation,suchasOnlineCertificateStatus Protocol(OCSP)Stapling,isenabledandconfigured.",
+    "reference": [
+      "12.1.4"
+    ],
+    "policy_id": "ASVS-276"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "VerifythatEncryptedClientHello(ECH)isenabledintheapplication’sTLS settingstopreventexposureofsensitivemetadata,suchastheServerName Indication(SNI),duringTLShandshakeprocesses.",
+    "reference": [
+      "12.1.5"
+    ],
+    "policy_id": "ASVS-277"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "VerifythatTLSisusedforallconnectivitybetweenaclientandexternal facing,HTTP‑basedservices,anddoesnotfallbacktoinsecureor unencryptedcommunications.",
+    "reference": [
+      "12.2.1"
+    ],
+    "policy_id": "ASVS-278"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "VerifythatexternalfacingservicesusepubliclytrustedTLScertificates.",
+    "reference": [
+      "12.2.2"
+    ],
+    "policy_id": "ASVS-279"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "VerifythatanencryptedprotocolsuchasTLSisusedforallinboundand outboundconnectionstoandfromtheapplication,includingmonitoring systems,managementtools,remoteaccessandSSH,middleware,databases, mainframes,partnersystems,orexternalAPIs. Theservermustnotfall backtoinsecureorunencryptedprotocols.",
+    "reference": [
+      "12.3.1"
+    ],
+    "policy_id": "ASVS-280"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "VerifythatTLSclientsvalidatecertificatesreceivedbeforecommunicating withaTLSserver.",
+    "reference": [
+      "12.3.2"
+    ],
+    "policy_id": "ASVS-281"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "VerifythatTLSoranotherappropriatetransportencryptionmechanism usedforallconnectivitybetweeninternal,HTTP‑basedserviceswithinthe application,anddoesnotfallbacktoinsecureorunencrypted communications.",
+    "reference": [
+      "12.3.3"
+    ],
+    "policy_id": "ASVS-282"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "VerifythatTLSconnectionsbetweeninternalservicesusetrusted certificates. Whereinternallygeneratedorself‑signedcertificatesareused, theconsumingservicemustbeconfiguredtoonlytrustspecificinternalCAs andspecificself‑signedcertificates.",
+    "reference": [
+      "12.3.4"
+    ],
+    "policy_id": "ASVS-283"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatservicescommunicatinginternallywithinasystem(intra‑service communications)usestrongauthenticationtoensurethateachendpointis verified. Strongauthenticationmethods,suchasTLSclientauthentication, mustbeemployedtoensureidentity,usingpublic‑keyinfrastructureand mechanismsthatareresistanttoreplayattacks. Formicroservice architectures,considerusingaservicemeshtosimplifycertificate managementandenhancesecurity.",
+    "reference": [
+      "12.3.5"
+    ],
+    "policy_id": "ASVS-284"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatallcommunicationneedsfortheapplicationaredocumented. Thismustincludeexternalserviceswhichtheapplicationreliesuponand caseswhereanendusermightbeabletoprovideanexternallocationto whichtheapplicationwillthenconnect.",
+    "reference": [
+      "13.1.1"
+    ],
+    "policy_id": "ASVS-285"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatforeachservicetheapplicationuses,thedocumentationdefines themaximumnumberofconcurrentconnections(e.g.,connectionpool limits)andhowtheapplicationbehaveswhenthatlimitisreached, includinganyfallbackorrecoverymechanisms,topreventdenialofservice conditions.",
+    "reference": [
+      "13.1.2"
+    ],
+    "policy_id": "ASVS-286"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheapplicationdocumentationdefinesresource‑management strategiesforeveryexternalsystemorserviceituses(e.g.,databases,file handles,threads,HTTPconnections). Thisshouldincluderesource‑release procedures,timeoutsettings,failurehandling,andwhereretrylogicis implemented,specifyingretrylimits,delays,andback‑offalgorithms. For synchronousHTTPrequest–responseoperationsitshouldmandateshort timeoutsandeitherdisableretriesorstrictlylimitretriestoprevent cascadingdelaysandresourceexhaustion.",
+    "reference": [
+      "13.1.3"
+    ],
+    "policy_id": "ASVS-287"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheapplication’sdocumentationdefinesthesecretsthatare criticalforthesecurityoftheapplicationandascheduleforrotatingthem, basedontheorganization’sthreatmodelandbusinessrequirements.",
+    "reference": [
+      "13.1.4"
+    ],
+    "policy_id": "ASVS-288"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatcommunicationsbetweenbackendapplicationcomponentsthat don’tsupporttheapplication’sstandardusersessionmechanism,including APIs,middleware,anddatalayers,areauthenticated. Authenticationmust useindividualserviceaccounts,short‑termtokens,orcertificate‑based authenticationandnotunchangingcredentialssuchaspasswords,APIkeys, orsharedaccountswithprivilegedaccess.",
+    "reference": [
+      "13.2.1"
+    ],
+    "policy_id": "ASVS-289"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatcommunicationsbetweenbackendapplicationcomponents, includinglocaloroperatingsystemservices,APIs,middleware,anddata layers,areperformedwithaccountsassignedtheleastnecessaryprivileges.",
+    "reference": [
+      "13.2.2"
+    ],
+    "policy_id": "ASVS-290"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatifacredentialhastobeusedforserviceauthentication,the credentialbeingusedbytheconsumerisnotadefaultcredential(e.g., root/rootoradmin/admin).",
+    "reference": [
+      "13.2.3"
+    ],
+    "policy_id": "ASVS-291"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatanallowlistisusedtodefinetheexternalresourcesorsystems withwhichtheapplicationispermittedtocommunicate(e.g.,foroutbound requests,dataloads,orfileaccess). Thisallowlistcanbeimplementedatthe applicationlayer,webserver,firewall,oracombinationofdifferentlayers.",
+    "reference": [
+      "13.2.4"
+    ],
+    "policy_id": "ASVS-292"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheweborapplicationserverisconfiguredwithanallowlistof resourcesorsystemstowhichtheservercansendrequestsorloaddataor filesfrom.",
+    "reference": [
+      "13.2.5"
+    ],
+    "policy_id": "ASVS-293"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatwheretheapplicationconnectstoseparateservices,itfollowsthe documentedconfigurationforeachconnection,suchasmaximumparallel connections,behaviorwhenmaximumallowedconnectionsisreached, connectiontimeouts,andretrystrategies.",
+    "reference": [
+      "13.2.6"
+    ],
+    "policy_id": "ASVS-294"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatasecretsmanagementsolution,suchasakeyvault,isusedto securelycreate,store,controlaccessto,anddestroybackendsecrets. These couldincludepasswords,keymaterial,integrationswithdatabasesand third‑partysystems,keysandseedsfortime‑basedtokens,otherinternal secrets,andAPIkeys. Secretsmustnotbeincludedinapplicationsource codeorincludedinbuildartifacts. ForanL3application,thismustinvolvea hardware‑backedsolutionsuchasanHSM.",
+    "reference": [
+      "13.3.1"
+    ],
+    "policy_id": "ASVS-295"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythataccesstosecretassetsadherestotheprincipleofleastprivilege.",
+    "reference": [
+      "13.3.2"
+    ],
+    "policy_id": "ASVS-296"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatallcryptographicoperationsareperformedusinganisolated securitymodule(suchasavaultorhardwaresecuritymodule)tosecurely manageandprotectkeymaterialfromexposureoutsideofthesecurity module.",
+    "reference": [
+      "13.3.3"
+    ],
+    "policy_id": "ASVS-297"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatsecretsareconfiguredtoexpireandberotatedbasedonthe application’sdocumentation.",
+    "reference": [
+      "13.3.4"
+    ],
+    "policy_id": "ASVS-298"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythattheapplicationisdeployedeitherwithoutanysourcecontrol metadata,includingthe.gitor.svnfolders,orinawaythesefoldersare inaccessiblebothexternallyandtotheapplicationitself.",
+    "reference": [
+      "13.4.1"
+    ],
+    "policy_id": "ASVS-299"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatdebugmodesaredisabledforallcomponentsinproduction environmentstopreventexposureofdebuggingfeaturesandinformation leakage.",
+    "reference": [
+      "13.4.2"
+    ],
+    "policy_id": "ASVS-300"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verifythatwebserversdonotexposedirectorylistingstoclientsunless explicitlyintended.",
+    "reference": [
+      "13.4.3"
+    ],
+    "policy_id": "ASVS-301"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "VerifythatusingtheHTTPTRACEmethodisnotsupportedinproduction environments,toavoidpotentialinformationleakage.",
+    "reference": [
+      "13.4.4"
+    ],
+    "policy_id": "ASVS-302"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that all communication needs for the application are documented. This must include external services which the application relies upon and cases where an end user might be able to provide an external location to which the application will then connect.",
+    "reference": [
+      "13.1.1"
+    ],
+    "policy_id": "ASVS-303"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that for each service the application uses, the documentation defines the maximum number of concurrent connections (e.g., connection pool limits) and how the application behaves when that limit is reached, including any fallback or recovery mechanisms, to prevent denial of service conditions.",
+    "reference": [
+      "13.1.2"
+    ],
+    "policy_id": "ASVS-304"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application documentation defines resource-management strategies for every external system or service it uses (e.g., databases, file handles, threads, HTTP connections). This should include resource-release procedures, timeout settings, failure handling, and where retry logic is implemented, specifying retry limits, delays, and back-off algorithms. For synchronous HTTP request–response operations it should mandate short timeouts and either disable retries or strictly limit retries to prevent cascading delays and resource exhaustion.",
+    "reference": [
+      "13.1.3"
+    ],
+    "policy_id": "ASVS-305"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application's documentation defines the secrets that are critical for the security of the application and a schedule for rotating them, based on the organization's threat model and business requirements.",
+    "reference": [
+      "13.1.4"
+    ],
+    "policy_id": "ASVS-306"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that communications between backend application components that don't support the application's standard user session mechanism, including APIs, middleware, and data layers, are authenticated. Authentication must use individual service accounts, short-term tokens, or certificate-based authentication and not unchanging credentials such as passwords, API keys, or shared accounts with privileged access.",
+    "reference": [
+      "13.2.1"
+    ],
+    "policy_id": "ASVS-307"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that an allowlist is used to define the external resources or systems with which the application is permitted to communicate (e.g., for outbound requests, data loads, or file access). This allowlist can be implemented at the application layer, web server, firewall, or a combination of different layers.",
+    "reference": [
+      "13.2.4"
+    ],
+    "policy_id": "ASVS-308"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the web or application server is configured with an allowlist of resources or systems to which the server can send requests or load data or files from.",
+    "reference": [
+      "13.2.5"
+    ],
+    "policy_id": "ASVS-309"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that where the application connects to separate services, it follows the documented configuration for each connection, such as maximum parallel connections, behavior when maximum allowed connections is reached, connection timeouts, and retry strategies.",
+    "reference": [
+      "13.2.6"
+    ],
+    "policy_id": "ASVS-310"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that a secrets management solution, such as a key vault, is used to securely create, store, control access to, and destroy backend secrets. These could include passwords, key material, integrations with databases and third-party systems, keys and seeds for time-based tokens, other internal secrets, and API keys. Secrets must not be included in application source code or included in build artifacts. For an L3 application, this must involve a hardware-backed solution such as an HSM.",
+    "reference": [
+      "13.3.1"
+    ],
+    "policy_id": "ASVS-311"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that access to secret assets adheres to the principle of least privilege.",
+    "reference": [
+      "13.3.2"
+    ],
+    "policy_id": "ASVS-312"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application is deployed either without any source control metadata, including the .git or .svn folders, or in a way that these folders are inaccessible both externally and to the application itself.",
+    "reference": [
+      "13.4.1"
+    ],
+    "policy_id": "ASVS-313"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that documentation (such as for internal APIs) and monitoring endpoints are not exposed unless explicitly intended.",
+    "reference": [
+      "13.4.5"
+    ],
+    "policy_id": "ASVS-314"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application does not expose detailed version information of backend components.",
+    "reference": [
+      "13.4.6"
+    ],
+    "policy_id": "ASVS-315"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the web tier is configured to only serve files with specific file extensions to prevent unintentional information, configuration, and source code leakage.",
+    "reference": [
+      "13.4.7"
+    ],
+    "policy_id": "ASVS-316"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that all sensitive data created and processed by the application has been identified and classified into protection levels. This includes data that is only encoded and therefore easily decoded, such as Base64 strings or the plaintext payload inside a JWT. Protection levels need to take into account any data protection and privacy regulations and standards which the application is required to comply with.",
+    "reference": [
+      "14.1.1"
+    ],
+    "policy_id": "ASVS-317"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that all sensitive data protection levels have a documented set of protection requirements. This must include (but not be limited to) requirements related to general encryption, integrity verification, retention, how the data is to be logged, access controls around sensitive data in logs, database-level encryption, privacy and privacy-enhancing technologies to be used, and other confidentiality requirements.",
+    "reference": [
+      "14.1.2"
+    ],
+    "policy_id": "ASVS-318"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that sensitive data is only sent to the server in the HTTP message body or header fields, and that the URL and query string do not containsensitive information, such as an API key or session token.",
+    "reference": [
+      "14.2.1"
+    ],
+    "policy_id": "ASVS-319"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application prevents sensitive data from being cached in server components, such as load balancers and application caches, or ensures that the data is securely purged after use.",
+    "reference": [
+      "14.2.2"
+    ],
+    "policy_id": "ASVS-320"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that defined sensitive data is not sent to untrusted parties (e.g., user trackers) to prevent unwanted collection of data outside of the application's control.",
+    "reference": [
+      "14.2.3"
+    ],
+    "policy_id": "ASVS-321"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that controls around sensitive data related to encryption, integrity verification, retention, how the data is logged, access controls around sensitive data in logs, privacy and privacy-enhancing technologies, are implemented as defined in the documentation for the specific data's protection level.",
+    "reference": [
+      "14.2.4"
+    ],
+    "policy_id": "ASVS-322"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that caching mechanisms are configured to only cache responses which have the expected content type for that resource and do not contain sensitive, dynamic content. The web server should return a 404 or 302 response when a non-existent file is accessed rather than returning a different, valid file. This should prevent Web Cache Deception attacks.",
+    "reference": [
+      "14.2.5"
+    ],
+    "policy_id": "ASVS-323"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application only returns the minimum required sensitive data for the application's functionality. For example, only returning some of the digits of a credit card number and not the full number. If the complete data is required, it should be masked in the user interface unless the user specifically views it.",
+    "reference": [
+      "14.2.6"
+    ],
+    "policy_id": "ASVS-324"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that sensitive information is subject to data retention classification, ensuring that outdated or unnecessary data is deleted automatically, on a defined schedule, or as the situation requires.",
+    "reference": [
+      "14.2.7"
+    ],
+    "policy_id": "ASVS-325"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that sensitive information is removed from the metadata of user-submitted files unless storage is consented to by the user.",
+    "reference": [
+      "14.2.8"
+    ],
+    "policy_id": "ASVS-326"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that authenticated data is cleared from client storage, such as the browser DOM, after the client or session is terminated. The 'Clear-Site-Data' HTTP response header field may be able to help with this but the client-side should also be able to clear up if the server connection is not available when the session is terminated.",
+    "reference": [
+      "14.3.1"
+    ],
+    "policy_id": "ASVS-327"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application sets sufficient anti-caching HTTP response header fields (i.e., Cache-Control: no-store) so that sensitive data is not cached in browsers.",
+    "reference": [
+      "14.3.2"
+    ],
+    "policy_id": "ASVS-328"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that data stored in browser storage (such as localStorage, sessionStorage, IndexedDB, or cookies) does not contain sensitive data, with the exception of session tokens.",
+    "reference": [
+      "14.3.3"
+    ],
+    "policy_id": "ASVS-329"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that application documentation defines risk based remediation time frames for 3rd party component versions with vulnerabilities and for updating libraries in general, to minimize the risk from these components.",
+    "reference": [
+      "15.1.1"
+    ],
+    "policy_id": "ASVS-330"
+  },
+  {
+    "definition": [
+      "SBOM: software bill of materials — a structured inventory of third-party libraries and components used by the application."
+    ],
+    "scope": null,
+    "policy_description": "Verify that an inventory catalog, such as a software bill of materials (SBOM), is maintained of all third-party libraries in use, including verifying that components come from pre-defined, trusted, and continually maintained repositories.",
+    "reference": [
+      "15.1.2"
+    ],
+    "policy_id": "ASVS-331"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application documentation identifies functionality which is time-consuming or resource-demanding. This must include how to prevent a loss of availability due to overusing this functionality and how to avoid a situation where building a response takes longer than the consumer’s timeout. Potential defenses may include asynchronous processing, using queues, and limiting parallel processes per user and per application.",
+    "reference": [
+      "15.1.3"
+    ],
+    "policy_id": "ASVS-332"
+  },
+  {
+    "definition": [
+      "'Risky component' — a 3rd party library (i.e., not internally developed) with missing or poorly implemented security controls around its development processes or functionality; examples include poorly maintained, unsupported, end-of-life, or components with a history of significant vulnerabilities."
+    ],
+    "scope": null,
+    "policy_description": "Verify that application documentation highlights third-party libraries which are considered to be \"risky components\".",
+    "reference": [
+      "15.1.4"
+    ],
+    "policy_id": "ASVS-333"
+  },
+  {
+    "definition": [
+      "\"Dangerous functionality\" — a component (internally developed or third-party) that performs operations such as deserialization of untrusted data, raw file or binary data parsing, dynamic code execution, or direct memory manipulation."
+    ],
+    "scope": null,
+    "policy_description": "Verify that application documentation highlights parts of the application where \"dangerous functionality\" is being used.",
+    "reference": [
+      "15.1.5"
+    ],
+    "policy_id": "ASVS-334"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application only contains components which have not breached the documented update and remediation timeframes.",
+    "reference": [
+      "15.2.1"
+    ],
+    "policy_id": "ASVS-335"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application has implemented defenses against loss of availability due to functionality which is time-consuming or resource-demanding, based on the documented security decisions and strategies for this.",
+    "reference": [
+      "15.2.2"
+    ],
+    "policy_id": "ASVS-336"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the production environment only includes functionality that is required for the application to function, and does not expose extraneous functionality such as test code, sample snippets, and development functionality.",
+    "reference": [
+      "15.2.3"
+    ],
+    "policy_id": "ASVS-337"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that third-party components and all of their transitive dependencies are included from the expected repository, whether internally owned or an external source, and that there is no risk of a dependency confusion attack.",
+    "reference": [
+      "15.2.4"
+    ],
+    "policy_id": "ASVS-338"
+  },
+  {
+    "definition": [
+      "\"Dangerous functionality\" — a component that performs operations such as deserialization of untrusted data, raw file or binary data parsing, dynamic code execution, or direct memory manipulation.",
+      "'Risky component' — a 3rd party library with missing or poorly implemented security controls or poor maintenance."
+    ],
+    "scope": null,
+    "policy_description": "Verify that the application implements additional protections around parts of the application which are documented as containing \"dangerous functionality\" or using third-party libraries considered to be \"risky components\". This could include techniques such as sandboxing, encapsulation, containerization or network level isolation to delay and deter attackers who compromise one part of an application from pivoting elsewhere in the application.",
+    "reference": [
+      "15.2.5"
+    ],
+    "policy_id": "ASVS-339"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application only returns the required subset of fields from a data object. For example, it should not return an entire data object, as some individual fields should not be accessible to users.",
+    "reference": [
+      "15.3.1"
+    ],
+    "policy_id": "ASVS-340"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that where the application backend makes calls to external URLs, it is configured to not follow redirects unless it is intended functionality.",
+    "reference": [
+      "15.3.2"
+    ],
+    "policy_id": "ASVS-341"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application has countermeasures to protect against mass assignment attacks by limiting allowed fields per controller and action, e.g., it is not possible to insert or update a field value when it was not intended to be part of that action.",
+    "reference": [
+      "15.3.3"
+    ],
+    "policy_id": "ASVS-342"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that all proxying and middleware components transfer the user’s original IP address correctly using trusted data fields that cannot be manipulated by the end user, and the application and web server use this correct value for logging and security decisions such as rate limiting, taking into account that even the original IP address may not be reliable due to dynamic IPs, VPNs, or corporate firewalls.",
+    "reference": [
+      "15.3.4"
+    ],
+    "policy_id": "ASVS-343"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application explicitly ensures that variables are of the correct type and performs strict equality and comparator operations. This is to avoid type juggling or type confusion vulnerabilities caused by the application code making an assumption about a variable type.",
+    "reference": [
+      "15.3.5"
+    ],
+    "policy_id": "ASVS-344"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that JavaScript code is written in a way that prevents prototype pollution, for example, by using Set() or Map() instead of object literals.",
+    "reference": [
+      "15.3.6"
+    ],
+    "policy_id": "ASVS-345"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application has defenses against HTTP parameter pollution attacks, particularly if the application framework makes no distinction about the source of request parameters (querystring, body parameters, cookies, or header fields).",
+    "reference": [
+      "15.3.7"
+    ],
+    "policy_id": "ASVS-346"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that shared objects in multi-threaded code (such as caches, files, or in-memory objects accessed by multiple threads) are accessed safely by using thread-safe types and synchronization mechanisms like locks or semaphore to avoid race conditions and data corruption.",
+    "reference": [
+      "15.4.1"
+    ],
+    "policy_id": "ASVS-347"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that checks on a resource’s state, such as its existence or permissions, and the actions that depend on them are performed as a single atomic operation to prevent time-of-check to time-of-use (TOCTOU) race conditions. For example, checking if a file exists before opening it, or verifying a user’s access before granting it.",
+    "reference": [
+      "15.4.2"
+    ],
+    "policy_id": "ASVS-348"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that locks are used consistently to avoid threads getting stuck, whether by waiting on each other or retrying endlessly, and that locking logic stays with the code responsible for managing the resource to ensure locks cannot be inadvertently or maliciously modified by external classes or code.",
+    "reference": [
+      "15.4.3"
+    ],
+    "policy_id": "ASVS-349"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that resource allocation policies prevent thread starvation by ensuring fair access to resources, such as by leveraging thread pools, allowing lower-priority threads to proceed within a reasonable timeframe.",
+    "reference": [
+      "15.4.4"
+    ],
+    "policy_id": "ASVS-350"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that an inventory exists documenting the logging performed at each layer of the application's technology stack, what events are being logged, log formats, where that logging is stored, how it is used, how access to it is controlled, and for how long logs are kept.",
+    "reference": [
+      "16.1.1"
+    ],
+    "policy_id": "ASVS-351"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that each log entry includes necessary metadata (such as when, where, who, what) that would allow for a detailed investigation of the timeline when an event happens.",
+    "reference": [
+      "16.2.1"
+    ],
+    "policy_id": "ASVS-352"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that time sources for all logging components are synchronized, and that timestamps in security event metadata use UTC or include an explicit timezone offset. UTC is recommended to ensure consistency across distributed systems and to prevent confusion during daylight saving time transitions.",
+    "reference": [
+      "16.2.2"
+    ],
+    "policy_id": "ASVS-353"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application only stores or broadcasts logs to the files and services that are documented in the log inventory.",
+    "reference": [
+      "16.2.3"
+    ],
+    "policy_id": "ASVS-354"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that logs can be read and correlated by the log processor that is in use, preferably by using a common logging format.",
+    "reference": [
+      "16.2.4"
+    ],
+    "policy_id": "ASVS-355"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that when logging sensitive data, the application enforces logging based on the data’s protection level. For example, it may not be allowed to log certain data, such as credentials or payment details. Other data, such as session tokens, may only be logged by being hashed or masked, either in full or partially.",
+    "reference": [
+      "16.2.5"
+    ],
+    "policy_id": "ASVS-356"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that all authentication operations are logged, including successful and unsuccessful attempts. Additional metadata, such as the type of authentication or factors used, should also be collected.",
+    "reference": [
+      "16.3.1"
+    ],
+    "policy_id": "ASVS-357"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that failed authorization attempts are logged. For L3, this must include logging all authorization decisions, including logging when sensitive data is accessed (without logging the sensitive data itself).",
+    "reference": [
+      "16.3.2"
+    ],
+    "policy_id": "ASVS-358"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application logs the security events that are defined in the documentation and also logs attempts to bypass the security controls, such as input validation, business logic, and anti-automation.",
+    "reference": [
+      "16.3.3"
+    ],
+    "policy_id": "ASVS-359"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application logs unexpected errors and security control failures such as backend TLS failures.",
+    "reference": [
+      "16.3.4"
+    ],
+    "policy_id": "ASVS-360"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that all logging components appropriately encode data to prevent log injection.",
+    "reference": [
+      "16.4.1"
+    ],
+    "policy_id": "ASVS-361"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that logs are protected from unauthorized access and cannot be modified.",
+    "reference": [
+      "16.4.2"
+    ],
+    "policy_id": "ASVS-362"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that logs are securely transmitted to a logically separate system for analysis, detection, alerting, and escalation. The aim is to ensure that if the application is breached, the logs are not compromised.",
+    "reference": [
+      "16.4.3"
+    ],
+    "policy_id": "ASVS-363"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that a generic message is returned to the consumer when an unexpected or security-sensitive error occurs, ensuring no exposure of sensitive internal system data such as stack traces, queries, secret keys, and tokens.",
+    "reference": [
+      "16.5.1"
+    ],
+    "policy_id": "ASVS-364"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application continues to operate securely when external resource access fails, for example, by using patterns such as circuit breakers or graceful degradation.",
+    "reference": [
+      "16.5.2"
+    ],
+    "policy_id": "ASVS-365"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that the application fails gracefully and securely, including when an exception occurs, preventing fail-open conditions such as processing a transaction despite errors resulting from validation logic.",
+    "reference": [
+      "16.5.3"
+    ],
+    "policy_id": "ASVS-366"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that a \"last resort\" error handler is defined which will catch all unhandled exceptions. This is both to avoid losing error details that must go to log files and to ensure that an error does not take down the entire application process, leading to a loss of availability.",
+    "reference": [
+      "16.5.4"
+    ],
+    "policy_id": "ASVS-367"
+  },
+  {
+    "definition": [
+      "TURN servers: Traversal Using Relays around NAT servers that operate as relays when direct peer-to-peer connections cannot be established."
+    ],
+    "scope": "Systems that operate their own TURN servers.",
+    "policy_description": "Verify that the Traversal Using Relays around NAT (TURN) service only allows access to IP addresses that are not reserved for special purposes (e.g., internal networks, broadcast, loopback). Note that this applies to both IPv4 and IPv6 addresses.",
+    "reference": [
+      "17.1.1"
+    ],
+    "policy_id": "ASVS-368"
+  },
+  {
+    "definition": [
+      "TURN servers: Traversal Using Relays around NAT servers that operate as relays when direct peer-to-peer connections cannot be established."
+    ],
+    "scope": "Systems that operate their own TURN servers.",
+    "policy_description": "Verify that the Traversal Using Relays around NAT (TURN) service is not susceptible to resource exhaustion when legitimate users attempt to open a large number of ports on the TURN server.",
+    "reference": [
+      "17.1.2"
+    ],
+    "policy_id": "ASVS-369"
+  },
+  {
+    "definition": [],
+    "scope": "Systems that host their own WebRTC media servers (e.g., SFUs, MCUs, recording servers, or gateway servers). Systems relying solely on peer-to-peer media between browsers are excluded.",
+    "policy_description": "Verify that the key for the Datagram Transport Layer Security (DTLS) certificate is managed and protected based on the documented policy for management of cryptographic keys.",
+    "reference": [
+      "17.2.1"
+    ],
+    "policy_id": "ASVS-370"
+  },
+  {
+    "definition": [],
+    "scope": "Systems that host their own WebRTC media servers (e.g., SFUs, MCUs, recording servers, or gateway servers). Systems relying solely on peer-to-peer media between browsers are excluded.",
+    "policy_description": "Verify that the media server is configured to use and support approved Datagram Transport Layer Security (DTLS) ciphersuites and a secure protection profile for the DTLS Extension for establishing keys for the Secure Real-time Transport Protocol (DTLS-SRTP).",
+    "reference": [
+      "17.2.2"
+    ],
+    "policy_id": "ASVS-371"
+  },
+  {
+    "definition": [],
+    "scope": "Systems that host their own WebRTC media servers (e.g., SFUs, MCUs, recording servers, or gateway servers). Systems relying solely on peer-to-peer media between browsers are excluded.",
+    "policy_description": "Verify that Secure Real-time Transport Protocol (SRTP) authentication is checked at the media server to prevent Real-time Transport Protocol (RTP) injection attacks from leading to either a Denial of Service condition or audio or video media insertion into media streams.",
+    "reference": [
+      "17.2.3"
+    ],
+    "policy_id": "ASVS-372"
+  },
+  {
+    "definition": [],
+    "scope": "Systems that host their own WebRTC media servers (e.g., SFUs, MCUs, recording servers, or gateway servers). Systems relying solely on peer-to-peer media between browsers are excluded.",
+    "policy_description": "Verify that the media server is able to continue processing incoming media traffic when encountering malformed Secure Real-time Transport Protocol (SRTP) packets.",
+    "reference": [
+      "17.2.4"
+    ],
+    "policy_id": "ASVS-373"
+  },
+  {
+    "definition": [],
+    "scope": "Systems that host their own WebRTC media servers (e.g., SFUs, MCUs, recording servers, or gateway servers). Systems relying solely on peer-to-peer media between browsers are excluded.",
+    "policy_description": "Verify that the media server is able to continue processing incoming media traffic during a flood of Secure Real-time Transport Protocol (SRTP) packets from legitimate users.",
+    "reference": [
+      "17.2.5"
+    ],
+    "policy_id": "ASVS-374"
+  },
+  {
+    "definition": [],
+    "scope": "Systems that host their own WebRTC media servers (e.g., SFUs, MCUs, recording servers, or gateway servers). Systems relying solely on peer-to-peer media between browsers are excluded.",
+    "policy_description": "Verify that the media server is not susceptible to the \"ClientHello\" Race Condition vulnerability in Datagram Transport Layer Security (DTLS) by checking if the media server is publicly known to be vulnerable or by performing the race condition test.",
+    "reference": [
+      "17.2.6"
+    ],
+    "policy_id": "ASVS-375"
+  },
+  {
+    "definition": [],
+    "scope": "Systems that host their own WebRTC media servers (e.g., SFUs, MCUs, recording servers, or gateway servers). Systems relying solely on peer-to-peer media between browsers are excluded.",
+    "policy_description": "Verify that any audio or video recording mechanisms associated with the media server are able to continue processing incoming media traffic during a flood of Secure Real-time Transport Protocol (SRTP) packets from legitimate users.",
+    "reference": [
+      "17.2.7"
+    ],
+    "policy_id": "ASVS-376"
+  },
+  {
+    "definition": [],
+    "scope": "Systems that host their own WebRTC media servers (e.g., SFUs, MCUs, recording servers, or gateway servers). Systems relying solely on peer-to-peer media between browsers are excluded.",
+    "policy_description": "Verify that the Datagram Transport Layer Security (DTLS) certificate is checked against the Session Description Protocol (SDP) fingerprint attribute, terminating the media stream if the check fails, to ensure the authenticity of the media stream.",
+    "reference": [
+      "17.2.8"
+    ],
+    "policy_id": "ASVS-377"
+  },
+  {
+    "definition": [],
+    "scope": "Systems that operate their own WebRTC signaling servers.",
+    "policy_description": "Verify that the signaling server is able to continue processing legitimate incoming signaling messages during a flood attack. This should be achieved by implementing rate limiting at the signaling level.",
+    "reference": [
+      "17.3.1"
+    ],
+    "policy_id": "ASVS-378"
+  },
+  {
+    "definition": [],
+    "scope": "Systems that operate their own WebRTC signaling servers.",
+    "policy_description": "Verify that the signaling server is able to continue processing legitimate signaling messages when encountering malformed signaling message that could cause a denial of service condition. This could include implementing input validation, safely handling integer overflows, preventing buffer overflows, and employing other robust error-handling techniques.",
+    "reference": [
+      "17.3.2"
+    ],
+    "policy_id": "ASVS-379"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "The underlying hash function used with HMAC‑DRBG or Hash‑DRBG must be approved for this usage.",
+    "reference": [
+      "NISTSP800‑90A"
+    ],
+    "policy_id": "ASVS-380"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Many modes of operations, such as Electronic codebook (ECB), are insecure and must not be used.",
+    "reference": [],
+    "policy_id": "ASVS-381"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "The Galois/Counter Mode (GCM) and Counter with cipher block chaining message authentication code (CCM) modes of operations provide authenticated encryption and should be used in modern applications.",
+    "reference": [
+      "NISTSP800‑38D",
+      "NISTSP800‑38C"
+    ],
+    "policy_id": "ASVS-382"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "All encrypted messages must be authenticated.",
+    "reference": [],
+    "policy_id": "ASVS-383"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "For ANY use of CBC mode there MUST be an associated hashing MAC algorithm to validate the message. In general, this MUST be applied in the Encrypt‑Then‑Hash method (but TLS 1.2 uses Hash‑Then‑Encrypt instead). If this cannot be guaranteed, then CBC MUST NOT be used. The only application where encryption without a MAC algorithm is allowed is disk encryption.",
+    "reference": [
+      "NISTSP800‑38A"
+    ],
+    "policy_id": "ASVS-384"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "If CBC is used, it shall be guaranteed that the verification of the padding is performed in constant time.",
+    "reference": [],
+    "policy_id": "ASVS-385"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "When using CCM‑8, the MAC tag only has 64 bits of security. This does not conform to requirement 6.2.9 which requires at least 128 bits of security.",
+    "reference": [],
+    "policy_id": "ASVS-386"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Specifically, AES‑256 MUST be used for key wrapping, following NIST SP 800‑38F and considering forward‑looking provisions against the quantum threat.",
+    "reference": [
+      "NISTSP800‑38F"
+    ],
+    "policy_id": "ASVS-387"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "AES‑192andAES‑128MAYbeusediftheusecasedemandsit,butitsmotivationMUSTbedocumentedintheentity’scryptographyinventory.",
+    "reference": [],
+    "policy_id": "ASVS-388"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "With the exception of disk encryption, encrypted data must be protected against unauthorized modification using some form of authenticated encryption (AE) scheme, usually using an authenticated encryption with associated data (AEAD) scheme.",
+    "reference": [],
+    "policy_id": "ASVS-389"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "The application should preferably use an approved AEAD scheme. It might alternatively combine an approved cipher scheme and an approved MAC algorithm with a Encrypt‑then‑MAC construct.",
+    "reference": [],
+    "policy_id": "ASVS-390"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "MAC‑then‑encrypt is still allowed for compatibility with legacy applications. It is used in TLS v1.2 with old cipherssuites.",
+    "reference": [],
+    "policy_id": "ASVS-391"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Hash function with less than 254 bit of output have insufficient collision resistance and must not be used for digital signature or other applications requiring collision resistance. For other usages, they might be used for compatibility and verification ONLY with legacy systems but must not be used in new designs.",
+    "reference": [],
+    "policy_id": "ASVS-392"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "For secure password hashing, dedicated hash functions must be used. These slow‑hashing algorithms mitigate brute‑force and dictionary attacks by increasing the computational difficulty of password cracking.",
+    "reference": [],
+    "policy_id": "ASVS-393"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "argon2id RFC9106 t=1: m≥47104(46MiB),p=1 A",
+    "reference": [
+      "RFC9106"
+    ],
+    "policy_id": "ASVS-394"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "argon2id RFC9106 t=2: m≥19456(19MiB),p=1 A",
+    "reference": [
+      "RFC9106"
+    ],
+    "policy_id": "ASVS-395"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "argon2id RFC9106 t≥3: m≥12288(12MiB),p=1 A",
+    "reference": [
+      "RFC9106"
+    ],
+    "policy_id": "ASVS-396"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "scrypt RFC7914 p=1: N≥2^17(128MiB),r=8 A",
+    "reference": [
+      "RFC7914"
+    ],
+    "policy_id": "ASVS-397"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "scrypt RFC7914 p=2: N≥2^16(64MiB),r=8 A",
+    "reference": [
+      "RFC7914"
+    ],
+    "policy_id": "ASVS-398"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "scrypt RFC7914 p≥3: N≥2^15(32MiB),r=8 A",
+    "reference": [
+      "RFC7914"
+    ],
+    "policy_id": "ASVS-399"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "bcrypt A Future‑Adaptable cost≥10 A",
+    "reference": [],
+    "policy_id": "ASVS-400"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "PBKDF2‑HMAC‑SHA‑512 NISTSP800‑132,FIPS180‑4 iterations≥210,000 A",
+    "reference": [
+      "NISTSP800‑132",
+      "FIPS180‑4"
+    ],
+    "policy_id": "ASVS-401"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Approved password‑based key derivations functions can be used for password storage.",
+    "reference": [],
+    "policy_id": "ASVS-402"
+  },
+  {
+    "definition": [
+      "k is the keysize for RSA keys.",
+      "L is the size of the public key and N is the size of the private key for finite field cryptography.",
+      "f is the range of keysizes for ECC."
+    ],
+    "scope": null,
+    "policy_description": "A security strength of 112 bits or above MUST be ensured for all Key Exchange schemes, and their implementation MUST follow the parameter choices in the following table.",
+    "reference": [],
+    "policy_id": "ASVS-403"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "FiniteFieldDiffie‑Hellman(FFDH) L>=3072&N>=256 Yes A",
+    "reference": [],
+    "policy_id": "ASVS-404"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "EllipticCurveDiffie‑Hellman(ECDH) f>=256‑383 Yes A",
+    "reference": [],
+    "policy_id": "ASVS-405"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "EncryptedkeytransportwithRSA‑PKCS#1v1.5 No D",
+    "reference": [
+      "RFC8017"
+    ],
+    "policy_id": "ASVS-406"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Any new implementation MUST NOT use any scheme that is NOT compliant with NISTSP800‑56A & Band NISTSP800‑77. Specifically, IKEv1 MUST NOT be used in production.",
+    "reference": [
+      "NISTSP800‑56A",
+      "NISTSP800‑77"
+    ],
+    "policy_id": "ASVS-407"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "The following groups are approved for implementations of Diffie‑Hellman key exchange. Security strengths are documented in NISTSP800‑56A, Appendix D, and NISTSP800‑57Part1Rev.5.\nP‑224,secp224r1 A\nP‑256,secp256r1 A\nP‑384,secp384r1 A\nP‑521,secp521r1 A\nK‑233,sect233k1 A\nK‑283,sect283k1 A\nK‑409,sect409k1 A\nK‑571,sect571k1 A\nB‑233,sect233r1 A\nB‑283,sect283r1 A\nB‑409,sect409r1 A\nB‑571,sect571r1 A\nCurve448 A\nCurve25519 A\nMODP‑2048 A\nMODP‑3072 A\nMODP‑4096 A\nMODP‑6144 A\nMODP‑8192 A\nffdhe2048 A\nffdhe3072 A\nffdhe4096 A\nffdhe6144 A\nffdhe8192 A",
+    "reference": [
+      "NISTSP800‑56A",
+      "NISTSP800‑57Part1Rev.5"
+    ],
+    "policy_id": "ASVS-408"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "HMAC‑SHA‑256 RFC2104&FIPS198‑1 A",
+    "reference": [
+      "RFC2104",
+      "FIPS198‑1"
+    ],
+    "policy_id": "ASVS-409"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "HMAC‑SHA‑384 RFC2104&FIPS198‑1 A",
+    "reference": [
+      "RFC2104",
+      "FIPS198‑1"
+    ],
+    "policy_id": "ASVS-410"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "SignatureschemesMUSTuseapprovedkeysizesandparametersperNISTSP800‑57Part1.",
+    "reference": [
+      "NISTSP800‑57Part1"
+    ],
+    "policy_id": "ASVS-411"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Post‑quantumcryptography(PQC)implementationsshouldfollowFIPS‑203,FIPS‑204,andFIPS‑205.",
+    "reference": [
+      "FIPS‑203",
+      "FIPS‑204",
+      "FIPS‑205"
+    ],
+    "policy_id": "ASVS-412"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "The proposed mlkem768x25519 post‑quantum hybrid TLS key agreement method is supported by major browsers such as Firefox release 132 and Chrome release 131. It may be used in cryptographic testing environments or when available within industry‑or government‑approved libraries.",
+    "reference": [],
+    "policy_id": "ASVS-413"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "A password strength meter should provided to help users set a stronger password.",
+    "reference": [
+      "security.txt RFC (referenced nearby)"
+    ],
+    "policy_id": "ASVS-414"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Create a publicly available security.txt file at the root or .well‑known directory of the application that clearly defines a link or e‑mail address for people to contact owners about security issues.",
+    "reference": [
+      "RFC (security.txt referenced)"
+    ],
+    "policy_id": "ASVS-415"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Client‑side input validation should be enforced in addition to validation at a trusted service layer as this provides a good opportunity to discover when someone has bypassed client‑side controls in an attempt to attack the application.",
+    "reference": [],
+    "policy_id": "ASVS-416"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Prevent accidentally accessible and sensitive pages from appearing in search engines using a robots.txt file, the X‑Robots‑Tag response header or a robots html meta tag.",
+    "reference": [],
+    "policy_id": "ASVS-417"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "When using GraphQL, implement authorization logic at the business logic layer instead of the GraphQL or resolver layer to avoid having to handle authorization on every separate interface.",
+    "reference": [],
+    "policy_id": "ASVS-418"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Security controls should be centralized, simple (economy of design), verifiably secure, and reusable. This should avoid duplicate, missing, or ineffective controls.",
+    "reference": [],
+    "policy_id": "ASVS-419"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Wherever possible, use previously written and well‑vetted security control implementations rather than relying on implementing controls from scratch.",
+    "reference": [],
+    "policy_id": "ASVS-420"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Ideally, a single access control mechanism should be used to access protected data and resources. All requests should pass through this single mechanism to avoid copy and paste or insecure alternative paths.",
+    "reference": [],
+    "policy_id": "ASVS-421"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Attribute or feature‑based access control is a recommended pattern whereby the code checks the user’s authorization for a feature or data item rather than just their role. Permissions should still be allocated using roles.",
+    "reference": [],
+    "policy_id": "ASVS-422"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify the use of a secure software development lifecycle that addresses security in all stages of development.",
+    "reference": [
+      "OWASPSoftwareAssuranceMaturityModelProject",
+      "MicrosoftSDL"
+    ],
+    "policy_id": "ASVS-423"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify the use of threat modeling for every design change or sprint planning to identify threats, plan for countermeasures, facilitate appropriate risk responses, and guide security testing.",
+    "reference": [
+      "OWASPThreatModelingCheatSheet",
+      "OWASPThreatmodeling"
+    ],
+    "policy_id": "ASVS-424"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that all user stories and features contain functional security constraints, such as “As a user, I should be able to view and edit my profile. I should not be able to view or edit anyone else’s profile”",
+    "reference": [],
+    "policy_id": "ASVS-425"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify availability of a secure coding checklist, security requirements, guideline, or policy to all developers and testers.",
+    "reference": [],
+    "policy_id": "ASVS-426"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that an ongoing process exists to ensure that the application source code is free from backdoors, malicious code (e.g., salami attacks, logic bombs, time bombs), and undocumented or hidden features (e.g., Easter eggs, insecure debugging tools). Complying with this section is not possible without complete access to source code, including third‑party libraries, and is therefore probably only suitable for applications requiring the very highest levels of security.",
+    "reference": [],
+    "policy_id": "ASVS-427"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that mechanisms are in place to detect and respond to configuration drift in deployed environments. This may include using immutable infrastructure, automated redeployment from a secure baseline, or drift detection tools that compare current state against approved configurations.",
+    "reference": [],
+    "policy_id": "ASVS-428"
+  },
+  {
+    "definition": [],
+    "scope": null,
+    "policy_description": "Verify that configuration hardening is performed on all third‑party products, libraries, frameworks, and services as per their individual recommendations.",
+    "reference": [],
+    "policy_id": "ASVS-429"
+  }
+]
