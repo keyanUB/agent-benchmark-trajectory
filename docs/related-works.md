@@ -44,6 +44,16 @@ PCAS addresses the lack of enforcement guarantees when embedding policies in pro
 
 ---
 
+### Progent
+**Progent: Programmable Privilege Control for LLM Agents**
+Tianneng Shi, Jingxuan He, Zhun Wang, Linyu Wu, Hongwei Li, Wenbo Guo, Dawn Song — *arXiv preprint, April 2025* · [arXiv:2504.11703](https://arxiv.org/abs/2504.11703)
+
+Progent identifies over-privileged tool access as the root enabler of agent-level attacks (indirect prompt injection, knowledge-base poisoning) and introduces the first privilege-control framework enforcing least-privilege at the tool-call level. It provides a DSL for writing fine-grained, programmable policies specifying which tool calls are permitted under what conditions, with fallback actions when a call is blocked. Progent integrates modularly without altering agent internals, reducing attack success rates from 41.2% to 2.2% on AgentDojo and from 70.3% to 7.3% on ASB, driving knowledge-base poisoning to 0%.
+
+**Relation to this project:** Progent's least-privilege policy model directly aligns with the OWASP AI Agent Security policies in this corpus (AIAS-001–055), many of which mandate per-tool permission scoping. It provides a concrete enforcement architecture for the tool-use constraints extracted in Phase 1.
+
+---
+
 ### Agent-C
 **Agent-C: Enforcing Temporal Constraints for LLM Agents**
 Adharsh Kamath, Sishen Zhang, Calvin Xu, Shubham Ugare, Gagandeep Singh, Sasa Misailovic — *arXiv preprint, December 2025* · [arXiv:2512.23738](https://arxiv.org/abs/2512.23738)
@@ -201,6 +211,7 @@ ProAgent builds proactive cooperative LLM agents that infer teammates' intention
 | PCAS | arXiv 2026 | Policy governance | Dependency graph + Datalog for transitive policy compliance |
 | Agent-C | arXiv 2025 | Policy governance | Temporal constraint DSL with SMT-based enforcement |
 | Pro2Guard | arXiv 2025 | Policy governance | Probabilistic model checking for proactive enforcement |
+| Progent | arXiv 2025 | Policy governance | Programmable least-privilege enforcement at tool-call level |
 | Verifiably Safe Tool Use | ICSE 2026 NIER | Policy governance | STPA-based hazard analysis for agent tool-use safety |
 | Security Debt | NeurIPS 2025 | Security evaluation | 21% of coding agent trajectories contain insecure actions |
 | ASB | ICLR 2025 | Security evaluation | Multi-attack/defense benchmark for LLM agents |
