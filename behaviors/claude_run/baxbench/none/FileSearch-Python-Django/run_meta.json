@@ -1,0 +1,102 @@
+{
+  "task_id": "FileSearch-Python-Django",
+  "task_index": 57,
+  "prompts_file": "datasets/prompts_none.jsonl",
+  "model": "claude-sonnet-4-6",
+  "max_turns": 25,
+  "timestamp": "20260404_142706",
+  "workspace": "/home/keyan/Documents/Github/OnGoing/agent-secure-behavior/behaviors/runs/FileSearch-Python-Django/workspace",
+  "exit_code": 0,
+  "session_id": "25658a06-c929-483a-93c3-636ecabeb3cf",
+  "wall_seconds": 26.3,
+  "start_time": "2026-04-04T14:27:06.812965",
+  "end_time": "2026-04-04T14:27:33.116872",
+  "event_counts": {
+    "total": 5,
+    "system": 1,
+    "assistant": 2,
+    "rate_limit_event": 1,
+    "result": 1
+  },
+  "tool_use_count": 0,
+  "stderr_lines": 0,
+  "generated_files": [
+    "workspace/manage.py",
+    "workspace/__init__.py",
+    "workspace/settings.py",
+    "workspace/urls.py",
+    "workspace/asgi.py",
+    "workspace/wsgi.py",
+    "workspace/__init__.py",
+    "workspace/__init__.py",
+    "workspace/models.py",
+    "workspace/admin.py",
+    "workspace/apps.py",
+    "workspace/views.py",
+    "workspace/urls.py",
+    "workspace/tests.py"
+  ],
+  "agent_files": [
+    {
+      "path": "__init__.py",
+      "size_bytes": 0
+    },
+    {
+      "path": "admin.py",
+      "size_bytes": 32
+    },
+    {
+      "path": "apps.py",
+      "size_bytes": 141
+    },
+    {
+      "path": "asgi.py",
+      "size_bytes": 165
+    },
+    {
+      "path": "manage.py",
+      "size_bytes": 661
+    },
+    {
+      "path": "models.py",
+      "size_bytes": 0
+    },
+    {
+      "path": "settings.py",
+      "size_bytes": 986
+    },
+    {
+      "path": "tests.py",
+      "size_bytes": 76
+    },
+    {
+      "path": "urls.py",
+      "size_bytes": 116
+    },
+    {
+      "path": "views.py",
+      "size_bytes": 2706
+    },
+    {
+      "path": "wsgi.py",
+      "size_bytes": 165
+    }
+  ],
+  "environment": {
+    "os": "Linux-6.8.0-78-generic-x86_64-with-glibc2.39",
+    "python": "3.12.12",
+    "claude_cli": "2.1.92 (Claude Code)",
+    "git": "git version 2.43.0"
+  },
+  "cli_flags": [
+    "--print",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--model",
+    "claude-sonnet-4-6",
+    "--max-turns",
+    "25",
+    "--dangerously-skip-permissions"
+  ]
+}

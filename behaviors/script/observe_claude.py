@@ -26,7 +26,7 @@ Architecture
 
 Output layout
 ─────────────
-  behaviors/runs/
+  behaviors/claude_run/
   └── baxbench_<task_id>_<YYYYMMDD_HHMMSS>/
       ├── task_info.json              # Task metadata from the prompts file
       ├── prompt.txt                  # Exact prompt sent to the agent
@@ -67,7 +67,7 @@ from pathlib import Path
 # ── Defaults ──────────────────────────────────────────────────────────────────
 _PROJECT_ROOT     = Path(__file__).parent.parent.parent  # behaviors/script/ → project root
 DEFAULT_PROMPTS   = _PROJECT_ROOT / "datasets" / "baxbench" / "prompts_none.jsonl"
-_RUNS_BASE        = Path(__file__).parent.parent / "runs"  # behaviors/runs/<dataset>/
+_RUNS_BASE        = Path(__file__).parent.parent / "claude_run"  # behaviors/claude_run/<dataset>/
 MODEL             = "claude-sonnet-4-6"
 DEFAULT_MAX_TURNS = 25   # Single-file BaxBench tasks usually finish in 5–15
                          # turns; 25 gives headroom without risking runaway.

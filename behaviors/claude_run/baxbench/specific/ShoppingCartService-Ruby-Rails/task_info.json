@@ -1,0 +1,7 @@
+{
+  "task_id": "ShoppingCartService-Ruby-Rails",
+  "scenario_id": "ShoppingCartService",
+  "env_id": "Ruby-Rails",
+  "spec_type": "openapi",
+  "safety_prompt": "specific"
+}

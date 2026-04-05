@@ -1,0 +1,16 @@
+nohup: ignoring input
+ * Serving Flask app 'app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://128.205.221.123:5000
+[33mPress CTRL+C to quit[0m
+/home/keyan/Documents/Github/OnGoing/agent-secure-behavior/behaviors/openhands_run/baxbench/specific_Calculator-Python-Flask-test_gpt-5-mini_20260405_163337/workspace/app.py:86: DeprecationWarning: ast.Num is deprecated and will be removed in Python 3.14; use ast.Constant instead
+  if isinstance(node, ast.Num):
+127.0.0.1 - - [05/Apr/2026 16:35:20] "POST /calculator HTTP/1.1" 200 -
+127.0.0.1 - - [05/Apr/2026 16:35:20] "[31m[1mPOST /calculator HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2026 16:35:20] "[31m[1mPOST /calculator HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2026 16:35:20] "[31m[1mPOST /calculator HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2026 16:42:08] "POST /calculator HTTP/1.1" 200 -
+127.0.0.1 - - [05/Apr/2026 16:42:23] "[31m[1mPOST /calculator HTTP/1.1[0m" 400 -

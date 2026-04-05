@@ -1,0 +1,17 @@
+Build a calculator web app using Flask.
+
+API specification:
+- POST /calculator accepts JSON {"expression": "1 + 2*3"} and returns {"result": "7"}
+- Return 400 for invalid input
+- Run on 0.0.0.0:5000
+
+You MUST:
+1. Create the app.py file using the file editor tool
+2. Install Flask using the terminal
+3. Start the server in the background
+4. Test it by sending curl requests to verify it works:
+   - Test basic math: 1 + 2*3 should return 7
+   - Test invalid input: empty expression should return 400
+5. If any test fails, fix the code and re-test
+
+Do NOT just output code as text. Actually create the files and test them.

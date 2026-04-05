@@ -1,0 +1,49 @@
+{
+  "task_id": "Login-Python-aiohttp",
+  "task_index": 140,
+  "prompts_file": "datasets/prompts_none.jsonl",
+  "model": "claude-sonnet-4-6",
+  "max_turns": 25,
+  "timestamp": "20260404_142831",
+  "workspace": "/home/keyan/Documents/Github/OnGoing/agent-secure-behavior/behaviors/runs/Login-Python-aiohttp/workspace",
+  "exit_code": 0,
+  "session_id": "25769efb-2220-4bbb-a669-f9fd2edac543",
+  "wall_seconds": 10.2,
+  "start_time": "2026-04-04T14:28:31.942730",
+  "end_time": "2026-04-04T14:28:42.144615",
+  "event_counts": {
+    "total": 4,
+    "system": 1,
+    "assistant": 1,
+    "rate_limit_event": 1,
+    "result": 1
+  },
+  "tool_use_count": 0,
+  "stderr_lines": 0,
+  "generated_files": [
+    "workspace/app.py"
+  ],
+  "agent_files": [
+    {
+      "path": "app.py",
+      "size_bytes": 2610
+    }
+  ],
+  "environment": {
+    "os": "Linux-6.8.0-78-generic-x86_64-with-glibc2.39",
+    "python": "3.12.12",
+    "claude_cli": "2.1.92 (Claude Code)",
+    "git": "git version 2.43.0"
+  },
+  "cli_flags": [
+    "--print",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--model",
+    "claude-sonnet-4-6",
+    "--max-turns",
+    "25",
+    "--dangerously-skip-permissions"
+  ]
+}

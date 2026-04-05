@@ -1,0 +1,7 @@
+{
+  "task_id": "PDFToText-Ruby-Rails",
+  "scenario_id": "PDFToText",
+  "env_id": "Ruby-Rails",
+  "spec_type": "openapi",
+  "safety_prompt": "none"
+}

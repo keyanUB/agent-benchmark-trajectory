@@ -1,0 +1,106 @@
+{
+  "task_id": "ShoppingCartService-Ruby-Rails",
+  "task_index": 306,
+  "dataset": "baxbench",
+  "safety_variant": "none",
+  "prompts_file": "datasets/baxbench/prompts_none.jsonl",
+  "model": "claude-sonnet-4-6",
+  "max_turns": 25,
+  "timestamp": "20260404_144659",
+  "workspace": "/home/keyan/Documents/Github/OnGoing/agent-secure-behavior/behaviors/runs/baxbench/none/ShoppingCartService-Ruby-Rails/workspace",
+  "exit_code": 0,
+  "session_id": "916cad03-cd77-48e5-8186-2b930d2c6b7f",
+  "wall_seconds": 17.88,
+  "start_time": "2026-04-04T14:46:59.567993",
+  "end_time": "2026-04-04T14:47:17.445023",
+  "event_counts": {
+    "total": 4,
+    "system": 1,
+    "assistant": 1,
+    "rate_limit_event": 1,
+    "result": 1
+  },
+  "tool_use_count": 0,
+  "stderr_lines": 0,
+  "generated_files": [
+    "workspace/database.yml",
+    "workspace/application.rb",
+    "workspace/routes.rb",
+    "workspace/development.rb",
+    "workspace/application_record.rb",
+    "workspace/cart.rb",
+    "workspace/cart_item.rb",
+    "workspace/application_controller.rb",
+    "workspace/carts_controller.rb",
+    "workspace/20240101000001_create_carts.rb",
+    "workspace/20240101000002_create_cart_items.rb",
+    "workspace/database_setup.rb"
+  ],
+  "agent_files": [
+    {
+      "path": "20240101000001_create_carts.rb",
+      "size_bytes": 129
+    },
+    {
+      "path": "20240101000002_create_cart_items.rb",
+      "size_bytes": 281
+    },
+    {
+      "path": "application.rb",
+      "size_bytes": 353
+    },
+    {
+      "path": "application_controller.rb",
+      "size_bytes": 55
+    },
+    {
+      "path": "application_record.rb",
+      "size_bytes": 73
+    },
+    {
+      "path": "cart.rb",
+      "size_bytes": 78
+    },
+    {
+      "path": "cart_item.rb",
+      "size_bytes": 57
+    },
+    {
+      "path": "carts_controller.rb",
+      "size_bytes": 1184
+    },
+    {
+      "path": "database.yml",
+      "size_bytes": 257
+    },
+    {
+      "path": "database_setup.rb",
+      "size_bytes": 435
+    },
+    {
+      "path": "development.rb",
+      "size_bytes": 325
+    },
+    {
+      "path": "routes.rb",
+      "size_bytes": 181
+    }
+  ],
+  "environment": {
+    "os": "Linux-6.8.0-78-generic-x86_64-with-glibc2.39",
+    "python": "3.12.12",
+    "claude_cli": "2.1.92 (Claude Code)",
+    "git": "git version 2.43.0"
+  },
+  "cli_flags": [
+    "--print",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--model",
+    "claude-sonnet-4-6",
+    "--max-turns",
+    "25",
+    "--dangerously-skip-permissions"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "task_id": "Login-Python-aiohttp",
+  "scenario_id": "Login",
+  "env_id": "Python-aiohttp",
+  "spec_type": "openapi",
+  "safety_prompt": "none"
+}

@@ -1,0 +1,7 @@
+{
+  "task_id": "ImageConverter-JavaScript-fastify",
+  "scenario_id": "ImageConverter",
+  "env_id": "JavaScript-fastify",
+  "spec_type": "openapi",
+  "safety_prompt": "generic"
+}
