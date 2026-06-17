@@ -1,25 +1,20 @@
-# Datasets & notebooks
-datasets/
-datasets/dataset_view.ipynb
-
-# Agent run outputs
-behaviors/runs/
+# Local/raw benchmark material
 data/raw/Agent Logs/
 data/intermediate/
 
-# Running environments
+# Local environments and editor state
 .cache/
-.vscode/
 .claude/
+.vscode/
+.venv/
+venv/
 
-# Python
+# Python/build outputs
 __pycache__/
 *.py[cod]
 *.egg-info/
-.venv/
-venv/
 dist/
 build/
 
-# OS
+# OS files
 .DS_Store
