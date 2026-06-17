@@ -1,7 +1,0 @@
-{
-  "task_id": "Calculator-Python-Flask-test",
-  "scenario_id": "Calculator",
-  "env_id": "Python-Flask",
-  "spec_type": "openapi",
-  "safety_prompt": "specific"
-}

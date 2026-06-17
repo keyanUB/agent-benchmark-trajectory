@@ -1,7 +1,0 @@
-{
-  "task_id": "ZipToTxt-Python-Django",
-  "scenario_id": "ZipToTxt",
-  "env_id": "Python-Django",
-  "spec_type": "openapi",
-  "safety_prompt": "none"
-}

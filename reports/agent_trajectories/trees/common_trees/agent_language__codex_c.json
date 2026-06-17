@@ -1,0 +1,380 @@
+{
+  "children": {
+    "message_llm_call": {
+      "children": {
+        "inspect_workspace": {
+          "children": {
+            "error": {
+              "children": {
+                "probe_compile_or_build": {
+                  "children": {
+                    "probe_execute_other": {
+                      "children": {
+                        "error": {
+                          "children": {
+                            "message_summary": {
+                              "children": {
+                                "generated_code:error": {
+                                  "children": {},
+                                  "count": 2,
+                                  "success": 2
+                                }
+                              },
+                              "count": 2,
+                              "success": 2
+                            }
+                          },
+                          "count": 3,
+                          "success": 3
+                        }
+                      },
+                      "count": 4,
+                      "success": 4
+                    }
+                  },
+                  "count": 7,
+                  "success": 5
+                }
+              },
+              "count": 8,
+              "success": 6
+            },
+            "probe_compile_or_build": {
+              "children": {
+                "probe_execute_other": {
+                  "children": {
+                    "probe_compile_or_build": {
+                      "children": {},
+                      "count": 2,
+                      "success": 2
+                    }
+                  },
+                  "count": 3,
+                  "success": 3
+                },
+                "probe_http_or_network": {
+                  "children": {},
+                  "count": 2,
+                  "success": 2
+                },
+                "probe_run_program": {
+                  "children": {
+                    "error": {
+                      "children": {
+                        "message_summary": {
+                          "children": {
+                            "generated_code:error": {
+                              "children": {},
+                              "count": 5,
+                              "success": 5
+                            }
+                          },
+                          "count": 5,
+                          "success": 5
+                        }
+                      },
+                      "count": 5,
+                      "success": 5
+                    },
+                    "read_file": {
+                      "children": {
+                        "message_summary": {
+                          "children": {
+                            "generated_code": {
+                              "children": {},
+                              "count": 9,
+                              "success": 8
+                            },
+                            "generated_code:error": {
+                              "children": {},
+                              "count": 2,
+                              "success": 1
+                            }
+                          },
+                          "count": 11,
+                          "success": 9
+                        }
+                      },
+                      "count": 11,
+                      "success": 9
+                    }
+                  },
+                  "count": 16,
+                  "success": 14
+                }
+              },
+              "count": 23,
+              "success": 21
+            },
+            "probe_execute_other": {
+              "children": {},
+              "count": 5,
+              "success": 5
+            },
+            "read_file": {
+              "children": {
+                "probe_compile_or_build": {
+                  "children": {
+                    "error": {
+                      "children": {
+                        "probe_execute_other": {
+                          "children": {
+                            "probe_compile_or_build": {
+                              "children": {
+                                "probe_execute_other": {
+                                  "children": {},
+                                  "count": 2,
+                                  "success": 2
+                                }
+                              },
+                              "count": 4,
+                              "success": 4
+                            }
+                          },
+                          "count": 4,
+                          "success": 4
+                        }
+                      },
+                      "count": 6,
+                      "success": 6
+                    },
+                    "inspect_workspace": {
+                      "children": {
+                        "probe_execute_other": {
+                          "children": {
+                            "probe_compile_or_build": {
+                              "children": {},
+                              "count": 2,
+                              "success": 1
+                            }
+                          },
+                          "count": 2,
+                          "success": 1
+                        }
+                      },
+                      "count": 2,
+                      "success": 1
+                    },
+                    "probe_execute_other": {
+                      "children": {
+                        "error": {
+                          "children": {},
+                          "count": 2,
+                          "success": 2
+                        },
+                        "inspect_workspace": {
+                          "children": {},
+                          "count": 2,
+                          "success": 2
+                        },
+                        "probe_compile_or_build": {
+                          "children": {
+                            "probe_execute_other": {
+                              "children": {
+                                "read_file": {
+                                  "children": {
+                                    "probe_execute_other": {
+                                      "children": {},
+                                      "count": 2,
+                                      "success": 2
+                                    }
+                                  },
+                                  "count": 2,
+                                  "success": 2
+                                }
+                              },
+                              "count": 2,
+                              "success": 2
+                            }
+                          },
+                          "count": 4,
+                          "success": 3
+                        },
+                        "read_file": {
+                          "children": {
+                            "message_summary": {
+                              "children": {
+                                "generated_code": {
+                                  "children": {},
+                                  "count": 3,
+                                  "success": 3
+                                }
+                              },
+                              "count": 4,
+                              "success": 4
+                            }
+                          },
+                          "count": 5,
+                          "success": 5
+                        }
+                      },
+                      "count": 15,
+                      "success": 13
+                    },
+                    "probe_run_program": {
+                      "children": {
+                        "error": {
+                          "children": {
+                            "message_summary": {
+                              "children": {
+                                "generated_code:error": {
+                                  "children": {},
+                                  "count": 5,
+                                  "success": 3
+                                }
+                              },
+                              "count": 5,
+                              "success": 3
+                            }
+                          },
+                          "count": 5,
+                          "success": 3
+                        },
+                        "inspect_workspace": {
+                          "children": {
+                            "read_file": {
+                              "children": {
+                                "message_summary": {
+                                  "children": {
+                                    "generated_code": {
+                                      "children": {},
+                                      "count": 2,
+                                      "success": 2
+                                    }
+                                  },
+                                  "count": 2,
+                                  "success": 2
+                                }
+                              },
+                              "count": 2,
+                              "success": 2
+                            }
+                          },
+                          "count": 2,
+                          "success": 2
+                        },
+                        "read_file": {
+                          "children": {
+                            "message_summary": {
+                              "children": {
+                                "generated_code": {
+                                  "children": {},
+                                  "count": 3,
+                                  "success": 3
+                                },
+                                "generated_code:error": {
+                                  "children": {},
+                                  "count": 4,
+                                  "success": 4
+                                }
+                              },
+                              "count": 7,
+                              "success": 7
+                            }
+                          },
+                          "count": 8,
+                          "success": 8
+                        }
+                      },
+                      "count": 15,
+                      "success": 13
+                    },
+                    "write_file": {
+                      "children": {},
+                      "count": 3,
+                      "success": 3
+                    }
+                  },
+                  "count": 43,
+                  "success": 38
+                }
+              },
+              "count": 45,
+              "success": 40
+            }
+          },
+          "count": 83,
+          "success": 74
+        },
+        "probe_compile_or_build": {
+          "children": {
+            "probe_http_or_network": {
+              "children": {
+                "read_file": {
+                  "children": {
+                    "message_summary": {
+                      "children": {
+                        "generated_code": {
+                          "children": {},
+                          "count": 2,
+                          "success": 1
+                        }
+                      },
+                      "count": 2,
+                      "success": 1
+                    }
+                  },
+                  "count": 2,
+                  "success": 1
+                }
+              },
+              "count": 2,
+              "success": 1
+            },
+            "probe_run_program": {
+              "children": {},
+              "count": 2,
+              "success": 2
+            }
+          },
+          "count": 4,
+          "success": 3
+        },
+        "probe_execute_other": {
+          "children": {},
+          "count": 2,
+          "success": 2
+        },
+        "read_file": {
+          "children": {
+            "probe_compile_or_build": {
+              "children": {
+                "probe_run_program": {
+                  "children": {
+                    "read_file": {
+                      "children": {
+                        "message_summary": {
+                          "children": {
+                            "generated_code": {
+                              "children": {},
+                              "count": 2,
+                              "success": 2
+                            }
+                          },
+                          "count": 2,
+                          "success": 2
+                        }
+                      },
+                      "count": 2,
+                      "success": 2
+                    }
+                  },
+                  "count": 2,
+                  "success": 2
+                }
+              },
+              "count": 2,
+              "success": 2
+            }
+          },
+          "count": 3,
+          "success": 3
+        }
+      },
+      "count": 93,
+      "success": 83
+    }
+  },
+  "count": 93,
+  "success": 83
+}

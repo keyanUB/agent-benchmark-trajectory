@@ -1,0 +1,211 @@
+{
+  "children": {
+    "message_task_prompt": {
+      "children": {
+        "agent_action": {
+          "children": {
+            "read_file": {
+              "children": {
+                "inspect_workspace": {
+                  "children": {
+                    "agent_action": {
+                      "children": {},
+                      "count": 6,
+                      "success": 1
+                    }
+                  },
+                  "count": 14,
+                  "success": 1
+                }
+              },
+              "count": 18,
+              "success": 1
+            }
+          },
+          "count": 19,
+          "success": 1
+        },
+        "inspect_workspace": {
+          "children": {
+            "read_file": {
+              "children": {
+                "inspect_workspace": {
+                  "children": {},
+                  "count": 6,
+                  "success": 0
+                }
+              },
+              "count": 6,
+              "success": 0
+            }
+          },
+          "count": 12,
+          "success": 0
+        },
+        "message_code_answer": {
+          "children": {},
+          "count": 77,
+          "success": 0
+        },
+        "read_file": {
+          "children": {
+            "agent_action": {
+              "children": {
+                "inspect_workspace": {
+                  "children": {
+                    "agent_action": {
+                      "children": {
+                        "error": {
+                          "children": {
+                            "write_file": {
+                              "children": {},
+                              "count": 8,
+                              "success": 1
+                            }
+                          },
+                          "count": 12,
+                          "success": 2
+                        },
+                        "inspect_workspace": {
+                          "children": {},
+                          "count": 12,
+                          "success": 1
+                        }
+                      },
+                      "count": 30,
+                      "success": 3
+                    },
+                    "read_file": {
+                      "children": {
+                        "agent_action": {
+                          "children": {},
+                          "count": 9,
+                          "success": 0
+                        }
+                      },
+                      "count": 14,
+                      "success": 0
+                    }
+                  },
+                  "count": 52,
+                  "success": 3
+                },
+                "read_file": {
+                  "children": {},
+                  "count": 6,
+                  "success": 0
+                }
+              },
+              "count": 63,
+              "success": 3
+            },
+            "error": {
+              "children": {
+                "write_file": {
+                  "children": {},
+                  "count": 6,
+                  "success": 0
+                }
+              },
+              "count": 9,
+              "success": 1
+            },
+            "inspect_workspace": {
+              "children": {
+                "agent_action": {
+                  "children": {
+                    "error": {
+                      "children": {},
+                      "count": 6,
+                      "success": 0
+                    }
+                  },
+                  "count": 14,
+                  "success": 0
+                },
+                "error": {
+                  "children": {
+                    "probe_run_program": {
+                      "children": {
+                        "error": {
+                          "children": {},
+                          "count": 7,
+                          "success": 0
+                        }
+                      },
+                      "count": 10,
+                      "success": 1
+                    },
+                    "probe_script_snippet": {
+                      "children": {
+                        "error": {
+                          "children": {},
+                          "count": 7,
+                          "success": 0
+                        }
+                      },
+                      "count": 9,
+                      "success": 1
+                    },
+                    "read_file": {
+                      "children": {},
+                      "count": 8,
+                      "success": 1
+                    },
+                    "write_file": {
+                      "children": {
+                        "error": {
+                          "children": {},
+                          "count": 7,
+                          "success": 0
+                        },
+                        "probe_http_or_network": {
+                          "children": {},
+                          "count": 6,
+                          "success": 2
+                        },
+                        "read_file": {
+                          "children": {},
+                          "count": 9,
+                          "success": 0
+                        }
+                      },
+                      "count": 35,
+                      "success": 3
+                    }
+                  },
+                  "count": 72,
+                  "success": 6
+                },
+                "probe_run_program": {
+                  "children": {},
+                  "count": 6,
+                  "success": 0
+                },
+                "write_file": {
+                  "children": {
+                    "probe_run_program": {
+                      "children": {},
+                      "count": 6,
+                      "success": 2
+                    }
+                  },
+                  "count": 11,
+                  "success": 2
+                }
+              },
+              "count": 113,
+              "success": 8
+            }
+          },
+          "count": 193,
+          "success": 12
+        }
+      },
+      "count": 307,
+      "success": 14
+    }
+  },
+  "count": 307,
+  "success": 14
+}

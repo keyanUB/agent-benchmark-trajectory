@@ -183,6 +183,9 @@ Policy extraction is implemented in `policy/code/policy_extractor.py`:
 ## Repository Structure
 
 ```
+├── data/
+│   ├── raw/                       # Pointer to the local raw Agent Logs bundle
+│   └── processed/                 # Curated trajectory CSVs and inventory files
 ├── docs/
 │   ├── principles-sources.md     # Policy source rationale
 │   ├── related-works.md          # Literature and prior work
@@ -190,6 +193,10 @@ Policy extraction is implemented in `policy/code/policy_extractor.py`:
 │   └── sdlc-categorization-summary.md
 ├── policy/
 │   └── code/policy_extractor.py  # Policy extraction pipeline
+├── reports/
+│   └── agent_trajectories/        # Behavior trajectory reports, viewer, and figures
+├── scripts/
+│   └── agent_analysis/            # Log inventory, extraction, trajectory, and report scripts
 ├── research_proposal.docx        # Full research proposal
 └── requirements.txt
 ```

@@ -1,7 +1,0 @@
-{
-  "task_id": "FileSearch-Python-Django",
-  "scenario_id": "FileSearch",
-  "env_id": "Python-Django",
-  "spec_type": "openapi",
-  "safety_prompt": "none"
-}

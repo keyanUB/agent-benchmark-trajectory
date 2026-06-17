@@ -1,0 +1,34 @@
+{
+  "children": {
+    "message_llm_call": {
+      "children": {
+        "generated_code:error": {
+          "children": {
+            "message_llm_call": {
+              "children": {
+                "generated_code": {
+                  "children": {},
+                  "count": 77,
+                  "success": 33
+                },
+                "generated_code:error": {
+                  "children": {},
+                  "count": 161,
+                  "success": 45
+                }
+              },
+              "count": 238,
+              "success": 78
+            }
+          },
+          "count": 357,
+          "success": 132
+        }
+      },
+      "count": 357,
+      "success": 132
+    }
+  },
+  "count": 357,
+  "success": 132
+}

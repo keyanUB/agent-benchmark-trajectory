@@ -1,0 +1,166 @@
+{
+  "children": {
+    "message_task_prompt": {
+      "children": {
+        "agent_action": {
+          "children": {
+            "read_file": {
+              "children": {
+                "inspect_workspace": {
+                  "children": {
+                    "agent_action": {
+                      "children": {},
+                      "count": 23,
+                      "success": 1
+                    }
+                  },
+                  "count": 42,
+                  "success": 2
+                }
+              },
+              "count": 55,
+              "success": 2
+            }
+          },
+          "count": 56,
+          "success": 2
+        },
+        "inspect_workspace": {
+          "children": {
+            "read_file": {
+              "children": {
+                "inspect_workspace": {
+                  "children": {},
+                  "count": 20,
+                  "success": 0
+                }
+              },
+              "count": 27,
+              "success": 0
+            }
+          },
+          "count": 40,
+          "success": 0
+        },
+        "message_code_answer": {
+          "children": {},
+          "count": 224,
+          "success": 3
+        },
+        "read_file": {
+          "children": {
+            "agent_action": {
+              "children": {
+                "inspect_workspace": {
+                  "children": {
+                    "agent_action": {
+                      "children": {
+                        "error": {
+                          "children": {
+                            "write_file": {
+                              "children": {},
+                              "count": 23,
+                              "success": 2
+                            }
+                          },
+                          "count": 37,
+                          "success": 4
+                        },
+                        "inspect_workspace": {
+                          "children": {},
+                          "count": 32,
+                          "success": 2
+                        }
+                      },
+                      "count": 88,
+                      "success": 6
+                    },
+                    "error": {
+                      "children": {},
+                      "count": 29,
+                      "success": 0
+                    },
+                    "read_file": {
+                      "children": {},
+                      "count": 32,
+                      "success": 2
+                    }
+                  },
+                  "count": 154,
+                  "success": 8
+                }
+              },
+              "count": 174,
+              "success": 8
+            },
+            "error": {
+              "children": {},
+              "count": 30,
+              "success": 5
+            },
+            "inspect_workspace": {
+              "children": {
+                "agent_action": {
+                  "children": {
+                    "error": {
+                      "children": {},
+                      "count": 32,
+                      "success": 1
+                    }
+                  },
+                  "count": 56,
+                  "success": 1
+                },
+                "error": {
+                  "children": {
+                    "agent_action": {
+                      "children": {},
+                      "count": 19,
+                      "success": 3
+                    },
+                    "probe_script_snippet": {
+                      "children": {},
+                      "count": 25,
+                      "success": 5
+                    },
+                    "write_file": {
+                      "children": {
+                        "read_file": {
+                          "children": {},
+                          "count": 24,
+                          "success": 1
+                        }
+                      },
+                      "count": 103,
+                      "success": 13
+                    }
+                  },
+                  "count": 193,
+                  "success": 25
+                },
+                "message_code_answer": {
+                  "children": {},
+                  "count": 18,
+                  "success": 0
+                },
+                "write_file": {
+                  "children": {},
+                  "count": 44,
+                  "success": 9
+                }
+              },
+              "count": 346,
+              "success": 37
+            }
+          },
+          "count": 581,
+          "success": 52
+        }
+      },
+      "count": 921,
+      "success": 58
+    }
+  },
+  "count": 921,
+  "success": 58
+}

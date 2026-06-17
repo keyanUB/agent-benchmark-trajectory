@@ -1,0 +1,377 @@
+{
+  "children": {
+    "message": {
+      "children": {
+        "agent_action": {
+          "children": {
+            "read_file": {
+              "children": {
+                "inspect_workspace": {
+                  "children": {},
+                  "count": 13,
+                  "success": 1
+                }
+              },
+              "count": 19,
+              "success": 1
+            }
+          },
+          "count": 19,
+          "success": 1
+        },
+        "inspect_workspace": {
+          "children": {
+            "read_file": {
+              "children": {
+                "inspect_workspace": {
+                  "children": {},
+                  "count": 9,
+                  "success": 0
+                }
+              },
+              "count": 15,
+              "success": 0
+            }
+          },
+          "count": 24,
+          "success": 0
+        },
+        "message:error": {
+          "children": {},
+          "count": 31,
+          "success": 1
+        },
+        "read_file": {
+          "children": {
+            "agent_action": {
+              "children": {
+                "inspect_workspace": {
+                  "children": {
+                    "agent_action": {
+                      "children": {
+                        "error": {
+                          "children": {},
+                          "count": 10,
+                          "success": 0
+                        }
+                      },
+                      "count": 25,
+                      "success": 0
+                    },
+                    "read_file": {
+                      "children": {},
+                      "count": 10,
+                      "success": 1
+                    }
+                  },
+                  "count": 42,
+                  "success": 1
+                }
+              },
+              "count": 53,
+              "success": 1
+            },
+            "error": {
+              "children": {},
+              "count": 9,
+              "success": 1
+            },
+            "inspect_workspace": {
+              "children": {
+                "agent_action": {
+                  "children": {},
+                  "count": 13,
+                  "success": 0
+                },
+                "error": {
+                  "children": {
+                    "write_file": {
+                      "children": {},
+                      "count": 16,
+                      "success": 4
+                    }
+                  },
+                  "count": 27,
+                  "success": 5
+                },
+                "message": {
+                  "children": {},
+                  "count": 9,
+                  "success": 0
+                },
+                "write_file": {
+                  "children": {
+                    "execute_probe": {
+                      "children": {
+                        "agent_action": {
+                          "children": {},
+                          "count": 13,
+                          "success": 4
+                        }
+                      },
+                      "count": 16,
+                      "success": 5
+                    }
+                  },
+                  "count": 30,
+                  "success": 8
+                }
+              },
+              "count": 90,
+              "success": 14
+            },
+            "write_file": {
+              "children": {
+                "execute_probe": {
+                  "children": {},
+                  "count": 9,
+                  "success": 2
+                }
+              },
+              "count": 14,
+              "success": 2
+            }
+          },
+          "count": 173,
+          "success": 18
+        }
+      },
+      "count": 375,
+      "success": 23
+    },
+    "message:error": {
+      "children": {
+        "agent_action": {
+          "children": {
+            "read_file": {
+              "children": {
+                "inspect_workspace": {
+                  "children": {
+                    "agent_action": {
+                      "children": {},
+                      "count": 15,
+                      "success": 0
+                    },
+                    "read_file": {
+                      "children": {},
+                      "count": 9,
+                      "success": 0
+                    }
+                  },
+                  "count": 29,
+                  "success": 1
+                }
+              },
+              "count": 36,
+              "success": 1
+            }
+          },
+          "count": 37,
+          "success": 1
+        },
+        "inspect_workspace": {
+          "children": {
+            "read_file": {
+              "children": {
+                "inspect_workspace": {
+                  "children": {},
+                  "count": 11,
+                  "success": 0
+                }
+              },
+              "count": 12,
+              "success": 0
+            }
+          },
+          "count": 16,
+          "success": 0
+        },
+        "read_file": {
+          "children": {
+            "agent_action": {
+              "children": {
+                "inspect_workspace": {
+                  "children": {
+                    "agent_action": {
+                      "children": {
+                        "error": {
+                          "children": {
+                            "write_file": {
+                              "children": {},
+                              "count": 16,
+                              "success": 2
+                            }
+                          },
+                          "count": 27,
+                          "success": 4
+                        },
+                        "inspect_workspace": {
+                          "children": {
+                            "agent_action": {
+                              "children": {},
+                              "count": 10,
+                              "success": 1
+                            }
+                          },
+                          "count": 26,
+                          "success": 2
+                        }
+                      },
+                      "count": 63,
+                      "success": 6
+                    },
+                    "error": {
+                      "children": {
+                        "write_file": {
+                          "children": {},
+                          "count": 10,
+                          "success": 0
+                        }
+                      },
+                      "count": 24,
+                      "success": 0
+                    },
+                    "read_file": {
+                      "children": {
+                        "agent_action": {
+                          "children": {},
+                          "count": 10,
+                          "success": 1
+                        }
+                      },
+                      "count": 22,
+                      "success": 1
+                    }
+                  },
+                  "count": 112,
+                  "success": 7
+                }
+              },
+              "count": 121,
+              "success": 7
+            },
+            "error": {
+              "children": {},
+              "count": 21,
+              "success": 4
+            },
+            "inspect_workspace": {
+              "children": {
+                "agent_action": {
+                  "children": {
+                    "error": {
+                      "children": {
+                        "write_file": {
+                          "children": {},
+                          "count": 11,
+                          "success": 0
+                        }
+                      },
+                      "count": 27,
+                      "success": 1
+                    }
+                  },
+                  "count": 43,
+                  "success": 1
+                },
+                "error": {
+                  "children": {
+                    "agent_action": {
+                      "children": {
+                        "error": {
+                          "children": {},
+                          "count": 13,
+                          "success": 2
+                        }
+                      },
+                      "count": 19,
+                      "success": 2
+                    },
+                    "execute_probe": {
+                      "children": {
+                        "error": {
+                          "children": {},
+                          "count": 16,
+                          "success": 2
+                        },
+                        "write_file": {
+                          "children": {},
+                          "count": 9,
+                          "success": 3
+                        }
+                      },
+                      "count": 31,
+                      "success": 6
+                    },
+                    "read_file": {
+                      "children": {},
+                      "count": 13,
+                      "success": 1
+                    },
+                    "write_file": {
+                      "children": {
+                        "agent_action": {
+                          "children": {},
+                          "count": 15,
+                          "success": 2
+                        },
+                        "error": {
+                          "children": {},
+                          "count": 29,
+                          "success": 4
+                        },
+                        "execute_probe": {
+                          "children": {
+                            "error": {
+                              "children": {},
+                              "count": 17,
+                              "success": 3
+                            }
+                          },
+                          "count": 23,
+                          "success": 3
+                        },
+                        "read_file": {
+                          "children": {},
+                          "count": 18,
+                          "success": 1
+                        }
+                      },
+                      "count": 90,
+                      "success": 10
+                    }
+                  },
+                  "count": 170,
+                  "success": 20
+                },
+                "execute_probe": {
+                  "children": {},
+                  "count": 9,
+                  "success": 0
+                },
+                "message:error": {
+                  "children": {},
+                  "count": 11,
+                  "success": 0
+                },
+                "write_file": {
+                  "children": {},
+                  "count": 14,
+                  "success": 1
+                }
+              },
+              "count": 256,
+              "success": 23
+            }
+          },
+          "count": 408,
+          "success": 34
+        }
+      },
+      "count": 546,
+      "success": 35
+    }
+  },
+  "count": 921,
+  "success": 58
+}

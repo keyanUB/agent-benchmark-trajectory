@@ -1,0 +1,127 @@
+{
+  "children": {
+    "error": {
+      "children": {
+        "inspect_workspace": {
+          "children": {
+            "read_file": {
+              "children": {
+                "error": {
+                  "children": {},
+                  "count": 6,
+                  "success": 0
+                }
+              },
+              "count": 7,
+              "success": 0
+            }
+          },
+          "count": 7,
+          "success": 0
+        },
+        "message_code_answer": {
+          "children": {
+            "finish": {
+              "children": {},
+              "count": 7,
+              "success": 0
+            },
+            "finish:error": {
+              "children": {},
+              "count": 19,
+              "success": 0
+            }
+          },
+          "count": 26,
+          "success": 0
+        },
+        "message_other": {
+          "children": {
+            "finish": {
+              "children": {},
+              "count": 30,
+              "success": 0
+            }
+          },
+          "count": 30,
+          "success": 0
+        },
+        "message_status_or_error": {
+          "children": {
+            "finish:error": {
+              "children": {},
+              "count": 51,
+              "success": 0
+            }
+          },
+          "count": 51,
+          "success": 0
+        },
+        "read_file": {
+          "children": {
+            "error": {
+              "children": {},
+              "count": 7,
+              "success": 0
+            }
+          },
+          "count": 9,
+          "success": 0
+        }
+      },
+      "count": 124,
+      "success": 0
+    },
+    "inspect_workspace": {
+      "children": {},
+      "count": 6,
+      "success": 0
+    },
+    "message_code_answer": {
+      "children": {
+        "finish": {
+          "children": {},
+          "count": 67,
+          "success": 0
+        },
+        "finish:error": {
+          "children": {},
+          "count": 80,
+          "success": 6
+        }
+      },
+      "count": 148,
+      "success": 6
+    },
+    "write_file": {
+      "children": {
+        "message_code_answer": {
+          "children": {
+            "finish": {
+              "children": {},
+              "count": 7,
+              "success": 0
+            }
+          },
+          "count": 8,
+          "success": 0
+        },
+        "message_other": {
+          "children": {
+            "finish": {
+              "children": {},
+              "count": 13,
+              "success": 0
+            }
+          },
+          "count": 13,
+          "success": 0
+        }
+      },
+      "count": 27,
+      "success": 0
+    }
+  },
+  "count": 307,
+  "success": 6
+}

@@ -1,7 +1,0 @@
-{
-  "task_id": "FrameExtract-PHP-Lumen",
-  "scenario_id": "FrameExtract",
-  "env_id": "PHP-Lumen",
-  "spec_type": "openapi",
-  "safety_prompt": "none"
-}

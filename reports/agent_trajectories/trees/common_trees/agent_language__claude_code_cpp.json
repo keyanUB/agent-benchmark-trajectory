@@ -1,0 +1,238 @@
+{
+  "children": {
+    "message_llm_call": {
+      "children": {
+        "edit_file": {
+          "children": {},
+          "count": 2,
+          "success": 2
+        },
+        "error": {
+          "children": {
+            "probe_compile_or_build": {
+              "children": {
+                "error": {
+                  "children": {
+                    "read_file": {
+                      "children": {
+                        "generated_code:error": {
+                          "children": {},
+                          "count": 2,
+                          "success": 2
+                        }
+                      },
+                      "count": 2,
+                      "success": 2
+                    }
+                  },
+                  "count": 3,
+                  "success": 3
+                },
+                "probe_execute_other": {
+                  "children": {
+                    "inspect_workspace": {
+                      "children": {
+                        "probe_compile_or_build": {
+                          "children": {
+                            "inspect_workspace": {
+                              "children": {
+                                "probe_compile_or_build": {
+                                  "children": {
+                                    "inspect_workspace": {
+                                      "children": {},
+                                      "count": 4,
+                                      "success": 4
+                                    }
+                                  },
+                                  "count": 4,
+                                  "success": 4
+                                }
+                              },
+                              "count": 6,
+                              "success": 6
+                            }
+                          },
+                          "count": 8,
+                          "success": 8
+                        }
+                      },
+                      "count": 8,
+                      "success": 8
+                    }
+                  },
+                  "count": 9,
+                  "success": 9
+                },
+                "probe_run_program": {
+                  "children": {
+                    "generated_code:error": {
+                      "children": {},
+                      "count": 2,
+                      "success": 2
+                    },
+                    "read_file": {
+                      "children": {
+                        "generated_code:error": {
+                          "children": {},
+                          "count": 3,
+                          "success": 2
+                        }
+                      },
+                      "count": 4,
+                      "success": 3
+                    }
+                  },
+                  "count": 6,
+                  "success": 5
+                },
+                "read_file": {
+                  "children": {
+                    "generated_code:error": {
+                      "children": {},
+                      "count": 4,
+                      "success": 4
+                    },
+                    "inspect_workspace": {
+                      "children": {
+                        "read_file": {
+                          "children": {},
+                          "count": 3,
+                          "success": 3
+                        }
+                      },
+                      "count": 4,
+                      "success": 3
+                    },
+                    "probe_run_program": {
+                      "children": {
+                        "inspect_workspace": {
+                          "children": {},
+                          "count": 2,
+                          "success": 2
+                        }
+                      },
+                      "count": 2,
+                      "success": 2
+                    }
+                  },
+                  "count": 11,
+                  "success": 9
+                },
+                "write_file": {
+                  "children": {},
+                  "count": 4,
+                  "success": 4
+                }
+              },
+              "count": 34,
+              "success": 31
+            }
+          },
+          "count": 35,
+          "success": 32
+        },
+        "write_file": {
+          "children": {
+            "probe_compile_or_build": {
+              "children": {
+                "probe_execute_other": {
+                  "children": {
+                    "inspect_workspace": {
+                      "children": {
+                        "probe_execute_other": {
+                          "children": {
+                            "inspect_workspace": {
+                              "children": {},
+                              "count": 2,
+                              "success": 2
+                            }
+                          },
+                          "count": 3,
+                          "success": 3
+                        }
+                      },
+                      "count": 4,
+                      "success": 4
+                    }
+                  },
+                  "count": 7,
+                  "success": 7
+                },
+                "probe_http_or_network": {
+                  "children": {
+                    "generated_code": {
+                      "children": {},
+                      "count": 4,
+                      "success": 4
+                    }
+                  },
+                  "count": 5,
+                  "success": 5
+                },
+                "probe_run_program": {
+                  "children": {
+                    "generated_code": {
+                      "children": {},
+                      "count": 6,
+                      "success": 6
+                    },
+                    "read_file": {
+                      "children": {
+                        "generated_code": {
+                          "children": {},
+                          "count": 2,
+                          "success": 2
+                        }
+                      },
+                      "count": 3,
+                      "success": 3
+                    }
+                  },
+                  "count": 10,
+                  "success": 10
+                },
+                "read_file": {
+                  "children": {
+                    "inspect_workspace": {
+                      "children": {
+                        "probe_execute_other": {
+                          "children": {
+                            "read_file": {
+                              "children": {
+                                "inspect_workspace": {
+                                  "children": {},
+                                  "count": 2,
+                                  "success": 2
+                                }
+                              },
+                              "count": 2,
+                              "success": 2
+                            }
+                          },
+                          "count": 2,
+                          "success": 2
+                        }
+                      },
+                      "count": 2,
+                      "success": 2
+                    }
+                  },
+                  "count": 4,
+                  "success": 4
+                }
+              },
+              "count": 26,
+              "success": 26
+            }
+          },
+          "count": 26,
+          "success": 26
+        }
+      },
+      "count": 63,
+      "success": 60
+    }
+  },
+  "count": 63,
+  "success": 60
+}

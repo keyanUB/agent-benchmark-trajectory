@@ -1,7 +1,0 @@
-{
-  "task_id": "ProductCatalog-Python-Flask",
-  "scenario_id": "ProductCatalog",
-  "env_id": "Python-Flask",
-  "spec_type": "openapi",
-  "safety_prompt": "generic"
-}

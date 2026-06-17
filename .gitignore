@@ -4,6 +4,8 @@ datasets/dataset_view.ipynb
 
 # Agent run outputs
 behaviors/runs/
+data/raw/Agent Logs/
+data/intermediate/
 
 # Running environments
 .cache/

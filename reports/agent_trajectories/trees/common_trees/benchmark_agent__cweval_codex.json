@@ -1,0 +1,228 @@
+{
+  "children": {
+    "message_llm_call": {
+      "children": {
+        "error": {
+          "children": {},
+          "count": 10,
+          "success": 9
+        },
+        "inspect_workspace": {
+          "children": {
+            "error": {
+              "children": {
+                "probe_compile_or_build": {
+                  "children": {},
+                  "count": 11,
+                  "success": 9
+                },
+                "probe_execute_other": {
+                  "children": {},
+                  "count": 9,
+                  "success": 8
+                }
+              },
+              "count": 35,
+              "success": 32
+            },
+            "probe_compile_or_build": {
+              "children": {
+                "probe_run_program": {
+                  "children": {
+                    "error": {
+                      "children": {
+                        "message_summary": {
+                          "children": {
+                            "generated_code:error": {
+                              "children": {},
+                              "count": 7,
+                              "success": 7
+                            }
+                          },
+                          "count": 7,
+                          "success": 7
+                        }
+                      },
+                      "count": 7,
+                      "success": 7
+                    },
+                    "read_file": {
+                      "children": {
+                        "message_summary": {
+                          "children": {
+                            "generated_code": {
+                              "children": {},
+                              "count": 14,
+                              "success": 12
+                            }
+                          },
+                          "count": 17,
+                          "success": 14
+                        }
+                      },
+                      "count": 18,
+                      "success": 15
+                    }
+                  },
+                  "count": 25,
+                  "success": 22
+                }
+              },
+              "count": 37,
+              "success": 34
+            },
+            "probe_execute_other": {
+              "children": {
+                "probe_run_program": {
+                  "children": {},
+                  "count": 9,
+                  "success": 8
+                }
+              },
+              "count": 24,
+              "success": 23
+            },
+            "probe_run_program": {
+              "children": {
+                "error": {
+                  "children": {
+                    "message_summary": {
+                      "children": {
+                        "generated_code:error": {
+                          "children": {},
+                          "count": 19,
+                          "success": 18
+                        }
+                      },
+                      "count": 19,
+                      "success": 18
+                    }
+                  },
+                  "count": 21,
+                  "success": 19
+                },
+                "read_file": {
+                  "children": {
+                    "message_summary": {
+                      "children": {
+                        "generated_code": {
+                          "children": {},
+                          "count": 17,
+                          "success": 15
+                        }
+                      },
+                      "count": 20,
+                      "success": 18
+                    }
+                  },
+                  "count": 24,
+                  "success": 22
+                }
+              },
+              "count": 56,
+              "success": 52
+            },
+            "probe_script_snippet": {
+              "children": {},
+              "count": 13,
+              "success": 10
+            },
+            "read_file": {
+              "children": {
+                "probe_compile_or_build": {
+                  "children": {
+                    "probe_execute_other": {
+                      "children": {},
+                      "count": 17,
+                      "success": 15
+                    },
+                    "probe_run_program": {
+                      "children": {
+                        "read_file": {
+                          "children": {
+                            "message_summary": {
+                              "children": {},
+                              "count": 10,
+                              "success": 9
+                            }
+                          },
+                          "count": 11,
+                          "success": 10
+                        }
+                      },
+                      "count": 22,
+                      "success": 19
+                    }
+                  },
+                  "count": 56,
+                  "success": 50
+                },
+                "probe_execute_other": {
+                  "children": {},
+                  "count": 8,
+                  "success": 8
+                },
+                "probe_run_program": {
+                  "children": {},
+                  "count": 15,
+                  "success": 12
+                },
+                "probe_script_snippet": {
+                  "children": {},
+                  "count": 12,
+                  "success": 10
+                }
+              },
+              "count": 105,
+              "success": 94
+            }
+          },
+          "count": 291,
+          "success": 264
+        },
+        "probe_compile_or_build": {
+          "children": {
+            "probe_run_program": {
+              "children": {},
+              "count": 7,
+              "success": 6
+            }
+          },
+          "count": 10,
+          "success": 8
+        },
+        "probe_execute_other": {
+          "children": {},
+          "count": 10,
+          "success": 8
+        },
+        "probe_run_program": {
+          "children": {
+            "read_file": {
+              "children": {
+                "message_summary": {
+                  "children": {},
+                  "count": 8,
+                  "success": 7
+                }
+              },
+              "count": 9,
+              "success": 8
+            }
+          },
+          "count": 17,
+          "success": 15
+        },
+        "read_file": {
+          "children": {},
+          "count": 11,
+          "success": 11
+        }
+      },
+      "count": 357,
+      "success": 323
+    }
+  },
+  "count": 357,
+  "success": 323
+}

@@ -1,0 +1,238 @@
+{
+  "children": {
+    "message_llm_call": {
+      "children": {
+        "edit_file": {
+          "children": {},
+          "count": 2,
+          "success": 2
+        },
+        "error": {
+          "children": {
+            "probe_run_program": {
+              "children": {
+                "edit_file": {
+                  "children": {
+                    "read_file": {
+                      "children": {
+                        "edit_file": {
+                          "children": {
+                            "probe_run_program": {
+                              "children": {},
+                              "count": 2,
+                              "success": 2
+                            }
+                          },
+                          "count": 2,
+                          "success": 2
+                        }
+                      },
+                      "count": 2,
+                      "success": 2
+                    }
+                  },
+                  "count": 2,
+                  "success": 2
+                },
+                "generated_code:error": {
+                  "children": {},
+                  "count": 5,
+                  "success": 4
+                },
+                "probe_execute_other": {
+                  "children": {
+                    "probe_run_program": {
+                      "children": {
+                        "read_file": {
+                          "children": {
+                            "generated_code:error": {
+                              "children": {},
+                              "count": 2,
+                              "success": 1
+                            }
+                          },
+                          "count": 2,
+                          "success": 1
+                        }
+                      },
+                      "count": 2,
+                      "success": 1
+                    }
+                  },
+                  "count": 2,
+                  "success": 1
+                },
+                "read_file": {
+                  "children": {
+                    "generated_code:error": {
+                      "children": {},
+                      "count": 9,
+                      "success": 9
+                    }
+                  },
+                  "count": 9,
+                  "success": 9
+                }
+              },
+              "count": 19,
+              "success": 17
+            },
+            "write_file": {
+              "children": {
+                "probe_run_program": {
+                  "children": {
+                    "probe_install_dependency": {
+                      "children": {},
+                      "count": 2,
+                      "success": 2
+                    }
+                  },
+                  "count": 3,
+                  "success": 3
+                }
+              },
+              "count": 3,
+              "success": 3
+            }
+          },
+          "count": 23,
+          "success": 21
+        },
+        "write_file": {
+          "children": {
+            "error": {
+              "children": {
+                "probe_run_program": {
+                  "children": {
+                    "read_file": {
+                      "children": {
+                        "generated_code": {
+                          "children": {},
+                          "count": 2,
+                          "success": 2
+                        }
+                      },
+                      "count": 2,
+                      "success": 2
+                    }
+                  },
+                  "count": 2,
+                  "success": 2
+                }
+              },
+              "count": 2,
+              "success": 2
+            },
+            "probe_http_or_network": {
+              "children": {
+                "generated_code": {
+                  "children": {},
+                  "count": 4,
+                  "success": 4
+                },
+                "read_file": {
+                  "children": {
+                    "generated_code": {
+                      "children": {},
+                      "count": 5,
+                      "success": 5
+                    }
+                  },
+                  "count": 5,
+                  "success": 5
+                }
+              },
+              "count": 9,
+              "success": 9
+            },
+            "probe_run_program": {
+              "children": {
+                "generated_code": {
+                  "children": {},
+                  "count": 11,
+                  "success": 11
+                },
+                "probe_install_dependency": {
+                  "children": {
+                    "probe_execute_other": {
+                      "children": {
+                        "probe_install_dependency": {
+                          "children": {
+                            "probe_run_program": {
+                              "children": {
+                                "read_file": {
+                                  "children": {
+                                    "generated_code": {
+                                      "children": {},
+                                      "count": 2,
+                                      "success": 2
+                                    }
+                                  },
+                                  "count": 3,
+                                  "success": 3
+                                }
+                              },
+                              "count": 4,
+                              "success": 4
+                            }
+                          },
+                          "count": 4,
+                          "success": 4
+                        }
+                      },
+                      "count": 4,
+                      "success": 4
+                    },
+                    "probe_run_program": {
+                      "children": {
+                        "generated_code": {
+                          "children": {},
+                          "count": 3,
+                          "success": 2
+                        },
+                        "read_file": {
+                          "children": {
+                            "generated_code": {
+                              "children": {},
+                              "count": 9,
+                              "success": 8
+                            }
+                          },
+                          "count": 9,
+                          "success": 8
+                        }
+                      },
+                      "count": 12,
+                      "success": 10
+                    }
+                  },
+                  "count": 18,
+                  "success": 16
+                },
+                "read_file": {
+                  "children": {
+                    "generated_code": {
+                      "children": {},
+                      "count": 9,
+                      "success": 9
+                    }
+                  },
+                  "count": 9,
+                  "success": 9
+                }
+              },
+              "count": 39,
+              "success": 37
+            }
+          },
+          "count": 50,
+          "success": 48
+        }
+      },
+      "count": 75,
+      "success": 71
+    }
+  },
+  "count": 75,
+  "success": 71
+}

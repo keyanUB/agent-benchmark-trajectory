@@ -1,7 +1,0 @@
-{
-  "task_id": "Calculator-Ruby-Rails",
-  "scenario_id": "Calculator",
-  "env_id": "Ruby-Rails",
-  "spec_type": "openapi",
-  "safety_prompt": "none"
-}

@@ -1,0 +1,137 @@
+{
+  "children": {
+    "error": {
+      "children": {
+        "message_code_answer": {
+          "children": {},
+          "count": 8,
+          "success": 3
+        }
+      },
+      "count": 15,
+      "success": 5
+    },
+    "inspect_workspace": {
+      "children": {
+        "error": {
+          "children": {
+            "inspect_workspace": {
+              "children": {
+                "error": {
+                  "children": {},
+                  "count": 12,
+                  "success": 2
+                }
+              },
+              "count": 21,
+              "success": 4
+            },
+            "message_code_answer": {
+              "children": {},
+              "count": 19,
+              "success": 5
+            },
+            "read_file": {
+              "children": {
+                "error": {
+                  "children": {},
+                  "count": 9,
+                  "success": 3
+                },
+                "message_code_answer": {
+                  "children": {},
+                  "count": 8,
+                  "success": 4
+                }
+              },
+              "count": 20,
+              "success": 8
+            },
+            "search": {
+              "children": {
+                "error": {
+                  "children": {},
+                  "count": 6,
+                  "success": 1
+                }
+              },
+              "count": 12,
+              "success": 2
+            }
+          },
+          "count": 76,
+          "success": 20
+        },
+        "message_code_answer": {
+          "children": {},
+          "count": 7,
+          "success": 3
+        },
+        "search": {
+          "children": {
+            "error": {
+              "children": {
+                "inspect_workspace": {
+                  "children": {},
+                  "count": 9,
+                  "success": 1
+                },
+                "message_code_answer": {
+                  "children": {},
+                  "count": 19,
+                  "success": 7
+                }
+              },
+              "count": 39,
+              "success": 12
+            },
+            "inspect_workspace": {
+              "children": {
+                "error": {
+                  "children": {},
+                  "count": 8,
+                  "success": 2
+                }
+              },
+              "count": 10,
+              "success": 3
+            },
+            "read_file": {
+              "children": {},
+              "count": 12,
+              "success": 9
+            }
+          },
+          "count": 63,
+          "success": 24
+        }
+      },
+      "count": 152,
+      "success": 49
+    },
+    "message_code_answer": {
+      "children": {},
+      "count": 114,
+      "success": 13
+    },
+    "search": {
+      "children": {
+        "error": {
+          "children": {
+            "message_code_answer": {
+              "children": {},
+              "count": 9,
+              "success": 2
+            }
+          },
+          "count": 17,
+          "success": 4
+        }
+      },
+      "count": 24,
+      "success": 7
+    }
+  },
+  "count": 307,
+  "success": 74
+}

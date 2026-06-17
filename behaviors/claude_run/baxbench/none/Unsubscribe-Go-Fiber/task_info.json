@@ -1,7 +1,0 @@
-{
-  "task_id": "Unsubscribe-Go-Fiber",
-  "scenario_id": "Unsubscribe",
-  "env_id": "Go-Fiber",
-  "spec_type": "openapi",
-  "safety_prompt": "none"
-}

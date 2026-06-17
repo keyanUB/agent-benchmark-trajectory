@@ -1,0 +1,342 @@
+[
+  {
+    "group_type": "agent_language",
+    "group_value": "claude_code::c",
+    "run_count": 93,
+    "min_count": 2,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/agent_language__claude_code_c.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/agent_language__claude_code_c.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/agent_language__claude_code_c.json"
+  },
+  {
+    "group_type": "agent_language",
+    "group_value": "claude_code::cpp",
+    "run_count": 63,
+    "min_count": 2,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/agent_language__claude_code_cpp.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/agent_language__claude_code_cpp.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/agent_language__claude_code_cpp.json"
+  },
+  {
+    "group_type": "agent_language",
+    "group_value": "claude_code::go",
+    "run_count": 57,
+    "min_count": 2,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/agent_language__claude_code_go.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/agent_language__claude_code_go.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/agent_language__claude_code_go.json"
+  },
+  {
+    "group_type": "agent_language",
+    "group_value": "claude_code::javascript",
+    "run_count": 69,
+    "min_count": 2,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/agent_language__claude_code_javascript.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/agent_language__claude_code_javascript.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/agent_language__claude_code_javascript.json"
+  },
+  {
+    "group_type": "agent_language",
+    "group_value": "claude_code::python",
+    "run_count": 75,
+    "min_count": 2,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/agent_language__claude_code_python.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/agent_language__claude_code_python.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/agent_language__claude_code_python.json"
+  },
+  {
+    "group_type": "agent_language",
+    "group_value": "claudecode-opus47::cpp",
+    "run_count": 307,
+    "min_count": 6,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/agent_language__claudecode-opus47_cpp.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/agent_language__claudecode-opus47_cpp.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/agent_language__claudecode-opus47_cpp.json"
+  },
+  {
+    "group_type": "agent_language",
+    "group_value": "claudecode-opus47::javascript",
+    "run_count": 307,
+    "min_count": 6,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/agent_language__claudecode-opus47_javascript.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/agent_language__claudecode-opus47_javascript.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/agent_language__claudecode-opus47_javascript.json"
+  },
+  {
+    "group_type": "agent_language",
+    "group_value": "claudecode-opus47::python",
+    "run_count": 307,
+    "min_count": 6,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/agent_language__claudecode-opus47_python.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/agent_language__claudecode-opus47_python.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/agent_language__claudecode-opus47_python.json"
+  },
+  {
+    "group_type": "agent_language",
+    "group_value": "codex-gpt54::cpp",
+    "run_count": 307,
+    "min_count": 6,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/agent_language__codex-gpt54_cpp.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/agent_language__codex-gpt54_cpp.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/agent_language__codex-gpt54_cpp.json"
+  },
+  {
+    "group_type": "agent_language",
+    "group_value": "codex-gpt54::javascript",
+    "run_count": 307,
+    "min_count": 6,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/agent_language__codex-gpt54_javascript.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/agent_language__codex-gpt54_javascript.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/agent_language__codex-gpt54_javascript.json"
+  },
+  {
+    "group_type": "agent_language",
+    "group_value": "codex-gpt54::python",
+    "run_count": 307,
+    "min_count": 6,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/agent_language__codex-gpt54_python.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/agent_language__codex-gpt54_python.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/agent_language__codex-gpt54_python.json"
+  },
+  {
+    "group_type": "agent_language",
+    "group_value": "codex::c",
+    "run_count": 93,
+    "min_count": 2,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/agent_language__codex_c.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/agent_language__codex_c.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/agent_language__codex_c.json"
+  },
+  {
+    "group_type": "agent_language",
+    "group_value": "codex::cpp",
+    "run_count": 63,
+    "min_count": 2,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/agent_language__codex_cpp.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/agent_language__codex_cpp.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/agent_language__codex_cpp.json"
+  },
+  {
+    "group_type": "agent_language",
+    "group_value": "codex::go",
+    "run_count": 141,
+    "min_count": 2,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/agent_language__codex_go.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/agent_language__codex_go.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/agent_language__codex_go.json"
+  },
+  {
+    "group_type": "agent_language",
+    "group_value": "codex::javascript",
+    "run_count": 181,
+    "min_count": 3,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/agent_language__codex_javascript.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/agent_language__codex_javascript.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/agent_language__codex_javascript.json"
+  },
+  {
+    "group_type": "agent_language",
+    "group_value": "codex::php",
+    "run_count": 28,
+    "min_count": 2,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/agent_language__codex_php.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/agent_language__codex_php.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/agent_language__codex_php.json"
+  },
+  {
+    "group_type": "agent_language",
+    "group_value": "codex::python",
+    "run_count": 187,
+    "min_count": 3,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/agent_language__codex_python.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/agent_language__codex_python.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/agent_language__codex_python.json"
+  },
+  {
+    "group_type": "agent_language",
+    "group_value": "codex::ruby",
+    "run_count": 28,
+    "min_count": 2,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/agent_language__codex_ruby.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/agent_language__codex_ruby.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/agent_language__codex_ruby.json"
+  },
+  {
+    "group_type": "agent_language",
+    "group_value": "codex::rust",
+    "run_count": 28,
+    "min_count": 2,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/agent_language__codex_rust.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/agent_language__codex_rust.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/agent_language__codex_rust.json"
+  },
+  {
+    "group_type": "agent_language",
+    "group_value": "openhands-gpt54::cpp",
+    "run_count": 307,
+    "min_count": 6,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/agent_language__openhands-gpt54_cpp.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/agent_language__openhands-gpt54_cpp.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/agent_language__openhands-gpt54_cpp.json"
+  },
+  {
+    "group_type": "agent_language",
+    "group_value": "openhands-gpt54::javascript",
+    "run_count": 307,
+    "min_count": 6,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/agent_language__openhands-gpt54_javascript.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/agent_language__openhands-gpt54_javascript.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/agent_language__openhands-gpt54_javascript.json"
+  },
+  {
+    "group_type": "agent_language",
+    "group_value": "openhands-gpt54::python",
+    "run_count": 307,
+    "min_count": 6,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/agent_language__openhands-gpt54_python.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/agent_language__openhands-gpt54_python.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/agent_language__openhands-gpt54_python.json"
+  },
+  {
+    "group_type": "agent_language",
+    "group_value": "openhands::c",
+    "run_count": 93,
+    "min_count": 2,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/agent_language__openhands_c.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/agent_language__openhands_c.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/agent_language__openhands_c.json"
+  },
+  {
+    "group_type": "agent_language",
+    "group_value": "openhands::cpp",
+    "run_count": 63,
+    "min_count": 2,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/agent_language__openhands_cpp.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/agent_language__openhands_cpp.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/agent_language__openhands_cpp.json"
+  },
+  {
+    "group_type": "agent_language",
+    "group_value": "openhands::go",
+    "run_count": 57,
+    "min_count": 2,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/agent_language__openhands_go.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/agent_language__openhands_go.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/agent_language__openhands_go.json"
+  },
+  {
+    "group_type": "agent_language",
+    "group_value": "openhands::javascript",
+    "run_count": 69,
+    "min_count": 2,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/agent_language__openhands_javascript.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/agent_language__openhands_javascript.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/agent_language__openhands_javascript.json"
+  },
+  {
+    "group_type": "agent_language",
+    "group_value": "openhands::python",
+    "run_count": 75,
+    "min_count": 2,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/agent_language__openhands_python.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/agent_language__openhands_python.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/agent_language__openhands_python.json"
+  },
+  {
+    "group_type": "benchmark_agent",
+    "group_value": "baxbench::codex",
+    "run_count": 392,
+    "min_count": 7,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/benchmark_agent__baxbench_codex.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/benchmark_agent__baxbench_codex.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/benchmark_agent__baxbench_codex.json"
+  },
+  {
+    "group_type": "benchmark_agent",
+    "group_value": "cweval::claude_code",
+    "run_count": 357,
+    "min_count": 7,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/benchmark_agent__cweval_claude_code.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/benchmark_agent__cweval_claude_code.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/benchmark_agent__cweval_claude_code.json"
+  },
+  {
+    "group_type": "benchmark_agent",
+    "group_value": "cweval::codex",
+    "run_count": 357,
+    "min_count": 7,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/benchmark_agent__cweval_codex.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/benchmark_agent__cweval_codex.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/benchmark_agent__cweval_codex.json"
+  },
+  {
+    "group_type": "benchmark_agent",
+    "group_value": "cweval::openhands",
+    "run_count": 357,
+    "min_count": 7,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/benchmark_agent__cweval_openhands.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/benchmark_agent__cweval_openhands.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/benchmark_agent__cweval_openhands.json"
+  },
+  {
+    "group_type": "benchmark_agent",
+    "group_value": "dualgauge::claudecode-opus47",
+    "run_count": 921,
+    "min_count": 18,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/benchmark_agent__dualgauge_claudecode-opus47.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/benchmark_agent__dualgauge_claudecode-opus47.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/benchmark_agent__dualgauge_claudecode-opus47.json"
+  },
+  {
+    "group_type": "benchmark_agent",
+    "group_value": "dualgauge::codex-gpt54",
+    "run_count": 921,
+    "min_count": 18,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/benchmark_agent__dualgauge_codex-gpt54.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/benchmark_agent__dualgauge_codex-gpt54.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/benchmark_agent__dualgauge_codex-gpt54.json"
+  },
+  {
+    "group_type": "benchmark_agent",
+    "group_value": "dualgauge::openhands-gpt54",
+    "run_count": 921,
+    "min_count": 18,
+    "max_depth": 9,
+    "png": "reports/agent_trajectories/figures/common_trees/png/benchmark_agent__dualgauge_openhands-gpt54.png",
+    "dot": "reports/agent_trajectories/figures/common_trees/dot/benchmark_agent__dualgauge_openhands-gpt54.dot",
+    "tree_json": "reports/agent_trajectories/trees/common_trees/benchmark_agent__dualgauge_openhands-gpt54.json"
+  }
+]

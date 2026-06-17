@@ -1,0 +1,138 @@
+{
+  "children": {
+    "error": {
+      "children": {
+        "inspect_workspace": {
+          "children": {
+            "read_file": {
+              "children": {
+                "error": {
+                  "children": {},
+                  "count": 7,
+                  "success": 0
+                }
+              },
+              "count": 10,
+              "success": 0
+            }
+          },
+          "count": 10,
+          "success": 0
+        },
+        "message_code_answer": {
+          "children": {
+            "finish": {
+              "children": {},
+              "count": 10,
+              "success": 0
+            },
+            "finish:error": {
+              "children": {},
+              "count": 13,
+              "success": 0
+            }
+          },
+          "count": 23,
+          "success": 0
+        },
+        "message_other": {
+          "children": {
+            "finish": {
+              "children": {},
+              "count": 27,
+              "success": 0
+            }
+          },
+          "count": 27,
+          "success": 0
+        },
+        "message_status_or_error": {
+          "children": {
+            "finish:error": {
+              "children": {},
+              "count": 40,
+              "success": 0
+            }
+          },
+          "count": 40,
+          "success": 0
+        },
+        "read_file": {
+          "children": {
+            "error": {
+              "children": {},
+              "count": 10,
+              "success": 0
+            }
+          },
+          "count": 13,
+          "success": 0
+        }
+      },
+      "count": 113,
+      "success": 0
+    },
+    "inspect_workspace": {
+      "children": {},
+      "count": 6,
+      "success": 0
+    },
+    "message_code_answer": {
+      "children": {
+        "finish": {
+          "children": {},
+          "count": 71,
+          "success": 4
+        },
+        "finish:error": {
+          "children": {},
+          "count": 59,
+          "success": 1
+        }
+      },
+      "count": 131,
+      "success": 5
+    },
+    "message_other": {
+      "children": {
+        "error": {
+          "children": {},
+          "count": 7,
+          "success": 0
+        }
+      },
+      "count": 12,
+      "success": 0
+    },
+    "write_file": {
+      "children": {
+        "message_code_answer": {
+          "children": {
+            "finish": {
+              "children": {},
+              "count": 11,
+              "success": 0
+            }
+          },
+          "count": 12,
+          "success": 0
+        },
+        "message_other": {
+          "children": {
+            "finish": {
+              "children": {},
+              "count": 15,
+              "success": 0
+            }
+          },
+          "count": 16,
+          "success": 0
+        }
+      },
+      "count": 41,
+      "success": 0
+    }
+  },
+  "count": 307,
+  "success": 5
+}

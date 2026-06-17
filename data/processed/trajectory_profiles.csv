@@ -1,0 +1,72 @@
+group_type,group_value,run_count,unique_sequences,dominant_sequence,dominant_sequence_count,dominant_sequence_share,avg_collapsed_len,median_collapsed_len,sequence_entropy,success_share
+agent,claude_code,357,153,message > write_file > execute_probe > generated_code,53,0.1484593837535014,7.677871148459384,5.0,5.725942003284419,0.9019607843137255
+agent,claudecode-opus47,921,55,message:error > finish:error,248,0.2692725298588491,2.791530944625407,2.0,3.1525503017319343,0.02857142857142857
+agent,codex,749,521,message > inspect_workspace > execute_probe > read_file > message > generated_code,31,0.04138851802403204,12.759679572763686,9.0,8.468071375885286,0.9073033707865169
+agent,codex-gpt54,921,242,message:error,182,0.1976112920738328,3.3300760043431055,3.0,5.546075234266274,0.15570175438596492
+agent,openhands,357,3,message > generated_code:error > message > generated_code:error,161,0.45098039215686275,3.3333333333333335,4.0,1.5237480655876263,0.3848396501457726
+agent,openhands-gpt54,921,475,message,128,0.13897937024972856,7.352877307274701,6.0,7.393646351196754,0.06387665198237885
+agent_language,claude_code::c,93,46,message > error > execute_probe > read_file > generated_code:error,19,0.20430107526881722,9.096774193548388,5.0,4.542523278908686,0.8709677419354839
+agent_language,claude_code::cpp,63,42,message > write_file > execute_probe > generated_code,11,0.1746031746031746,10.095238095238095,7.0,4.878629014551655,0.9523809523809523
+agent_language,claude_code::go,57,32,message > write_file > execute_probe > read_file > generated_code,11,0.19298245614035087,7.0,5.0,4.4019510175097025,0.8947368421052632
+agent_language,claude_code::javascript,69,34,message > write_file > execute_probe > generated_code,11,0.15942028985507245,6.246376811594203,5.0,4.52425093889628,0.855072463768116
+agent_language,claude_code::python,75,29,message > write_file > execute_probe > generated_code,10,0.13333333333333333,5.72,5.0,4.2893793994661795,0.9466666666666667
+agent_language,claudecode-opus47::cpp,307,38,message > finish,71,0.23127035830618892,2.973941368078176,3.0,3.444040025570338,0.01639344262295082
+agent_language,claudecode-opus47::javascript,307,25,message:error > finish:error,80,0.26058631921824105,2.732899022801303,3.0,2.8743749384051545,0.019933554817275746
+agent_language,claudecode-opus47::python,307,26,message:error > finish:error,109,0.3550488599348534,2.6677524429967425,2.0,2.7769405178688653,0.049342105263157895
+agent_language,codex-gpt54::cpp,307,109,message,73,0.23778501628664495,3.254071661237785,3.0,5.065753329621486,0.08852459016393442
+agent_language,codex-gpt54::javascript,307,110,message:error,72,0.23452768729641693,3.3843648208469057,3.0,5.081215540559454,0.1353135313531353
+agent_language,codex-gpt54::python,307,105,message,57,0.18566775244299674,3.3517915309446256,3.0,5.152093584593251,0.24342105263157895
+agent_language,codex::c,93,60,message > inspect_workspace > execute_probe > read_file > message > generated_code,10,0.10752688172043011,7.473118279569892,7.0,5.491846010933218,0.8924731182795699
+agent_language,codex::cpp,63,45,message > inspect_workspace > execute_probe > read_file > message > generated_code,7,0.1111111111111111,7.761904761904762,7.0,5.228688503520073,0.9365079365079365
+agent_language,codex::go,141,109,message > inspect_workspace > execute_probe > read_file > message > generated_code,9,0.06382978723404255,11.49645390070922,10.0,6.5451291004262755,0.9298245614035088
+agent_language,codex::javascript,181,142,message > inspect_workspace > execute_probe > error > message > generated_code:error,11,0.06077348066298342,14.701657458563536,11.0,6.891956846994545,0.927536231884058
+agent_language,codex::php,28,28,message,1,0.03571428571428571,25.392857142857142,26.5,4.807354922057605,
+agent_language,codex::python,187,145,message > inspect_workspace > error > execute_probe > read_file > message > generated_code,10,0.053475935828877004,12.074866310160427,10.0,6.904578235617826,0.8648648648648649
+agent_language,codex::ruby,28,27,message > inspect_workspace > message > generated_code,2,0.07142857142857142,26.928571428571427,28.5,4.735926350629033,
+agent_language,codex::rust,28,27,message > inspect_workspace > write_file > error > execute_probe > error > inspect_workspace > error > message:error > generated_code:error,2,0.07142857142857142,13.142857142857142,10.0,4.735926350629033,
+agent_language,openhands-gpt54::cpp,307,190,message,51,0.16612377850162866,8.31270358306189,6.0,6.568553379835501,0.04966887417218543
+agent_language,openhands-gpt54::javascript,307,173,message,41,0.13355048859934854,7.3322475570032575,6.0,6.409745390295434,0.046357615894039736
+agent_language,openhands-gpt54::python,307,169,message,36,0.11726384364820847,6.413680781758957,6.0,6.424394645606437,0.09539473684210527
+agent_language,openhands::c,93,3,message > generated_code:error > message > generated_code:error,57,0.6129032258064516,3.3333333333333335,4.0,1.187928091712115,0.17204301075268819
+agent_language,openhands::cpp,63,3,message > generated_code:error > message > generated_code:error,37,0.5873015873015873,3.3333333333333335,4.0,1.2693738777687749,0.20634920634920634
+agent_language,openhands::go,57,3,message > generated_code:error > message > generated_code,22,0.38596491228070173,3.3333333333333335,4.0,1.5729230252972213,0.47368421052631576
+agent_language,openhands::javascript,69,3,message > generated_code:error > message > generated_code:error,25,0.36231884057971014,3.3333333333333335,4.0,1.5813216218211634,0.5507246376811594
+agent_language,openhands::python,75,3,message > generated_code:error > message > generated_code:error,26,0.3466666666666667,3.3333333333333335,4.0,1.5841928580512907,0.6229508196721312
+benchmark,baxbench,392,348,message > inspect_workspace,10,0.025510204081632654,17.278061224489797,15.0,8.265301969342941,
+benchmark,cweval,1071,330,message > generated_code:error > message > generated_code:error,161,0.1503267973856209,6.26984126984127,5.0,6.201548269422664,0.7357954545454546
+benchmark,dualgauge,2763,770,message,309,0.11183496199782844,4.4914947520810715,3.0,6.757304259564812,0.08278388278388278
+benchmark_agent,baxbench::codex,392,348,message > inspect_workspace,10,0.025510204081632654,17.278061224489797,15.0,8.265301969342941,
+benchmark_agent,cweval::claude_code,357,153,message > write_file > execute_probe > generated_code,53,0.1484593837535014,7.677871148459384,5.0,5.725942003284419,0.9019607843137255
+benchmark_agent,cweval::codex,357,175,message > inspect_workspace > execute_probe > read_file > message > generated_code,31,0.08683473389355742,7.798319327731092,7.0,6.6234385471467,0.9073033707865169
+benchmark_agent,cweval::openhands,357,3,message > generated_code:error > message > generated_code:error,161,0.45098039215686275,3.3333333333333335,4.0,1.5237480655876263,0.3848396501457726
+benchmark_agent,dualgauge::claudecode-opus47,921,55,message:error > finish:error,248,0.2692725298588491,2.791530944625407,2.0,3.1525503017319343,0.02857142857142857
+benchmark_agent,dualgauge::codex-gpt54,921,242,message:error,182,0.1976112920738328,3.3300760043431055,3.0,5.546075234266274,0.15570175438596492
+benchmark_agent,dualgauge::openhands-gpt54,921,475,message,128,0.13897937024972856,7.352877307274701,6.0,7.393646351196754,0.06387665198237885
+benchmark_language,baxbench::go,84,71,message,3,0.03571428571428571,13.083333333333334,14.0,6.046846589342405,
+benchmark_language,baxbench::javascript,112,104,message > inspect_workspace,4,0.03571428571428571,19.508928571428573,18.0,6.639900569359717,
+benchmark_language,baxbench::php,28,28,message,1,0.03571428571428571,25.392857142857142,26.5,4.807354922057605,
+benchmark_language,baxbench::python,112,105,message > inspect_workspace > execute_probe > message > generated_code,4,0.03571428571428571,14.785714285714286,13.0,6.657757712216859,
+benchmark_language,baxbench::ruby,28,27,message > inspect_workspace > message > generated_code,2,0.07142857142857142,26.928571428571427,28.5,4.735926350629033,
+benchmark_language,baxbench::rust,28,27,message > inspect_workspace > write_file > error > execute_probe > error > inspect_workspace > error > message:error > generated_code:error,2,0.07142857142857142,13.142857142857142,10.0,4.735926350629033,
+benchmark_language,cweval::c,279,109,message > generated_code:error > message > generated_code:error,57,0.20430107526881722,6.634408602150538,5.0,5.325728294572495,0.6451612903225806
+benchmark_language,cweval::cpp,189,90,message > generated_code:error > message > generated_code:error,37,0.19576719576719576,7.063492063492063,5.0,5.377192966001323,0.6984126984126984
+benchmark_language,cweval::go,171,72,message > generated_code:error > message > generated_code,22,0.1286549707602339,6.497076023391813,5.0,5.16695445736206,0.7660818713450293
+benchmark_language,cweval::javascript,207,76,message > generated_code:error > message > generated_code:error,25,0.12077294685990338,5.492753623188406,5.0,5.231072539132509,0.7777777777777778
+benchmark_language,cweval::python,225,73,message > generated_code:error > message > generated_code:error,26,0.11555555555555555,5.693333333333333,5.0,5.1686117214532015,0.8238095238095238
+benchmark_language,dualgauge::cpp,921,335,message,124,0.13463626492942454,4.846905537459284,3.0,6.404098920337968,0.051535087719298246
+benchmark_language,dualgauge::javascript,921,306,message:error,100,0.10857763300760044,4.483170466883822,3.0,6.181486556616338,0.0673289183222958
+benchmark_language,dualgauge::python,921,298,message:error > finish:error,109,0.11834961997828447,4.144408251900108,3.0,6.193793464053677,0.12938596491228072
+language,c,279,109,message > generated_code:error > message > generated_code:error,57,0.20430107526881722,6.634408602150538,5.0,5.325728294572495,0.6451612903225806
+language,cpp,1110,425,message,124,0.11171171171171171,5.224324324324324,4.0,6.887570035361446,0.16257947320617622
+language,go,255,143,message > generated_code:error > message > generated_code,22,0.08627450980392157,8.666666666666666,6.0,6.371125523740308,0.7660818713450293
+language,javascript,1240,484,message:error,100,0.08064516129032258,6.008870967741935,4.0,7.113483974783224,0.19946091644204852
+language,php,28,28,message,1,0.03571428571428571,25.392857142857142,26.5,4.807354922057605,
+language,python,1258,474,message:error > finish:error,109,0.08664546899841018,5.368839427662957,4.0,7.123173307901465,0.25935828877005346
+language,ruby,28,27,message > inspect_workspace > message > generated_code,2,0.07142857142857142,26.928571428571427,28.5,4.735926350629033,
+language,rust,28,27,message > inspect_workspace > write_file > error > execute_probe > error > inspect_workspace > error > message:error > generated_code:error,2,0.07142857142857142,13.142857142857142,10.0,4.735926350629033,
+outcome,both_fail,1731,440,message,209,0.12073945696129405,4.318890814558059,3.0,6.057890765774401,0.0
+outcome,func_and_sec_pass,1003,416,message > generated_code:error,55,0.054835493519441676,6.3010967098703885,6.0,7.419681193591582,1.0
+outcome,func_only_pass,331,124,message,65,0.19637462235649547,3.6706948640483383,2.0,5.106751025134195,0.0
+outcome,missing,48,25,message:error,8,0.16666666666666666,3.9791666666666665,4.0,4.1551876989901,
+outcome,present,392,348,message > inspect_workspace,10,0.025510204081632654,17.278061224489797,15.0,8.265301969342941,
+outcome,sec_only_pass,721,336,message:error,61,0.08460471567267684,5.441054091539528,4.0,7.138814065355977,0.0

@@ -1,0 +1,134 @@
+{
+  "children": {
+    "error": {
+      "children": {},
+      "count": 30,
+      "success": 5
+    },
+    "inspect_workspace": {
+      "children": {
+        "error": {
+          "children": {
+            "inspect_workspace": {
+              "children": {
+                "error": {
+                  "children": {},
+                  "count": 28,
+                  "success": 4
+                }
+              },
+              "count": 57,
+              "success": 9
+            },
+            "message_code_answer": {
+              "children": {},
+              "count": 46,
+              "success": 8
+            },
+            "read_file": {
+              "children": {
+                "error": {
+                  "children": {},
+                  "count": 18,
+                  "success": 7
+                },
+                "message_code_answer": {
+                  "children": {},
+                  "count": 22,
+                  "success": 7
+                }
+              },
+              "count": 51,
+              "success": 16
+            },
+            "search": {
+              "children": {},
+              "count": 41,
+              "success": 4
+            }
+          },
+          "count": 204,
+          "success": 39
+        },
+        "read_file": {
+          "children": {},
+          "count": 23,
+          "success": 3
+        },
+        "search": {
+          "children": {
+            "error": {
+              "children": {
+                "inspect_workspace": {
+                  "children": {},
+                  "count": 25,
+                  "success": 3
+                },
+                "message_code_answer": {
+                  "children": {},
+                  "count": 41,
+                  "success": 12
+                },
+                "read_file": {
+                  "children": {},
+                  "count": 18,
+                  "success": 5
+                },
+                "search": {
+                  "children": {},
+                  "count": 23,
+                  "success": 3
+                }
+              },
+              "count": 111,
+              "success": 25
+            },
+            "inspect_workspace": {
+              "children": {},
+              "count": 23,
+              "success": 5
+            },
+            "read_file": {
+              "children": {},
+              "count": 20,
+              "success": 10
+            }
+          },
+          "count": 159,
+          "success": 40
+        }
+      },
+      "count": 405,
+      "success": 88
+    },
+    "message_code_answer": {
+      "children": {},
+      "count": 365,
+      "success": 28
+    },
+    "search": {
+      "children": {
+        "error": {
+          "children": {
+            "message_code_answer": {
+              "children": {},
+              "count": 39,
+              "success": 5
+            }
+          },
+          "count": 70,
+          "success": 12
+        },
+        "inspect_workspace": {
+          "children": {},
+          "count": 21,
+          "success": 5
+        }
+      },
+      "count": 112,
+      "success": 21
+    }
+  },
+  "count": 921,
+  "success": 142
+}

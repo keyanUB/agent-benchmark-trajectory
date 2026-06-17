@@ -1,0 +1,684 @@
+{
+  "baxbench": {
+    "path": "baxbench",
+    "runs": [
+      {
+        "agent": "codex",
+        "evaluation_results": {
+          "aggregate_test_counts": {
+            "functional_exceptions": 121,
+            "functional_passed": 279,
+            "functional_total": 476,
+            "security_exceptions": 410,
+            "security_total": 987
+          },
+          "func_test_log_count": 0,
+          "sec_test_log_count": 0,
+          "summary_json": "baxbench/codex/scp_owasp/summary.json",
+          "test_results_json_count": 392
+        },
+        "framework_count": 14,
+        "frameworks": {
+          "Go-Fiber": 28,
+          "Go-Gin": 28,
+          "Go-net-http": 28,
+          "JavaScript-express": 28,
+          "JavaScript-fastify": 28,
+          "JavaScript-koa": 28,
+          "JavaScript-nest": 28,
+          "PHP-Lumen": 28,
+          "Python-Django": 28,
+          "Python-FastAPI": 28,
+          "Python-Flask": 28,
+          "Python-aiohttp": 28,
+          "Ruby-Rails": 28,
+          "Rust-Actix": 28
+        },
+        "generation_logs": {
+          "count": 392,
+          "root": "baxbench/codex/scp_owasp/codex",
+          "steps_jsonl_lines": 10927
+        },
+        "model": "openai:gpt-5.1-codex-mini",
+        "sample_count": 392,
+        "summary": {
+          "agent": "codex",
+          "benchmark": "baxbench",
+          "failed": 0,
+          "model": "openai:gpt-5.1-codex-mini",
+          "skipped": 390,
+          "success": 2,
+          "total": 392
+        },
+        "task_count": 28,
+        "tasks": {
+          "Calculator": 14,
+          "ClickCount": 14,
+          "Compiler": 14,
+          "CreditCardService": 14,
+          "FileSearch": 14,
+          "Forum": 14,
+          "FrameExtract": 14,
+          "ImageConverter": 14,
+          "ImageTransfer": 14,
+          "Logger": 14,
+          "Login": 14,
+          "Monitor": 14,
+          "PDFCat": 14,
+          "PDFToText": 14,
+          "ProductCatalog": 14,
+          "ProfileCollection": 14,
+          "Recipes": 14,
+          "RecommendationService": 14,
+          "RegexSearch": 14,
+          "SecretStorage": 14,
+          "ShopOverview": 14,
+          "ShoppingCartService": 14,
+          "SongDownloader": 14,
+          "Unsubscribe": 14,
+          "UptimeService": 14,
+          "UserCreation": 14,
+          "Wiki": 14,
+          "ZipToTxt": 14
+        },
+        "variant": "scp_owasp"
+      }
+    ]
+  },
+  "cweval": {
+    "path": "cweval",
+    "runs": [
+      {
+        "agent": "claude_code",
+        "evaluation_results": {
+          "generated_0_res_json": "cweval/claude_code/base/generated_0/res.json",
+          "res_all_json": "cweval/claude_code/base/res_all.json",
+          "summary_json": "cweval/claude_code/base/summary.json"
+        },
+        "generation_logs": {
+          "by_language": {
+            "c": 31,
+            "cpp": 21,
+            "go": 19,
+            "js": 23,
+            "py": 25
+          },
+          "by_suite": {
+            "core": 108,
+            "lang": 11
+          },
+          "count": 119,
+          "root": "cweval/claude_code/base/agent_logs",
+          "steps_jsonl_lines": 1349
+        },
+        "model": "anthropic:claude-haiku-4-5-20251001",
+        "summary": {
+          "agent": "claude_code",
+          "benchmark": "cweval",
+          "failed": 0,
+          "model": "anthropic:claude-haiku-4-5-20251001",
+          "skipped": 94,
+          "success": 25,
+          "total": 119
+        },
+        "variant": "base"
+      },
+      {
+        "agent": "claude_code",
+        "evaluation_results": {
+          "generated_0_res_json": "cweval/claude_code/scp_owasp/generated_0/res.json",
+          "res_all_json": "cweval/claude_code/scp_owasp/res_all.json",
+          "summary_json": "cweval/claude_code/scp_owasp/summary.json"
+        },
+        "generation_logs": {
+          "by_language": {
+            "c": 31,
+            "cpp": 21,
+            "go": 19,
+            "js": 23,
+            "py": 25
+          },
+          "by_suite": {
+            "core": 108,
+            "lang": 11
+          },
+          "count": 119,
+          "root": "cweval/claude_code/scp_owasp/agent_logs",
+          "steps_jsonl_lines": 1291
+        },
+        "model": null,
+        "summary": {
+          "agent": "claude_code",
+          "benchmark": "cweval",
+          "failed": 0,
+          "model": null,
+          "skipped": 119,
+          "success": 0,
+          "total": 119
+        },
+        "variant": "scp_owasp"
+      },
+      {
+        "agent": "claude_code",
+        "evaluation_results": {
+          "generated_0_res_json": "cweval/claude_code/zs/generated_0/res.json",
+          "res_all_json": "cweval/claude_code/zs/res_all.json",
+          "summary_json": "cweval/claude_code/zs/summary.json"
+        },
+        "generation_logs": {
+          "by_language": {
+            "c": 31,
+            "cpp": 21,
+            "go": 19,
+            "js": 23,
+            "py": 25
+          },
+          "by_suite": {
+            "core": 108,
+            "lang": 11
+          },
+          "count": 119,
+          "root": "cweval/claude_code/zs/agent_logs",
+          "steps_jsonl_lines": 1312
+        },
+        "model": null,
+        "summary": {
+          "agent": "claude_code",
+          "benchmark": "cweval",
+          "failed": 0,
+          "model": null,
+          "skipped": 119,
+          "success": 0,
+          "total": 119
+        },
+        "variant": "zs"
+      },
+      {
+        "agent": "codex",
+        "evaluation_results": {
+          "generated_0_res_json": "cweval/codex/base/generated_0/res.json",
+          "res_all_json": "cweval/codex/base/res_all.json",
+          "summary_json": "cweval/codex/base/summary.json"
+        },
+        "generation_logs": {
+          "by_language": {
+            "c": 31,
+            "cpp": 21,
+            "go": 19,
+            "js": 23,
+            "py": 25
+          },
+          "by_suite": {
+            "core": 108,
+            "lang": 11
+          },
+          "count": 119,
+          "root": "cweval/codex/base/agent_logs",
+          "steps_jsonl_lines": 1368
+        },
+        "model": "openai:gpt-5.1-codex-mini",
+        "summary": {
+          "agent": "codex",
+          "benchmark": "cweval",
+          "failed": 0,
+          "model": "openai:gpt-5.1-codex-mini",
+          "skipped": 116,
+          "success": 3,
+          "total": 119
+        },
+        "variant": "base"
+      },
+      {
+        "agent": "codex",
+        "evaluation_results": {
+          "generated_0_res_json": "cweval/codex/scp_owasp/generated_0/res.json",
+          "res_all_json": "cweval/codex/scp_owasp/res_all.json",
+          "summary_json": "cweval/codex/scp_owasp/summary.json"
+        },
+        "generation_logs": {
+          "by_language": {
+            "c": 31,
+            "cpp": 21,
+            "go": 19,
+            "js": 23,
+            "py": 25
+          },
+          "by_suite": {
+            "core": 108,
+            "lang": 11
+          },
+          "count": 119,
+          "root": "cweval/codex/scp_owasp/agent_logs",
+          "steps_jsonl_lines": 1356
+        },
+        "model": "openai:gpt-5.1-codex-mini",
+        "summary": {
+          "agent": "codex",
+          "benchmark": "cweval",
+          "failed": 0,
+          "model": "openai:gpt-5.1-codex-mini",
+          "skipped": 115,
+          "success": 4,
+          "total": 119
+        },
+        "variant": "scp_owasp"
+      },
+      {
+        "agent": "codex",
+        "evaluation_results": {
+          "generated_0_res_json": "cweval/codex/zs/generated_0/res.json",
+          "res_all_json": "cweval/codex/zs/res_all.json",
+          "summary_json": "cweval/codex/zs/summary.json"
+        },
+        "generation_logs": {
+          "by_language": {
+            "c": 31,
+            "cpp": 21,
+            "go": 19,
+            "js": 23,
+            "py": 25
+          },
+          "by_suite": {
+            "core": 108,
+            "lang": 11
+          },
+          "count": 119,
+          "root": "cweval/codex/zs/agent_logs",
+          "steps_jsonl_lines": 1476
+        },
+        "model": "openai:gpt-5.1-codex-mini",
+        "summary": {
+          "agent": "codex",
+          "benchmark": "cweval",
+          "failed": 0,
+          "model": "openai:gpt-5.1-codex-mini",
+          "skipped": 112,
+          "success": 7,
+          "total": 119
+        },
+        "variant": "zs"
+      },
+      {
+        "agent": "openhands",
+        "evaluation_results": {
+          "generated_0_res_json": "cweval/openhands/base/generated_0/res.json",
+          "res_all_json": "cweval/openhands/base/res_all.json",
+          "summary_json": "cweval/openhands/base/summary.json"
+        },
+        "generation_logs": {
+          "by_language": {
+            "c": 31,
+            "cpp": 21,
+            "go": 19,
+            "js": 23,
+            "py": 25
+          },
+          "by_suite": {
+            "core": 108,
+            "lang": 11
+          },
+          "count": 119,
+          "root": "cweval/openhands/base/agent_logs",
+          "steps_jsonl_lines": 482
+        },
+        "model": null,
+        "summary": {
+          "agent": "openhands",
+          "benchmark": "cweval",
+          "failed": 0,
+          "model": null,
+          "skipped": 119,
+          "success": 0,
+          "total": 119
+        },
+        "variant": "base"
+      },
+      {
+        "agent": "openhands",
+        "evaluation_results": {
+          "generated_0_res_json": "cweval/openhands/scp_owasp/generated_0/res.json",
+          "res_all_json": "cweval/openhands/scp_owasp/res_all.json",
+          "summary_json": "cweval/openhands/scp_owasp/summary.json"
+        },
+        "generation_logs": {
+          "by_language": {
+            "c": 31,
+            "cpp": 21,
+            "go": 19,
+            "js": 23,
+            "py": 25
+          },
+          "by_suite": {
+            "core": 108,
+            "lang": 11
+          },
+          "count": 119,
+          "root": "cweval/openhands/scp_owasp/agent_logs",
+          "steps_jsonl_lines": 724
+        },
+        "model": null,
+        "summary": {
+          "agent": "openhands",
+          "benchmark": "cweval",
+          "failed": 0,
+          "model": null,
+          "skipped": 119,
+          "success": 0,
+          "total": 119
+        },
+        "variant": "scp_owasp"
+      },
+      {
+        "agent": "openhands",
+        "evaluation_results": {
+          "generated_0_res_json": "cweval/openhands/zs/generated_0/res.json",
+          "res_all_json": "cweval/openhands/zs/res_all.json",
+          "summary_json": "cweval/openhands/zs/summary.json"
+        },
+        "generation_logs": {
+          "by_language": {
+            "c": 31,
+            "cpp": 21,
+            "go": 19,
+            "js": 23,
+            "py": 25
+          },
+          "by_suite": {
+            "core": 108,
+            "lang": 11
+          },
+          "count": 119,
+          "root": "cweval/openhands/zs/agent_logs",
+          "steps_jsonl_lines": 714
+        },
+        "model": null,
+        "summary": {
+          "agent": "openhands",
+          "benchmark": "cweval",
+          "failed": 0,
+          "model": null,
+          "skipped": 119,
+          "success": 0,
+          "total": 119
+        },
+        "variant": "zs"
+      }
+    ]
+  },
+  "dualgauge": {
+    "path": "dualgauge",
+    "runs": [
+      {
+        "agent": "claudecode-opus47",
+        "aggregate_evaluation": {
+          "functional_correctness_passed": 344,
+          "functional_correctness_total": 1897,
+          "gap_present": 2,
+          "security_passed": 1126,
+          "security_total": 1859
+        },
+        "evaluation_results": {
+          "debug_json_count": 305,
+          "root": "dualgauge/evaluation_results/cpp/claudecode-opus47",
+          "summary_json_count": 305
+        },
+        "execution_results": {
+          "result_json_count": 305,
+          "root": "dualgauge/execution_results/cpp/claudecode-opus47"
+        },
+        "generation_logs": {
+          "event_jsonl_count": 307,
+          "event_jsonl_lines": 14055,
+          "root": "dualgauge/generated_samples/cpp/claudecode-opus47"
+        },
+        "language": "cpp",
+        "sample_summary_count": 305,
+        "status_counts": {
+          "success": 305
+        },
+        "task_count": 305
+      },
+      {
+        "agent": "codex-gpt54",
+        "aggregate_evaluation": {
+          "functional_correctness_passed": 643,
+          "functional_correctness_total": 1897,
+          "gap_present": 12,
+          "security_passed": 1465,
+          "security_total": 1859
+        },
+        "evaluation_results": {
+          "debug_json_count": 305,
+          "root": "dualgauge/evaluation_results/cpp/codex-gpt54",
+          "summary_json_count": 305
+        },
+        "execution_results": {
+          "result_json_count": 305,
+          "root": "dualgauge/execution_results/cpp/codex-gpt54"
+        },
+        "generation_logs": {
+          "event_jsonl_count": 307,
+          "event_jsonl_lines": 3823,
+          "root": "dualgauge/generated_samples/cpp/codex-gpt54"
+        },
+        "language": "cpp",
+        "sample_summary_count": 305,
+        "status_counts": {
+          "success": 305
+        },
+        "task_count": 305
+      },
+      {
+        "agent": "openhands-gpt54",
+        "aggregate_evaluation": {
+          "functional_correctness_passed": 583,
+          "functional_correctness_total": 1877,
+          "gap_present": 14,
+          "security_passed": 1189,
+          "security_total": 1817
+        },
+        "evaluation_results": {
+          "debug_json_count": 302,
+          "root": "dualgauge/evaluation_results/cpp/openhands-gpt54",
+          "summary_json_count": 302
+        },
+        "execution_results": {
+          "result_json_count": 302,
+          "root": "dualgauge/execution_results/cpp/openhands-gpt54"
+        },
+        "generation_logs": {
+          "event_jsonl_count": 307,
+          "event_jsonl_lines": 251784,
+          "root": "dualgauge/generated_samples/cpp/openhands-gpt54"
+        },
+        "language": "cpp",
+        "sample_summary_count": 302,
+        "status_counts": {
+          "success": 302
+        },
+        "task_count": 302
+      },
+      {
+        "agent": "claudecode-opus47",
+        "aggregate_evaluation": {
+          "functional_correctness_passed": 400,
+          "functional_correctness_total": 1879,
+          "gap_present": 0,
+          "security_passed": 1142,
+          "security_total": 1842
+        },
+        "evaluation_results": {
+          "debug_json_count": 301,
+          "root": "dualgauge/evaluation_results/javascript/claudecode-opus47",
+          "summary_json_count": 301
+        },
+        "execution_results": {
+          "result_json_count": 301,
+          "root": "dualgauge/execution_results/javascript/claudecode-opus47"
+        },
+        "generation_logs": {
+          "event_jsonl_count": 307,
+          "event_jsonl_lines": 10321,
+          "root": "dualgauge/generated_samples/javascript/claudecode-opus47"
+        },
+        "language": "javascript",
+        "sample_summary_count": 301,
+        "status_counts": {
+          "success": 301
+        },
+        "task_count": 301
+      },
+      {
+        "agent": "codex-gpt54",
+        "aggregate_evaluation": {
+          "functional_correctness_passed": 866,
+          "functional_correctness_total": 1884,
+          "gap_present": 3,
+          "security_passed": 1456,
+          "security_total": 1847
+        },
+        "evaluation_results": {
+          "debug_json_count": 303,
+          "root": "dualgauge/evaluation_results/javascript/codex-gpt54",
+          "summary_json_count": 303
+        },
+        "execution_results": {
+          "result_json_count": 303,
+          "root": "dualgauge/execution_results/javascript/codex-gpt54"
+        },
+        "generation_logs": {
+          "event_jsonl_count": 307,
+          "event_jsonl_lines": 3888,
+          "root": "dualgauge/generated_samples/javascript/codex-gpt54"
+        },
+        "language": "javascript",
+        "sample_summary_count": 303,
+        "status_counts": {
+          "success": 303
+        },
+        "task_count": 303
+      },
+      {
+        "agent": "openhands-gpt54",
+        "aggregate_evaluation": {
+          "functional_correctness_passed": 759,
+          "functional_correctness_total": 1885,
+          "gap_present": 3,
+          "security_passed": 1176,
+          "security_total": 1851
+        },
+        "evaluation_results": {
+          "debug_json_count": 302,
+          "root": "dualgauge/evaluation_results/javascript/openhands-gpt54",
+          "summary_json_count": 302
+        },
+        "execution_results": {
+          "result_json_count": 302,
+          "root": "dualgauge/execution_results/javascript/openhands-gpt54"
+        },
+        "generation_logs": {
+          "event_jsonl_count": 307,
+          "event_jsonl_lines": 202586,
+          "root": "dualgauge/generated_samples/javascript/openhands-gpt54"
+        },
+        "language": "javascript",
+        "sample_summary_count": 302,
+        "status_counts": {
+          "success": 302
+        },
+        "task_count": 302
+      },
+      {
+        "agent": "claudecode-opus47",
+        "aggregate_evaluation": {
+          "functional_correctness_passed": 824,
+          "functional_correctness_total": 1893,
+          "gap_present": 0,
+          "security_passed": 1011,
+          "security_total": 1853
+        },
+        "evaluation_results": {
+          "debug_json_count": 304,
+          "root": "dualgauge/evaluation_results/python/claudecode-opus47",
+          "summary_json_count": 304
+        },
+        "execution_results": {
+          "result_json_count": 304,
+          "root": "dualgauge/execution_results/python/claudecode-opus47"
+        },
+        "generation_logs": {
+          "event_jsonl_count": 307,
+          "event_jsonl_lines": 9482,
+          "root": "dualgauge/generated_samples/python/claudecode-opus47"
+        },
+        "language": "python",
+        "sample_summary_count": 304,
+        "status_counts": {
+          "success": 304
+        },
+        "task_count": 304
+      },
+      {
+        "agent": "codex-gpt54",
+        "aggregate_evaluation": {
+          "functional_correctness_passed": 1385,
+          "functional_correctness_total": 1893,
+          "gap_present": 0,
+          "security_passed": 1475,
+          "security_total": 1853
+        },
+        "evaluation_results": {
+          "debug_json_count": 304,
+          "root": "dualgauge/evaluation_results/python/codex-gpt54",
+          "summary_json_count": 304
+        },
+        "execution_results": {
+          "result_json_count": 304,
+          "root": "dualgauge/execution_results/python/codex-gpt54"
+        },
+        "generation_logs": {
+          "event_jsonl_count": 307,
+          "event_jsonl_lines": 3970,
+          "root": "dualgauge/generated_samples/python/codex-gpt54"
+        },
+        "language": "python",
+        "sample_summary_count": 304,
+        "status_counts": {
+          "success": 304
+        },
+        "task_count": 304
+      },
+      {
+        "agent": "openhands-gpt54",
+        "aggregate_evaluation": {
+          "functional_correctness_passed": 967,
+          "functional_correctness_total": 1893,
+          "gap_present": 7,
+          "security_passed": 1187,
+          "security_total": 1853
+        },
+        "evaluation_results": {
+          "debug_json_count": 304,
+          "root": "dualgauge/evaluation_results/python/openhands-gpt54",
+          "summary_json_count": 304
+        },
+        "execution_results": {
+          "result_json_count": 304,
+          "root": "dualgauge/execution_results/python/openhands-gpt54"
+        },
+        "generation_logs": {
+          "event_jsonl_count": 307,
+          "event_jsonl_lines": 175644,
+          "root": "dualgauge/generated_samples/python/openhands-gpt54"
+        },
+        "language": "python",
+        "sample_summary_count": 304,
+        "status_counts": {
+          "success": 304
+        },
+        "task_count": 304
+      }
+    ]
+  },
+  "source_root": "<RAW_AGENT_LOGS>"
+}

@@ -1,0 +1,20 @@
+digraph trajectory {
+  graph [rankdir=LR, bgcolor="white", pad=0.25, nodesep=0.45, ranksep=0.65];
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=10, color="#46515f", fillcolor="#f8fafc"];
+  edge [fontname="Helvetica", fontsize=9, color="#64748b", arrowsize=0.7];
+  label="agent language: openhands::c";
+  labelloc=t;
+  fontsize=18;
+  fontname="Helvetica-Bold";
+  n0 [label="START\\ncount=93, success=16", fillcolor="#fee2e2"];
+  n1 [label="message_llm_call\\ncount=93, success=16", fillcolor="#fee2e2"];
+  n0 -> n1 [label="93"];
+  n2 [label="generated_code:error\\ncount=93, success=16", fillcolor="#fee2e2"];
+  n1 -> n2 [label="93"];
+  n3 [label="message_llm_call\\ncount=62, success=11", fillcolor="#fee2e2"];
+  n2 -> n3 [label="62"];
+  n4 [label="generated_code:error\\ncount=57, success=7", fillcolor="#fee2e2"];
+  n3 -> n4 [label="57"];
+  n5 [label="generated_code\\ncount=5, success=4", fillcolor="#dcfce7"];
+  n3 -> n5 [label="5"];
+}
