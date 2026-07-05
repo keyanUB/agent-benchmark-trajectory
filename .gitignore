@@ -8,6 +8,8 @@ data/intermediate/
 .vscode/
 .venv/
 venv/
+.env
+.env.*
 
 # Python/build outputs
 __pycache__/

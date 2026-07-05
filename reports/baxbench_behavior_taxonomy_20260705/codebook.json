@@ -1,0 +1,106 @@
+{
+  "unit_of_analysis": {
+    "primary": "completed event in logs/steps.jsonl with tool_name in agent_message, command_execution, file_change, plus task.started/task.completed",
+    "excluded": "thread/turn bookkeeping events and tool_start events to avoid double-counting started/completed pairs",
+    "multi_label": true,
+    "primary_label_rule": "alphabetically first deterministic label; use labels field for full multi-label analysis"
+  },
+  "labels": [
+    {
+      "label": "task_orientation",
+      "definition": "The agent establishes task/workspace context before implementation.",
+      "include": "Initial checks of prompt implications, workspace layout, existing files, or repo status.",
+      "exclude": "Specific dependency probing or verification commands, which receive narrower labels."
+    },
+    {
+      "label": "implementation_planning",
+      "definition": "The agent states or selects an implementation strategy.",
+      "include": "Messages describing intended file layout, architecture, endpoint design, or next coding step.",
+      "exclude": "Final summaries of completed work."
+    },
+    {
+      "label": "code_generation",
+      "definition": "The agent creates, updates, or deletes source/configuration artifacts.",
+      "include": "Any file_change event that adds, updates, or deletes files in the task workspace.",
+      "exclude": "Read-only commands that display generated code."
+    },
+    {
+      "label": "code_refinement",
+      "definition": "The agent makes correctness-oriented changes after an initial implementation.",
+      "include": "Fixing status codes, validation, edge cases, compile errors, route behavior, or persistence logic.",
+      "exclude": "The first creation of a file set unless the agent explicitly frames it as a fix."
+    },
+    {
+      "label": "workspace_inspection",
+      "definition": "The agent inspects files, directories, git status, or generated source.",
+      "include": "Commands such as ls, find, rg --files, git status, sed/head/tail/nl/cat.",
+      "exclude": "Toolchain checks such as go version, npm version, or compiler discovery."
+    },
+    {
+      "label": "toolchain_dependency_inspection",
+      "definition": "The agent checks runtime, compiler, package, framework, or module availability.",
+      "include": "go env, go list, node/npm/python/php/ruby checks, package-cache searches, command -v.",
+      "exclude": "General file inspection that is not about tool or dependency availability."
+    },
+    {
+      "label": "dependency_handling",
+      "definition": "The agent attempts to use, install, resolve, or replace dependencies/frameworks.",
+      "include": "go mod tidy, npm install/build dependency failures, module-cache handling, framework import decisions.",
+      "exclude": "Plain toolchain version checks without a dependency decision."
+    },
+    {
+      "label": "verification_static",
+      "definition": "The agent runs static formatting, lint, syntax, or source-level checks.",
+      "include": "gofmt, syntax-only compiler calls, py_compile, tsc --noEmit, direct source inspections for compile shape.",
+      "exclude": "Full build/test/runtime smoke checks."
+    },
+    {
+      "label": "verification_build",
+      "definition": "The agent builds or compiles the generated project.",
+      "include": "go build, cargo build, npm run build, tsc build, javac, compiler invocations for project build.",
+      "exclude": "Unit tests or live HTTP probes."
+    },
+    {
+      "label": "verification_test",
+      "definition": "The agent runs an automated test suite or local unit/integration test.",
+      "include": "pytest, unittest, go test, npm test, jest, rails test, or hand-written test command.",
+      "exclude": "Build-only commands or manual curl probes."
+    },
+    {
+      "label": "verification_runtime",
+      "definition": "The agent starts the service or probes runtime behavior.",
+      "include": "curl/http requests, server startup, port binding, live endpoint checks.",
+      "exclude": "Static build/test commands."
+    },
+    {
+      "label": "failure_diagnosis",
+      "definition": "The agent observes or explains an error, failed command, or mismatch.",
+      "include": "Events with failed exit codes, error output, or messages explaining a failure cause.",
+      "exclude": "Successful verification commands."
+    },
+    {
+      "label": "adaptation_workaround",
+      "definition": "The agent changes strategy in response to constraints.",
+      "include": "Fallback to stdlib, local compatibility layers, cache relocation, graceful degradation, framework replacement.",
+      "exclude": "Minor fixes that do not alter strategy."
+    },
+    {
+      "label": "security_safety",
+      "definition": "The agent explicitly implements or discusses safety/security-relevant behavior.",
+      "include": "Input validation, path normalization, SQL parameterization, escaping, size limits, secret handling.",
+      "exclude": "Generic correctness fixes without safety relevance."
+    },
+    {
+      "label": "environment_constraint",
+      "definition": "The trajectory encounters sandbox, network, missing binary, permission, or port constraints.",
+      "include": "No module/network access, missing php/django, bind denied, cache permission errors.",
+      "exclude": "Ordinary application-level compile errors."
+    },
+    {
+      "label": "final_reporting",
+      "definition": "The agent summarizes completed work, files, validation, or residual limits.",
+      "include": "Final assistant message and task.completed event.",
+      "exclude": "Interim progress messages."
+    }
+  ]
+}
