@@ -1,13 +1,13 @@
 # BaxBench Agent Coding Behavior Taxonomy
 
-Generated: 2026-07-05T21:23:19.976216+00:00
+Generated: 2026-07-07T22:26:50.026066+00:00
 
 ## Research Objective
 
 This artifact builds a first-pass taxonomy of coding-agent behaviors from the
 current Codex BaxBench trajectories. The descriptive research questions are:
 
-1. What observable behavior types appear during agent code-generation tasks?
+1. What observable behavior types appear during agent coding tasks?
 2. How often do these behavior types occur across the current BaxBench sample?
 3. What common behavior transitions characterize the coding process?
 4. Which behaviors reflect environment constraints and adaptive workarounds?
@@ -16,11 +16,71 @@ current Codex BaxBench trajectories. The descriptive research questions are:
 
 - Source root: `data/raw/baxbench/runs/codex/gpt-5.4-mini/codex-cli-agent`
 - Sample name: `sample_batch50`
-- Runs analyzed: 80
-- Included behavior events: 1929
+- Runs analyzed: 90
+- Observed behavior-bearing events before substantive filtering: 2131
+- Analyzed substantive behavior events: 2052
+- Excluded non-substantive residual events: 79
 - Agent/model family: Codex CLI trajectories using `gpt-5.4-mini`
 
 The analysis uses `logs/steps.jsonl` from each run. Raw files are not edited.
+
+## Revised Taxonomy Design
+
+The taxonomy is now explicitly two-axis:
+
+1. **Primary process label**: exactly one label describing what the agent is
+   doing in the coding workflow.
+2. **Secondary attribute labels**: zero or more orthogonal tags describing what
+   the behavior concerns, such as defensive coding, dependency issues, sandbox
+   constraints, or runtime-service constraints.
+
+This design avoids double-counting concepts such as security behavior or
+dependency handling as process steps. For example, a path-normalization edit is
+primary process `refinement` with secondary attribute `defensive_coding`; a
+Django fallback is primary process `adaptation` with secondary attributes
+`dependency_related` and `environment_or_sandbox_constraint`.
+
+## Answer to Research Question 1
+
+**RQ1: What observable behavior types appear during agent coding tasks?**
+
+At the primary-process level, the current BaxBench trajectories show twelve
+observable behavior types:
+
+1. **Orientation**: establishes task/workspace context.
+2. **Inspection**: gathers information from files, commands, tools, or the
+   local environment.
+3. **Planning**: states or selects an implementation strategy.
+4. **Implementation writing**: creates, updates, or deletes implementation
+   artifacts.
+5. **Refinement**: revises generated code for correctness, robustness, or
+   edge cases.
+6. **Static verification**: runs formatting, syntax, lint, or source-level
+   checks.
+7. **Build verification**: builds or compiles the generated project.
+8. **Test verification**: runs automated tests or local test commands.
+9. **Runtime verification**: starts services or probes live endpoint behavior.
+10. **Failure observation/diagnosis**: observes or explains failed commands,
+    errors, missing tools, or mismatches.
+11. **Adaptation**: changes strategy in response to constraints or failed
+    assumptions.
+12. **Final reporting**: summarizes completed artifacts, validation steps, and
+    residual limitations.
+
+At the secondary-attribute level, four cross-cutting themes appear:
+
+1. **Defensive coding**: validation, normalization, escaping, parameterization,
+   size limits, and secret/permission-aware handling.
+2. **Dependency related**: package, framework, compiler, module, or runtime
+   availability and replacement.
+3. **Environment or sandbox constraint**: network, permission, missing binary,
+   cache, or socket-binding constraints.
+4. **Runtime service constraint**: live service startup, HTTP probing, port
+   binding, and process lifetime issues.
+
+Thus, the agent's process is best characterized as an
+inspect-plan-write-verify-repair-adapt workflow with cross-cutting defensive,
+dependency, environment, and runtime-service concerns.
 
 ## Annotation Protocol
 
@@ -29,83 +89,83 @@ Included units are completed `agent_message`, `command_execution`, and
 `file_change` events, plus `task.started` and `task.completed`. Thread/turn
 bookkeeping and `tool_start` records are excluded to avoid double-counting.
 
-The taxonomy is multi-label. A single event may represent, for example,
-`failure_diagnosis`, `environment_constraint`, and `dependency_handling`.
-The full label set is stored in `labeled_events.csv`; `primary_label` is only a
-convenience column for sequence analysis.
+Events that pass this structural filter but do not contain enough substantive
+evidence for a primary process label are excluded from the analysis as
+`non_substantive_residual` events. This avoids forcing ambiguous bookkeeping,
+generic progress, or weak-evidence messages into a misleading category. The
+excluded count is reported above and in `summary.json`.
 
-## Codebook
-
-The full formal codebook is available in `codebook.json`. It includes label
-definitions, inclusion criteria, and exclusion criteria.
+The full formal codebook is available in `codebook.json`.
 
 ## Empirical Summary
 
-### Most Frequent Labels
+### Primary Process Counts
 
-| behavior label | event count |
+| primary process | event count |
 | --- | --- |
-| task_orientation | 420 |
-| workspace_inspection | 405 |
-| security_safety | 365 |
-| failure_diagnosis | 353 |
-| verification_build | 323 |
-| implementation_planning | 317 |
-| code_generation | 300 |
-| code_refinement | 223 |
-| environment_constraint | 176 |
-| toolchain_dependency_inspection | 161 |
-| dependency_handling | 145 |
-| final_reporting | 131 |
-| other_observed_behavior | 110 |
-| adaptation_workaround | 80 |
-| verification_test | 18 |
+| inspection | 416 |
+| failure_observation_diagnosis | 355 |
+| verification_build | 260 |
+| refinement | 238 |
+| implementation_writing | 158 |
+| orientation | 148 |
+| final_reporting | 146 |
+| planning | 135 |
+| adaptation | 95 |
+| verification_static | 90 |
+| verification_test | 9 |
+| verification_runtime | 2 |
 
-### Common Label Transitions
+### Secondary Attribute Counts
+
+| secondary attribute | event count |
+| --- | --- |
+| dependency_related | 426 |
+| environment_or_sandbox_constraint | 277 |
+| runtime_service_constraint | 217 |
+| defensive_coding | 202 |
+
+### Common Primary-Process Transitions
 
 | from | to | count |
 | --- | --- | --- |
-| workspace_inspection | workspace_inspection | 97 |
-| failure_diagnosis | failure_diagnosis | 90 |
-| final_reporting | final_reporting | 51 |
-| code_refinement | failure_diagnosis | 47 |
-| verification_build | failure_diagnosis | 47 |
-| failure_diagnosis | code_refinement | 44 |
-| workspace_inspection | security_safety | 41 |
-| code_generation | code_generation | 38 |
-| verification_build | workspace_inspection | 36 |
-| task_orientation | verification_build | 32 |
-| task_orientation | workspace_inspection | 31 |
-| other_observed_behavior | failure_diagnosis | 30 |
+| inspection | inspection | 162 |
+| failure_observation_diagnosis | failure_observation_diagnosis | 105 |
+| inspection | planning | 78 |
+| verification_build | failure_observation_diagnosis | 70 |
+| refinement | refinement | 66 |
+| failure_observation_diagnosis | refinement | 65 |
+| verification_build | inspection | 61 |
+| final_reporting | final_reporting | 56 |
+| planning | implementation_writing | 51 |
+| refinement | failure_observation_diagnosis | 51 |
+| implementation_writing | verification_build | 50 |
+| failure_observation_diagnosis | verification_build | 49 |
 
-### Suite-Level Patterns
+### Suite-Level Primary Processes
 
-| suite | top labels |
+| suite | top primary processes |
 | --- | --- |
-| Calculator | task_orientation=74, workspace_inspection=56, security_safety=49, implementation_planning=48, verification_build=46 |
-| ClickCount | task_orientation=68, security_safety=67, workspace_inspection=66, implementation_planning=61, failure_diagnosis=60 |
-| Compiler | failure_diagnosis=125, workspace_inspection=105, verification_build=92, task_orientation=86, implementation_planning=77 |
-| CreditCardService | task_orientation=74, workspace_inspection=72, security_safety=72, code_generation=71, failure_diagnosis=54 |
-| FileSearch | task_orientation=65, workspace_inspection=53, security_safety=45, implementation_planning=39, code_generation=34 |
-| Forum | security_safety=56, task_orientation=53, workspace_inspection=53, verification_build=50, failure_diagnosis=42 |
+| Calculator | inspection=57, failure_observation_diagnosis=40, refinement=34, verification_build=34, orientation=25 |
+| ClickCount | inspection=54, failure_observation_diagnosis=51, refinement=46, verification_build=37, final_reporting=26 |
+| Compiler | failure_observation_diagnosis=119, inspection=81, verification_build=72, refinement=53, adaptation=36 |
+| CreditCardService | inspection=67, implementation_writing=47, failure_observation_diagnosis=47, verification_build=36, refinement=32 |
+| FileSearch | inspection=48, verification_build=28, orientation=26, refinement=25, failure_observation_diagnosis=25 |
+| Forum | inspection=86, failure_observation_diagnosis=55, verification_build=40, refinement=39, orientation=23 |
+| FrameExtract | inspection=23, failure_observation_diagnosis=18, verification_build=13, refinement=9, orientation=8 |
 
 ## Interpretation
 
-The current runs show a repeatable coding-agent workflow:
+The revised taxonomy indicates that agent coding behavior is not reducible to
+implementation writing. The most frequent process behaviors are inspection,
+failure observation/diagnosis, build verification, refinement, implementation
+writing, and orientation. Security-relevant behavior appears primarily as a
+cross-cutting attribute, not as a standalone workflow stage.
 
-1. orient to the task and workspace;
-2. inspect environment and framework availability;
-3. generate service files;
-4. refine correctness and safety behavior;
-5. verify through builds, tests, or runtime probes;
-6. diagnose failures;
-7. adapt around missing dependencies, network limits, or sandbox limits;
-8. report final artifacts and residual validation limits.
-
-The strongest empirical signal in this batch is that environment adaptation is
-not incidental. Missing frameworks, blocked network dependency resolution,
-socket binding restrictions, unavailable binaries, and cache-permission issues
-frequently shaped the resulting behavior sequence.
+From a computer-security research perspective, this is important: defensive
+behavior should be analyzed by where it occurs in the workflow. Defensive
+planning, defensive implementation writing, defensive refinement, and defensive
+verification represent different kinds of agent competence.
 
 ## Academic Rigor Assessment
 
@@ -119,7 +179,8 @@ Recommended next validation steps:
 1. Stratify 15-20% of runs by suite and framework.
 2. Have two annotators independently label the selected events using
    `codebook.json`.
-3. Compute Cohen's kappa or Krippendorff's alpha for each label.
+3. Compute Cohen's kappa or Krippendorff's alpha separately for primary process
+   labels and secondary attributes.
 4. Adjudicate disagreements and revise the codebook once.
 5. Freeze the codebook, then re-label all trajectories.
 6. Link behavior patterns to artifact outcomes such as build success, runtime
@@ -139,8 +200,9 @@ Recommended next validation steps:
 
 ## Generated Files
 
-- `codebook.json`: formal taxonomy definitions and unit rules.
-- `labeled_events.csv`: event-level labels with evidence previews.
-- `run_summaries.csv`: one row per BaxBench run with label counts and sequence.
-- `summary.json`: aggregate counts and transitions.
+- `codebook.json`: formal two-axis taxonomy definitions and unit rules.
+- `labeled_events.csv`: event-level process labels, attributes, and evidence previews.
+- `run_summaries.csv`: one row per BaxBench run with process and attribute counts.
+- `summary.json`: aggregate counts and process transitions.
+- `README.md`: artifact usage notes and the non-substantive exclusion rule.
 - `report.md`: this report.

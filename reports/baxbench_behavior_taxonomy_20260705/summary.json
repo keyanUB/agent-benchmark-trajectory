@@ -1,306 +1,312 @@
 {
-  "event_count": 1929,
-  "label_counts": {
-    "adaptation_workaround": 80,
-    "code_generation": 300,
-    "code_refinement": 223,
-    "dependency_handling": 145,
-    "environment_constraint": 176,
-    "failure_diagnosis": 353,
-    "final_reporting": 131,
-    "implementation_planning": 317,
-    "other_observed_behavior": 110,
-    "security_safety": 365,
-    "task_orientation": 420,
-    "toolchain_dependency_inspection": 161,
-    "verification_build": 323,
-    "verification_runtime": 11,
-    "verification_static": 15,
-    "verification_test": 18,
-    "workspace_inspection": 405
-  },
-  "primary_label_counts": {
-    "adaptation_workaround": 73,
-    "code_generation": 140,
-    "code_refinement": 189,
-    "dependency_handling": 52,
-    "environment_constraint": 36,
-    "failure_diagnosis": 329,
-    "final_reporting": 131,
-    "implementation_planning": 63,
-    "other_observed_behavior": 110,
-    "security_safety": 121,
-    "task_orientation": 120,
-    "toolchain_dependency_inspection": 87,
-    "verification_build": 173,
+  "event_count": 2052,
+  "excluded_non_substantive_event_count": 79,
+  "observed_behavior_event_count": 2131,
+  "primary_process_counts": {
+    "adaptation": 95,
+    "failure_observation_diagnosis": 355,
+    "final_reporting": 146,
+    "implementation_writing": 158,
+    "inspection": 416,
+    "orientation": 148,
+    "planning": 135,
+    "refinement": 238,
+    "verification_build": 260,
     "verification_runtime": 2,
-    "verification_static": 15,
-    "verification_test": 9,
-    "workspace_inspection": 279
+    "verification_static": 90,
+    "verification_test": 9
   },
-  "run_count": 80,
-  "suite_label_counts": {
+  "run_count": 90,
+  "secondary_attribute_counts": {
+    "defensive_coding": 202,
+    "dependency_related": 426,
+    "environment_or_sandbox_constraint": 277,
+    "runtime_service_constraint": 217
+  },
+  "suite_attribute_counts": {
     "Calculator": {
-      "adaptation_workaround": 4,
-      "code_generation": 38,
-      "code_refinement": 33,
-      "dependency_handling": 19,
-      "environment_constraint": 27,
-      "failure_diagnosis": 42,
-      "final_reporting": 23,
-      "implementation_planning": 48,
-      "other_observed_behavior": 19,
-      "security_safety": 49,
-      "task_orientation": 74,
-      "toolchain_dependency_inspection": 23,
-      "verification_build": 46,
-      "verification_runtime": 1,
-      "verification_static": 2,
-      "verification_test": 1,
-      "workspace_inspection": 56
+      "defensive_coding": 18,
+      "dependency_related": 44,
+      "environment_or_sandbox_constraint": 33,
+      "runtime_service_constraint": 33
     },
     "ClickCount": {
-      "adaptation_workaround": 10,
-      "code_generation": 54,
-      "code_refinement": 41,
-      "dependency_handling": 26,
-      "environment_constraint": 30,
-      "failure_diagnosis": 60,
-      "final_reporting": 26,
-      "implementation_planning": 61,
-      "other_observed_behavior": 10,
-      "security_safety": 67,
-      "task_orientation": 68,
-      "toolchain_dependency_inspection": 20,
-      "verification_build": 56,
-      "verification_runtime": 1,
-      "verification_static": 3,
-      "workspace_inspection": 66
+      "defensive_coding": 48,
+      "dependency_related": 60,
+      "environment_or_sandbox_constraint": 36,
+      "runtime_service_constraint": 39
     },
     "Compiler": {
-      "adaptation_workaround": 33,
-      "code_generation": 63,
-      "code_refinement": 59,
-      "dependency_handling": 27,
-      "environment_constraint": 46,
-      "failure_diagnosis": 125,
-      "final_reporting": 23,
-      "implementation_planning": 77,
-      "other_observed_behavior": 44,
-      "security_safety": 76,
-      "task_orientation": 86,
-      "toolchain_dependency_inspection": 56,
-      "verification_build": 92,
-      "verification_runtime": 4,
-      "verification_static": 5,
-      "verification_test": 9,
-      "workspace_inspection": 105
+      "defensive_coding": 19,
+      "dependency_related": 118,
+      "environment_or_sandbox_constraint": 83,
+      "runtime_service_constraint": 42
     },
     "CreditCardService": {
-      "adaptation_workaround": 14,
-      "code_generation": 71,
-      "code_refinement": 33,
-      "dependency_handling": 28,
-      "environment_constraint": 24,
-      "failure_diagnosis": 54,
-      "final_reporting": 24,
-      "implementation_planning": 52,
-      "other_observed_behavior": 16,
-      "security_safety": 72,
-      "task_orientation": 74,
-      "toolchain_dependency_inspection": 24,
-      "verification_build": 51,
-      "verification_static": 5,
-      "verification_test": 1,
-      "workspace_inspection": 72
+      "defensive_coding": 53,
+      "dependency_related": 61,
+      "environment_or_sandbox_constraint": 38,
+      "runtime_service_constraint": 34
     },
     "FileSearch": {
-      "adaptation_workaround": 4,
-      "code_generation": 34,
-      "code_refinement": 24,
-      "dependency_handling": 20,
-      "environment_constraint": 22,
-      "failure_diagnosis": 30,
-      "final_reporting": 20,
-      "implementation_planning": 39,
-      "other_observed_behavior": 9,
-      "security_safety": 45,
-      "task_orientation": 65,
-      "toolchain_dependency_inspection": 8,
-      "verification_build": 28,
-      "verification_runtime": 3,
-      "verification_test": 2,
-      "workspace_inspection": 53
+      "defensive_coding": 18,
+      "dependency_related": 41,
+      "environment_or_sandbox_constraint": 23,
+      "runtime_service_constraint": 25
     },
     "Forum": {
-      "adaptation_workaround": 15,
-      "code_generation": 40,
-      "code_refinement": 33,
-      "dependency_handling": 25,
-      "environment_constraint": 27,
-      "failure_diagnosis": 42,
-      "final_reporting": 15,
-      "implementation_planning": 40,
-      "other_observed_behavior": 12,
-      "security_safety": 56,
-      "task_orientation": 53,
-      "toolchain_dependency_inspection": 30,
-      "verification_build": 50,
-      "verification_runtime": 2,
-      "verification_test": 5,
-      "workspace_inspection": 53
+      "defensive_coding": 45,
+      "dependency_related": 71,
+      "environment_or_sandbox_constraint": 46,
+      "runtime_service_constraint": 33
+    },
+    "FrameExtract": {
+      "defensive_coding": 1,
+      "dependency_related": 31,
+      "environment_or_sandbox_constraint": 18,
+      "runtime_service_constraint": 11
     }
   },
-  "top_transitions": [
+  "suite_process_counts": {
+    "Calculator": {
+      "adaptation": 5,
+      "failure_observation_diagnosis": 40,
+      "final_reporting": 23,
+      "implementation_writing": 20,
+      "inspection": 57,
+      "orientation": 25,
+      "planning": 23,
+      "refinement": 34,
+      "verification_build": 34,
+      "verification_static": 15
+    },
+    "ClickCount": {
+      "adaptation": 11,
+      "failure_observation_diagnosis": 51,
+      "final_reporting": 26,
+      "implementation_writing": 21,
+      "inspection": 54,
+      "orientation": 24,
+      "planning": 24,
+      "refinement": 46,
+      "verification_build": 37,
+      "verification_static": 12
+    },
+    "Compiler": {
+      "adaptation": 36,
+      "failure_observation_diagnosis": 119,
+      "final_reporting": 23,
+      "implementation_writing": 23,
+      "inspection": 81,
+      "orientation": 21,
+      "planning": 19,
+      "refinement": 53,
+      "verification_build": 72,
+      "verification_static": 27,
+      "verification_test": 5
+    },
+    "CreditCardService": {
+      "adaptation": 13,
+      "failure_observation_diagnosis": 47,
+      "final_reporting": 24,
+      "implementation_writing": 47,
+      "inspection": 67,
+      "orientation": 21,
+      "planning": 22,
+      "refinement": 32,
+      "verification_build": 36,
+      "verification_static": 14
+    },
+    "FileSearch": {
+      "adaptation": 6,
+      "failure_observation_diagnosis": 25,
+      "final_reporting": 20,
+      "implementation_writing": 22,
+      "inspection": 48,
+      "orientation": 26,
+      "planning": 17,
+      "refinement": 25,
+      "verification_build": 28,
+      "verification_static": 6,
+      "verification_test": 1
+    },
+    "Forum": {
+      "adaptation": 19,
+      "failure_observation_diagnosis": 55,
+      "final_reporting": 22,
+      "implementation_writing": 18,
+      "inspection": 86,
+      "orientation": 23,
+      "planning": 23,
+      "refinement": 39,
+      "verification_build": 40,
+      "verification_runtime": 2,
+      "verification_static": 8,
+      "verification_test": 3
+    },
+    "FrameExtract": {
+      "adaptation": 5,
+      "failure_observation_diagnosis": 18,
+      "final_reporting": 8,
+      "implementation_writing": 7,
+      "inspection": 23,
+      "orientation": 8,
+      "planning": 7,
+      "refinement": 9,
+      "verification_build": 13,
+      "verification_static": 8
+    }
+  },
+  "top_process_transitions": [
     {
-      "count": 97,
-      "from": "workspace_inspection",
-      "to": "workspace_inspection"
+      "count": 162,
+      "from": "inspection",
+      "to": "inspection"
     },
     {
-      "count": 90,
-      "from": "failure_diagnosis",
-      "to": "failure_diagnosis"
+      "count": 105,
+      "from": "failure_observation_diagnosis",
+      "to": "failure_observation_diagnosis"
     },
     {
-      "count": 51,
+      "count": 78,
+      "from": "inspection",
+      "to": "planning"
+    },
+    {
+      "count": 70,
+      "from": "verification_build",
+      "to": "failure_observation_diagnosis"
+    },
+    {
+      "count": 66,
+      "from": "refinement",
+      "to": "refinement"
+    },
+    {
+      "count": 65,
+      "from": "failure_observation_diagnosis",
+      "to": "refinement"
+    },
+    {
+      "count": 61,
+      "from": "verification_build",
+      "to": "inspection"
+    },
+    {
+      "count": 56,
       "from": "final_reporting",
       "to": "final_reporting"
     },
     {
-      "count": 47,
-      "from": "code_refinement",
-      "to": "failure_diagnosis"
+      "count": 51,
+      "from": "planning",
+      "to": "implementation_writing"
     },
     {
-      "count": 47,
-      "from": "verification_build",
-      "to": "failure_diagnosis"
+      "count": 51,
+      "from": "refinement",
+      "to": "failure_observation_diagnosis"
     },
     {
-      "count": 44,
-      "from": "failure_diagnosis",
-      "to": "code_refinement"
+      "count": 50,
+      "from": "implementation_writing",
+      "to": "verification_build"
+    },
+    {
+      "count": 49,
+      "from": "failure_observation_diagnosis",
+      "to": "verification_build"
+    },
+    {
+      "count": 48,
+      "from": "planning",
+      "to": "inspection"
+    },
+    {
+      "count": 43,
+      "from": "failure_observation_diagnosis",
+      "to": "inspection"
     },
     {
       "count": 41,
-      "from": "workspace_inspection",
-      "to": "security_safety"
+      "from": "orientation",
+      "to": "inspection"
     },
     {
-      "count": 38,
-      "from": "code_generation",
-      "to": "code_generation"
-    },
-    {
-      "count": 36,
-      "from": "verification_build",
-      "to": "workspace_inspection"
-    },
-    {
-      "count": 32,
-      "from": "task_orientation",
+      "count": 40,
+      "from": "inspection",
       "to": "verification_build"
     },
     {
-      "count": 31,
-      "from": "task_orientation",
-      "to": "workspace_inspection"
+      "count": 40,
+      "from": "implementation_writing",
+      "to": "implementation_writing"
     },
     {
-      "count": 30,
-      "from": "other_observed_behavior",
-      "to": "failure_diagnosis"
+      "count": 39,
+      "from": "orientation",
+      "to": "verification_build"
+    },
+    {
+      "count": 37,
+      "from": "inspection",
+      "to": "adaptation"
+    },
+    {
+      "count": 37,
+      "from": "verification_static",
+      "to": "failure_observation_diagnosis"
+    },
+    {
+      "count": 35,
+      "from": "verification_build",
+      "to": "refinement"
+    },
+    {
+      "count": 35,
+      "from": "refinement",
+      "to": "verification_build"
+    },
+    {
+      "count": 34,
+      "from": "inspection",
+      "to": "failure_observation_diagnosis"
     },
     {
       "count": 29,
-      "from": "code_generation",
-      "to": "verification_build"
+      "from": "refinement",
+      "to": "verification_static"
     },
     {
       "count": 28,
-      "from": "workspace_inspection",
-      "to": "implementation_planning"
+      "from": "verification_build",
+      "to": "verification_static"
+    },
+    {
+      "count": 28,
+      "from": "orientation",
+      "to": "planning"
+    },
+    {
+      "count": 28,
+      "from": "refinement",
+      "to": "inspection"
     },
     {
       "count": 27,
-      "from": "failure_diagnosis",
-      "to": "verification_build"
-    },
-    {
-      "count": 26,
-      "from": "code_refinement",
-      "to": "code_refinement"
-    },
-    {
-      "count": 26,
-      "from": "failure_diagnosis",
-      "to": "workspace_inspection"
-    },
-    {
-      "count": 25,
-      "from": "security_safety",
-      "to": "code_generation"
-    },
-    {
-      "count": 24,
-      "from": "failure_diagnosis",
-      "to": "adaptation_workaround"
-    },
-    {
-      "count": 23,
-      "from": "other_observed_behavior",
-      "to": "code_refinement"
-    },
-    {
-      "count": 23,
-      "from": "failure_diagnosis",
-      "to": "other_observed_behavior"
-    },
-    {
-      "count": 23,
-      "from": "failure_diagnosis",
+      "from": "failure_observation_diagnosis",
       "to": "final_reporting"
     },
     {
-      "count": 23,
-      "from": "verification_build",
-      "to": "code_refinement"
+      "count": 27,
+      "from": "failure_observation_diagnosis",
+      "to": "adaptation"
     },
     {
-      "count": 22,
-      "from": "code_refinement",
-      "to": "verification_build"
-    },
-    {
-      "count": 22,
-      "from": "workspace_inspection",
-      "to": "failure_diagnosis"
-    },
-    {
-      "count": 21,
-      "from": "task_orientation",
-      "to": "task_orientation"
-    },
-    {
-      "count": 21,
-      "from": "implementation_planning",
-      "to": "workspace_inspection"
-    },
-    {
-      "count": 20,
-      "from": "workspace_inspection",
-      "to": "adaptation_workaround"
-    },
-    {
-      "count": 20,
-      "from": "workspace_inspection",
-      "to": "verification_build"
-    },
-    {
-      "count": 20,
-      "from": "failure_diagnosis",
-      "to": "security_safety"
+      "count": 24,
+      "from": "orientation",
+      "to": "orientation"
     }
   ]
 }
